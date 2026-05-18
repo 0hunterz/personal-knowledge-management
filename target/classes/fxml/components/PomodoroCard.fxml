@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT">
+        <Label text="⏱ Pomodoro" styleClass="card-title" />
+    </HBox>
+
+    <!-- Vòng tròn Timer -->
+    <StackPane>
+        <Circle radius="70" fill="TRANSPARENT" stroke="#E2E8F0" strokeWidth="8" />
+        <!-- Vòng cung thể hiện tiến độ (Dùng Arc trong code logic, ở đây dùng Circle tạm) -->
+        <Circle radius="70" fill="TRANSPARENT" stroke="#10B981" strokeWidth="8" strokeDashArray="100, 400" />
+        
+        <VBox alignment="CENTER">
+            <Label fx:id="timeLabel" text="25:00" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" />
+            <Label text="Focus Time" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" />
+        </VBox>
+    </StackPane>
+
+    <!-- Nút điều khiển -->
+    <VBox spacing="10" alignment="CENTER" maxWidth="Infinity">
+        <Button text="▶ Start Focus" maxWidth="Infinity" style="-fx-background-color: #10B981; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10;" />
+        <Button text="☕ Short Break" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #3B82F6; -fx-font-weight: bold; -fx-cursor: hand;" />
+    </VBox>
+</VBox>

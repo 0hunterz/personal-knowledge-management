@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<!-- Trạng thái mặc định: Chưa hoàn thành (Màu xám nhạt) -->
+<!-- Trạng thái hoàn thành: Đổi background thành #E6F8F1 và chữ màu #10B981 -->
+<StackPane style="-fx-background-color: #E6F8F1; -fx-background-radius: 15; -fx-pref-width: 30; -fx-pref-height: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <Label fx:id="dayLabel" text="M" style="-fx-text-fill: #10B981; -fx-font-size: 12px; -fx-font-weight: bold;" />
+</StackPane>

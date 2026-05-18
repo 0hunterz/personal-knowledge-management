@@ -1,0 +1,246 @@
+/* =====================================================================
+   1. GLOBAL & FONT SETTINGS
+   ===================================================================== */
+.root {
+    -fx-font-family: "Inter", "Roboto", "Segoe UI", sans-serif;
+    -fx-background-color: #F8FAFC; /* Nền xám nhạt */
+}
+
+/* Xóa viền xanh mặc định của JavaFX khi click */
+.button:focus, .toggle-button:focus, .scroll-pane:focus, .text-area:focus {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Tùy chỉnh thanh cuộn (Scrollbar) cho giống Web */
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-pane {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical .thumb, .scroll-bar:horizontal .thumb {
+    -fx-background-color: #CBD5E1;
+    -fx-background-radius: 4px;
+}
+.scroll-bar:vertical .thumb:hover, .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #94A3B8;
+}
+
+/* =====================================================================
+   2. SIDEBAR & NAVIGATION MENU
+   ===================================================================== */
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #64748B;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 15px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-alignment: center-left;
+}
+.nav-btn:hover {
+    -fx-background-color: #F1F5F9;
+    -fx-text-fill: #1E293B;
+}
+.nav-btn:selected {
+    -fx-background-color: #E6F8F1; 
+    -fx-text-fill: #10B981; 
+}
+
+.user-profile-btn {
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-background-radius: 8px;
+}
+.user-profile-btn:hover {
+    -fx-background-color: #F1F5F9;
+}
+
+/* =====================================================================
+   3. GENERAL CARDS (Khung chứa)
+   ===================================================================== */
+.card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 15, 0, 0, 4);
+}
+.card:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 20, 0, 0, 6);
+}
+.card-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #1E293B;
+}
+
+/* Card màu nền riêng biệt (Ví dụ: Quote) */
+.card-blue-bg {
+    -fx-background-color: #EFF6FF;
+}
+
+/* =====================================================================
+   4. BUTTONS TÙY CHỈNH
+   ===================================================================== */
+/* Nút Add Task xanh nhạt */
+.btn-add-task {
+    -fx-background-color: #E6F8F1; 
+    -fx-text-fill: #10B981; 
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 12px;
+    -fx-cursor: hand;
+}
+.btn-add-task:hover {
+    -fx-background-color: #D1FAE5; 
+}
+
+/* Nút Primary (Bắt đầu Pomodoro) */
+.btn-primary {
+    -fx-background-color: #10B981;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 15px;
+    -fx-cursor: hand;
+}
+.btn-primary:hover {
+    -fx-background-color: #059669; /* Xanh đậm hơn */
+}
+
+/* Nút Text (Short Break, View All) */
+.btn-text {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3B82F6;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.btn-text:hover {
+    -fx-underline: true;
+}
+
+/* Nút 3 chấm (More options) */
+.btn-icon-transparent {
+    -fx-background-color: transparent;
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-padding: 0 5 0 5;
+    -fx-background-radius: 4px;
+}
+.btn-icon-transparent:hover {
+    -fx-background-color: #F1F5F9;
+    -fx-text-fill: #1E293B;
+}
+
+/* =====================================================================
+   5. TAGS & BADGES
+   ===================================================================== */
+.tag-badge {
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+.tag-study { -fx-background-color: #EEF2FF; -fx-text-fill: #4F46E5; }
+.tag-project { -fx-background-color: #ECFDF5; -fx-text-fill: #059669; }
+.tag-review { -fx-background-color: #F3E8FF; -fx-text-fill: #9333EA; }
+.tag-blue { -fx-background-color: #E0F2FE; -fx-text-fill: #0284C7; }
+
+/* =====================================================================
+   6. TASKS ITEM (Today's Focus)
+   ===================================================================== */
+.task-item {
+    -fx-padding: 8px 0;
+}
+.task-item:hover .task-name {
+    -fx-text-fill: #10B981;
+}
+.task-name {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1E293B;
+}
+.task-duration {
+    -fx-background-color: #F8FAFC;
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 12px;
+    -fx-text-fill: #64748B;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+}
+.check-circle {
+    -fx-stroke: #E2E8F0;
+    -fx-cursor: hand;
+}
+.check-circle:hover { -fx-stroke: #10B981; }
+.circle-green { -fx-stroke: #10B981; }
+
+/* =====================================================================
+   7. QUICK NOTE (TextArea)
+   ===================================================================== */
+.quick-note-area {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: #F8FAFC;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 5px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1E293B;
+}
+.quick-note-area:focused {
+    -fx-border-color: #10B981; /* Đổi viền xanh khi gõ chữ */
+    -fx-control-inner-background: #FFFFFF;
+}
+
+/* =====================================================================
+   8. DAILY STREAK (Các ngày trong tuần)
+   ===================================================================== */
+/* Vòng tròn ngày chưa hoàn thành */
+.streak-day-box {
+    -fx-background-color: #F1F5F9;
+    -fx-background-radius: 15px;
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-alignment: center;
+}
+.streak-day-label {
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* Trạng thái ngày ĐÃ hoàn thành */
+.streak-day-box-active {
+    -fx-background-color: #E6F8F1;
+}
+.streak-day-label-active {
+    -fx-text-fill: #10B981;
+}
+
+/* =====================================================================
+   9. POMODORO & CHART CIRCLES
+   ===================================================================== */
+/* Vòng nền xám */
+.chart-track {
+    -fx-stroke: #E2E8F0;
+    -fx-stroke-width: 8px;
+    -fx-fill: transparent;
+    -fx-stroke-linecap: round;
+}
+/* Vòng tiến trình xanh */
+.chart-progress {
+    -fx-stroke: #10B981;
+    -fx-stroke-width: 8px;
+    -fx-fill: transparent;
+    -fx-stroke-linecap: round;
+}

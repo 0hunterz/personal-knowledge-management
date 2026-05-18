@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: #F8FAFC;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox spacing="20" style="-fx-padding: 30px;">
+        
+        <!-- Header: Lời chào và Ngày tháng -->
+        <fx:include source="../components/Header.fxml"/>
+
+        <!-- Phần thân chia làm 2 cột chính -->
+        <HBox spacing="20">
+            <!-- Cột trái (Rộng hơn) -->
+            <VBox spacing="20" HBox.hgrow="ALWAYS" style="-fx-pref-width: 600;">
+                <fx:include source="../components/TodaysFocusCard.fxml"/>
+                <fx:include source="../components/RecentNotesSection.fxml"/>
+            </VBox>
+
+            <!-- Cột phải (Hẹp hơn) -->
+            <VBox spacing="20" style="-fx-pref-width: 320; -fx-min-width: 320;">
+                <fx:include source="../components/PomodoroCard.fxml"/>
+                <fx:include source="../components/QuoteCard.fxml"/>
+                <fx:include source="../components/QuickNoteCard.fxml"/>
+                <fx:include source="../components/DailyStreakCard.fxml"/>
+            </VBox>
+        </HBox>
+
+    </VBox>
+</ScrollPane>
