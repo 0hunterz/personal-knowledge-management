@@ -10,8 +10,8 @@
     <!-- Nơi chứa nội dung chính (sẽ được thay đổi linh hoạt bằng Controller) -->
     <center>
         <StackPane fx:id="contentArea" style="-fx-background-color: #F8FAFC;">
-            <!-- Tạm thời load TagsView để test -->
-            <fx:include source="TagsView.fxml"/>
+            <!-- Demo Analytics screen -->
+            <fx:include source="AnalyticsView.fxml"/>
         </StackPane>
     </center>
 </BorderPane>

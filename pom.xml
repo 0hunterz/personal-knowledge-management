@@ -67,7 +67,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>com.focusnode.Main</mainClass> <!-- Đổi lại nếu Main nằm trong package -->
+                    <mainClass>com.focusnode.Launcher</mainClass>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.geometry.Insets?>
 
@@ -12,9 +11,9 @@
 
     <!-- Logo Area -->
     <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 0 30 0;">
-        <ImageView fitHeight="32" fitWidth="32" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../images/logo.png" />
-        </ImageView>
+        <StackPane style="-fx-background-color: #E6F8F1; -fx-background-radius: 10;" prefWidth="32" prefHeight="32">
+            <Label text="⌁" style="-fx-text-fill: #10B981; -fx-font-size: 22px; -fx-font-weight: bold;" />
+        </StackPane>
         <VBox>
             <Label text="Focus-Node" style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-text-fill: #1E293B;" />
             <Label text="Focus. Learn. Grow." style="-fx-font-size: 12px; -fx-text-fill: #64748B;" />
