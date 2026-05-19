@@ -244,3 +244,128 @@
     -fx-fill: transparent;
     -fx-stroke-linecap: round;
 }
+
+/* =====================================================================
+   10. KNOWLEDGE BASE COMPONENTS
+   ===================================================================== */
+/* Thanh Search */
+.search-bar {
+    -fx-background-color: #F8FAFC;
+    -fx-background-radius: 8px;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 8px;
+    -fx-padding: 8px 12px;
+}
+.search-bar:focused {
+    -fx-border-color: #10B981;
+    -fx-background-color: #FFFFFF;
+}
+
+/* View Toggles (Grid / List) */
+.toggle-btn {
+    -fx-background-color: #F8FAFC;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 12px;
+    -fx-cursor: hand;
+}
+.toggle-btn-active {
+    -fx-background-color: #E6F8F1;
+    -fx-border-color: #10B981;
+    -fx-text-fill: #10B981;
+}
+
+/* Filter / New Note Buttons */
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 6px;
+    -fx-padding: 8px 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E293B;
+    -fx-cursor: hand;
+}
+.btn-outline:hover {
+    -fx-background-color: #F1F5F9;
+}
+
+/* Nút New Note xanh lá */
+.btn-new-note {
+    -fx-background-color: #10B981;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+}
+.btn-new-note:hover {
+    -fx-background-color: #059669;
+}
+
+/* Thẻ Knowledge Note Card */
+.knowledge-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 15, 0, 0, 4);
+    -fx-padding: 0; /* Padding bằng 0 để chứa vùng preview chạm viền */
+}
+.knowledge-card:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 20, 0, 0, 6);
+}
+
+.note-preview-area {
+    -fx-background-color: #F8FAFC;
+    -fx-background-radius: 12px 12px 0 0;
+    -fx-padding: 15px;
+}
+.note-preview-text {
+    -fx-font-family: "Consolas", monospace;
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748B;
+}
+
+.note-content-area {
+    -fx-padding: 15px;
+}
+
+/* Quick Filter */
+.quick-filter-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 15px;
+    -fx-padding: 4px 12px;
+    -fx-text-fill: #64748B;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+.quick-filter-btn-active {
+    -fx-background-color: #E6F8F1;
+    -fx-border-color: #10B981;
+    -fx-text-fill: #10B981;
+}
+
+/* Tag Badge trong Tag Cloud */
+.tag-cloud-badge {
+    -fx-padding: 4px 8px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 12px;
+}
+.tag-cloud-count {
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 11px;
+}
+
+/* Storage Progress Bar */
+.storage-progress-bar {
+    -fx-accent: #10B981;
+}
+.storage-progress-bar .track {
+    -fx-background-color: #E2E8F0;
+    -fx-background-radius: 4px;
+}
+.storage-progress-bar .bar {
+    -fx-background-color: #10B981;
+    -fx-background-radius: 4px;
+    -fx-padding: 4px;
+}

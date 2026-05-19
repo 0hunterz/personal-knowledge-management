@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToWidth="true" style="-fx-background-color: #F8FAFC;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <HBox spacing="30" style="-fx-padding: 30; -fx-background-color: #F8FAFC;">
+        
+        <!-- Cột Trái (Nội dung chính) -->
+        <VBox spacing="20" HBox.hgrow="ALWAYS">
+            
+            <!-- Tiêu đề -->
+            <VBox spacing="5">
+                <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1E293B;" text="Knowledge Base 📖" />
+                <Label style="-fx-font-size: 14px; -fx-text-fill: #64748B;" text="Your ideas, notes, and connections." />
+            </VBox>
+            
+            <!-- Thanh Công cụ (Search, Toggles, Filter) -->
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <TextField prefWidth="350" promptText="🔍 Search notes..." styleClass="search-bar" />
+                
+                <Region HBox.hgrow="ALWAYS" />
+                
+                <!-- Toggles -->
+                <HBox spacing="5">
+                    <Label styleClass="toggle-btn, toggle-btn-active" text="⊞" style="-fx-font-size: 18px;" />
+                    <Label styleClass="toggle-btn" text="≡" style="-fx-font-size: 18px;" />
+                </HBox>
+                
+                <Label styleClass="btn-outline" text="⚙ Filter" />
+                <Label styleClass="btn-new-note" text="+ New Note ⌄" />
+            </HBox>
+            
+            <!-- Quick Filters -->
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10 0;">
+                <Label style="-fx-text-fill: #64748B; -fx-font-size: 13px;" text="Quick Filters:" />
+                <Label styleClass="quick-filter-btn, quick-filter-btn-active" text="All" />
+                <Label styleClass="quick-filter-btn" text="#study" />
+                <Label styleClass="quick-filter-btn" text="#project" />
+                <Label styleClass="quick-filter-btn" text="#java" />
+                <Label styleClass="quick-filter-btn" text="#network" />
+                <Label styleClass="quick-filter-btn" text="#ai" />
+                <Label styleClass="quick-filter-btn" text="..." />
+            </HBox>
+            
+            <!-- Lưới Ghi chú (Note Grid) -->
+            <FlowPane hgap="20" vgap="20">
+                <fx:include source="../components/KnowledgeNoteCard.fxml" />
+                <fx:include source="../components/KnowledgeNoteCard.fxml" />
+                <fx:include source="../components/KnowledgeNoteCard.fxml" />
+                <fx:include source="../components/KnowledgeNoteCard.fxml" />
+                <fx:include source="../components/KnowledgeNoteCard.fxml" />
+                <fx:include source="../components/KnowledgeNoteCard.fxml" />
+            </FlowPane>
+        </VBox>
+        
+        <!-- Cột Phải (Widgets) -->
+        <VBox minWidth="300" prefWidth="300" spacing="20">
+            <fx:include source="../components/QuoteCard.fxml" />
+            <fx:include source="../components/QuickNoteCard.fxml" />
+            <fx:include source="../components/TagsCloudCard.fxml" />
+            <fx:include source="../components/StorageCard.fxml" />
+        </VBox>
+        
+    </HBox>
+</ScrollPane>

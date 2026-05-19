@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <Label styleClass="card-title" text="💾 Storage" />
+    
+    <HBox alignment="CENTER_LEFT">
+        <Label style="-fx-font-size: 13px; -fx-text-fill: #64748B;" text="1.2 GB / 5 GB used" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="24%" />
+    </HBox>
+    
+    <ProgressBar progress="0.24" prefWidth="250" styleClass="storage-progress-bar" />
+</VBox>
