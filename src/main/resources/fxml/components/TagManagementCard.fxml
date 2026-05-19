@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15" styleClass="card" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <Label styleClass="card-title" text="Tag Management" />
+
+    <!-- Table Header -->
+    <HBox style="-fx-padding: 5; -fx-border-color: #E2E8F0; -fx-border-width: 0 0 1 0;">
+        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #64748B;" prefWidth="160" text="Tag" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #64748B;" prefWidth="70" text="Color" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #64748B;" prefWidth="70" text="Notes" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #64748B;" prefWidth="120" text="Created" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #64748B;" prefWidth="80" text="Actions" />
+    </HBox>
+
+    <!-- Rows -->
+    <VBox>
+        <!-- study -->
+        <HBox alignment="CENTER_LEFT" styleClass="tag-table-row">
+            <Label style="-fx-text-fill: #059669; -fx-font-weight: bold; -fx-font-size: 13px;" prefWidth="160" text="#study" />
+            <HBox prefWidth="70" alignment="CENTER_LEFT">
+                <VBox styleClass="tag-color-dot" style="-fx-background-color: #10B981;" />
+            </HBox>
+            <Label prefWidth="70" style="-fx-font-size: 13px;" text="18" />
+            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="May 10, 2025" />
+            <HBox prefWidth="80" spacing="5">
+                <Label styleClass="tag-action-icon" text="✏" />
+                <Label styleClass="tag-action-icon" text="🗑" />
+            </HBox>
+        </HBox>
+        <!-- project -->
+        <HBox alignment="CENTER_LEFT" styleClass="tag-table-row">
+            <Label style="-fx-text-fill: #2563EB; -fx-font-weight: bold; -fx-font-size: 13px;" prefWidth="160" text="#project" />
+            <HBox prefWidth="70" alignment="CENTER_LEFT">
+                <VBox styleClass="tag-color-dot" style="-fx-background-color: #3B82F6;" />
+            </HBox>
+            <Label prefWidth="70" style="-fx-font-size: 13px;" text="15" />
+            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="May 8, 2025" />
+            <HBox prefWidth="80" spacing="5">
+                <Label styleClass="tag-action-icon" text="✏" />
+                <Label styleClass="tag-action-icon" text="🗑" />
+            </HBox>
+        </HBox>
+        <!-- java -->
+        <HBox alignment="CENTER_LEFT" styleClass="tag-table-row">
+            <Label style="-fx-text-fill: #D97706; -fx-font-weight: bold; -fx-font-size: 13px;" prefWidth="160" text="#java" />
+            <HBox prefWidth="70" alignment="CENTER_LEFT">
+                <VBox styleClass="tag-color-dot" style="-fx-background-color: #F59E0B;" />
+            </HBox>
+            <Label prefWidth="70" style="-fx-font-size: 13px;" text="14" />
+            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Apr 30, 2025" />
+            <HBox prefWidth="80" spacing="5">
+                <Label styleClass="tag-action-icon" text="✏" />
+                <Label styleClass="tag-action-icon" text="🗑" />
+            </HBox>
+        </HBox>
+        <!-- network -->
+        <HBox alignment="CENTER_LEFT" styleClass="tag-table-row">
+            <Label style="-fx-text-fill: #7C3AED; -fx-font-weight: bold; -fx-font-size: 13px;" prefWidth="160" text="#network" />
+            <HBox prefWidth="70" alignment="CENTER_LEFT">
+                <VBox styleClass="tag-color-dot" style="-fx-background-color: #8B5CF6;" />
+            </HBox>
+            <Label prefWidth="70" style="-fx-font-size: 13px;" text="12" />
+            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Apr 28, 2025" />
+            <HBox prefWidth="80" spacing="5">
+                <Label styleClass="tag-action-icon" text="✏" />
+                <Label styleClass="tag-action-icon" text="🗑" />
+            </HBox>
+        </HBox>
+        <!-- ai -->
+        <HBox alignment="CENTER_LEFT" styleClass="tag-table-row">
+            <Label style="-fx-text-fill: #DB2777; -fx-font-weight: bold; -fx-font-size: 13px;" prefWidth="160" text="#ai" />
+            <HBox prefWidth="70" alignment="CENTER_LEFT">
+                <VBox styleClass="tag-color-dot" style="-fx-background-color: #EC4899;" />
+            </HBox>
+            <Label prefWidth="70" style="-fx-font-size: 13px;" text="10" />
+            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Apr 25, 2025" />
+            <HBox prefWidth="80" spacing="5">
+                <Label styleClass="tag-action-icon" text="✏" />
+                <Label styleClass="tag-action-icon" text="🗑" />
+            </HBox>
+        </HBox>
+    </VBox>
+
+    <!-- Pagination -->
+    <HBox alignment="CENTER_LEFT" style="-fx-padding: 5 0 0 0;">
+        <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Showing 1-5 of 12 tags" />
+        <Region HBox.hgrow="ALWAYS" />
+        <HBox spacing="5" alignment="CENTER">
+            <Label styleClass="pagination-btn" text="&lt;" />
+            <Label styleClass="pagination-btn, pagination-btn-active" text="1" />
+            <Label styleClass="pagination-btn" text="2" />
+            <Label styleClass="pagination-btn" text="3" />
+            <Label styleClass="pagination-btn" text="&gt;" />
+        </HBox>
+        <Region HBox.hgrow="ALWAYS" />
+        <HBox spacing="5" alignment="CENTER">
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Show" />
+            <Label styleClass="btn-outline" style="-fx-padding: 2 8;" text="5 ⌄" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="per page" />
+        </HBox>
+    </HBox>
+</VBox>

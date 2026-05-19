@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.*?>
+
+<VBox spacing="15" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="🔥" style="-fx-font-size: 16px;" />
+        <Label text="Daily Streak" styleClass="card-title" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="⋮" style="-fx-background-color: transparent; -fx-font-size: 16px; -fx-cursor: hand; -fx-text-fill: #64748B;" />
+    </HBox>
+
+    <!-- Biểu đồ Streak và Số ngày -->
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <VBox>
+            <HBox alignment="BASELINE_LEFT" spacing="5">
+                <Label fx:id="streakDaysLabel" text="7" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" />
+                <Label text="days" style="-fx-font-size: 14px; -fx-text-fill: #64748B;" />
+            </HBox>
+            <Label text="Keep it up! 🔥" style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-font-weight: bold;" />
+        </VBox>
+        
+        <Region HBox.hgrow="ALWAYS" />
+
+        <!-- Biểu đồ chậu cây thu nhỏ -->
+        <StackPane>
+            <Circle radius="30" fill="TRANSPARENT" stroke="#E2E8F0" strokeWidth="4" />
+            <Circle radius="30" fill="TRANSPARENT" stroke="#10B981" strokeWidth="4" strokeDashArray="120, 200" />
+            <Label text="🌱" style="-fx-font-size: 24px;" />
+        </StackPane>
+    </HBox>
+
+    <!-- Danh sách các ngày trong tuần -->
+    <HBox spacing="10" alignment="CENTER" fx:id="daysContainer">
+        <fx:include source="StreakDay.fxml" />
+        <fx:include source="StreakDay.fxml" />
+        <fx:include source="StreakDay.fxml" />
+        <fx:include source="StreakDay.fxml" />
+        <fx:include source="StreakDay.fxml" />
+        <fx:include source="StreakDay.fxml" />
+        <fx:include source="StreakDay.fxml" />
+    </HBox>
+
+</VBox>

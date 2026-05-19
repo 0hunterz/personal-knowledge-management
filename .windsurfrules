@@ -1,0 +1,60 @@
+# BẢN ĐẶC TẢ HỆ THỐNG: FOCUS-NODE (Second Brain & LAN Focus Hub)
+
+## 1. Kiến trúc Kỹ thuật (Tech Stack)
+- **Mô hình Kiến trúc:** MVC (Model - View - Controller). Tách biệt hoàn toàn code xử lý giao diện và code xử lý logic/database.
+- **Frontend (Giao diện):** Java Swing kết hợp với thư viện FlatLaf (Màu sắc/Shape hiện đại), Ikonli (Icons sắc nét), và MigLayout (Bố cục cân đối) để tạo giao diện hiện đại, mượt mà.
+  - *Lưu ý quan trọng:* Luôn sử dụng `SwingUtilities.invokeLater()` khi cập nhật UI từ các luồng phụ (luồng mạng, luồng đếm ngược).
+- **Networking (Mạng lưới):** Java Sockets.
+  - *TCP Sockets:* Dùng để truyền file (LAN Airdrop) đảm bảo không mất mát gói tin.
+  - *UDP Broadcast:* Dùng để phát tín hiệu dò tìm các "Phòng học ảo" đang mở trong cùng mạng LAN nội bộ.
+
+## 2. Cấu trúc Giao diện (UI/UX Layout)
+Lấy cảm hứng từ các nền tảng quản trị tri thức hiện đại, giao diện sẽ chia làm 3 cột chính (sử dụng BorderLayout hoặc JPanel với MigLayout/GridBagLayout trong Swing):
+- **Left Sidebar (Điều hướng):** Cột cố định bên trái, tông màu tối nhẹ. Chứa các Tab: Dashboard (Home), Kiến thức (Knowledge), và Local LAN Hub.
+- **Main Workspace (Không gian làm việc chính):** Khu vực trung tâm rộng nhất, hiển thị nội dung tùy theo Tab đang chọn (Bảng Pomodoro, Trình soạn thảo văn bản, Danh sách tài liệu).
+- **Persistent Right Sidebar (Thanh công cụ phụ):** Cột cố định bên phải (luôn hiển thị).
+  - *Trên cùng:* Quote truyền cảm hứng ngẫu nhiên.
+  - *Giữa:* Quick Note (Ghi chú chớp nhoáng). Đang làm việc nảy ra ý tưởng, gõ vào đây lưu luôn, không cần chuyển trang.
+  - *Dưới cùng:* Tóm tắt Daily Streak (Chuỗi kỷ luật).
+
+## 3. Phân hệ Chức năng Cốt lõi (Core Modules)
+
+### 🧠 Module 1: Personal & Zen Space (Quản trị Kỷ luật)
+- **Focus Prompt (Chốt chặn xao nhãng):** Khi vừa mở app, giao diện chính bị khóa mờ. Màn hình hiện lên dòng chữ "Thứ tự ưu tiên của bạn hôm nay là gì?" kèm 3 ô text. Phải điền ít nhất 1 nhiệm vụ thì mới vào được Dashboard.
+- **Zen Mode:** Khi bấm "Start" một nhiệm vụ, ứng dụng Swing sẽ chuyển cửa sổ sang chế độ Fullscreen (`device.setFullScreenWindow(frame)`). Bật tự động nhạc nền Lofi (Java cơ bản hoặc JLayer).
+- **Gamification:** Mỗi phiên Pomodoro hoàn thành sẽ cộng dồn thành "Giờ tập trung". Duy trì đều đặn sẽ giữ được "Lửa" (Streak).
+
+### 📚 Module 2: Knowledge Base (Bộ脑 thứ 2)
+- **Hệ thống #Tags và Lưới (Grid):** Không dùng thư mục rườm rà. Mỗi tài liệu được gắn nhãn (ví dụ: `#java`, `#toán-rạc`). Hiển thị ngoài màn hình dạng các thẻ Card trực quan có màu sắc.
+- **Trình soạn thảo Markdown:** Giao diện nhập văn bản hỗ trợ in đậm, in nghiêng và Code Block.
+- **Bi-directional Linking (`[[Wiki-links]]`):** (Tính năng ăn tiền) Quét văn bản người dùng nhập, nếu thấy chữ nằm trong ngoặc vuông `[[Tên bài viết]]`, tự động biến nó thành hyperlink để bấm vào là nhảy sang bài viết đó.
+
+### 🌍 Module 3: LAN Focus Hub (Kết nối Mạng Nội bộ)
+- **Phòng Tự Học Ảo:** Một máy tính bấm "Create Room" (Mở port ServerSocket). Các máy khác trong phòng trọ/kí túc xá dùng chung Wi-Fi bấm "Join Room".
+- **Đồng bộ Đồng hồ & Cảnh báo:** Host bấm bắt đầu Pomodoro, tất cả các máy tính khác cùng đếm ngược. Ai thoát Fullscreen, app sẽ báo động lên nhóm "Người dùng X đang xao nhãng!".
+- **LAN Airdrop (Kéo thả File):** Kéo thả một file PDF vào Avatar của bạn bè trong phòng học ảo, hệ thống dùng Socket đẩy thẳng file sang máy người đó với tốc độ mạng LAN (nhanh hơn nhiều so với tải lên Google Drive).
+
+## 4. Thiết kế Cơ sở Dữ liệu Tối ưu (SQLite Schema)
+Sử dụng 4 bảng (Tables) chính để đảm bảo hiệu năng và tính liên kết dữ liệu:
+1. **Bảng tasks:** Quản lý To-do list.
+   - `id` (PK), `title`, `status` (Đã xong/Chưa xong), `created_date`.
+2. **Bảng notes:** Quản lý tài liệu/ghi chú.
+   - `id` (PK), `title`, `content` (Lưu Markdown text), `last_modified`.
+3. **Bảng tags & note_tags:** (Mapping nhiều-nhiều)
+   - `tags`: `id`, `tag_name`, `color_code`.
+   - `note_tags`: `note_id` (FK), `tag_id` (FK).
+4. **Bảng focus_sessions:** Nhật ký học tập để vẽ biểu đồ và tính Streak.
+   - `id`, `duration_minutes`, `date_logged`.
+
+## 5. Chiến lược Lập trình (Roadmap)
+Để code đồ án này mượt mà, hãy chia nhỏ thành 3 Sprint (Giai đoạn) rõ ràng:
+- **Sprint 1: Xây nền móng (Tuần 1-2)**
+  - Thiết kế khung giao diện với Java Swing, FlatLaf và MigLayout.
+  - Kết nối SQLite, viết các hàm CRUD (Thêm, Đọc, Sửa, Xóa) cho Bảng Ghi chú và Task. Đảm bảo Quick Note hoạt động.
+- **Sprint 2: Kỷ luật & Trải nghiệm (Tuần 3-4)**
+  - Code thuật toán Regex để nhận diện `#tags` và `[[wiki-links]]`.
+  - Làm tính năng Zen Mode (Đồng hồ đếm ngược, Fullscreen, phát nhạc).
+- **Sprint 3: Mạng lưới (Phần Khó Nhất - Các tuần cuối)**
+  - Thiết lập mô hình Client-Server nội bộ bằng Java Socket.
+  - Truyền tín hiệu Start/Stop đồng hồ Pomodoro qua mạng LAN.
+  - Thử nghiệm tính năng truyền File bằng mảng byte (Byte Array) qua Socket.

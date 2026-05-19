@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Nơi chứa Sidebar bên trái -->
+    <left>
+        <fx:include source="../components/Sidebar.fxml"/>
+    </left>
+
+    <!-- Nơi chứa nội dung chính (sẽ được thay đổi linh hoạt bằng Controller) -->
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: #F8FAFC;">
+            <!-- Tạm thời load TagsView để test -->
+            <fx:include source="TagsView.fxml"/>
+        </StackPane>
+    </center>
+</BorderPane>
