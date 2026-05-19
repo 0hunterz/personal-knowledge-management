@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT">
+        <Label styleClass="card-title" text="Popular Tags" />
+        <Region HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <VBox spacing="12">
+        <!-- #study -->
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #64748B;" text="1" />
+            <Label styleClass="popular-tag-badge" style="-fx-background-color: #D1FAE5; -fx-text-fill: #059669;" text="#study" />
+            <ProgressBar progress="1.0" prefWidth="130" style="-fx-accent: #10B981;" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="18" />
+        </HBox>
+        <!-- #project -->
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #64748B;" text="2" />
+            <Label styleClass="popular-tag-badge" style="-fx-background-color: #DBEAFE; -fx-text-fill: #2563EB;" text="#project" />
+            <ProgressBar progress="0.83" prefWidth="130" style="-fx-accent: #3B82F6;" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="15" />
+        </HBox>
+        <!-- #java -->
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #64748B;" text="3" />
+            <Label styleClass="popular-tag-badge" style="-fx-background-color: #FEF3C7; -fx-text-fill: #D97706;" text="#java" />
+            <ProgressBar progress="0.77" prefWidth="130" style="-fx-accent: #F59E0B;" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="14" />
+        </HBox>
+        <!-- #network -->
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #64748B;" text="4" />
+            <Label styleClass="popular-tag-badge" style="-fx-background-color: #EDE9FE; -fx-text-fill: #7C3AED;" text="#network" />
+            <ProgressBar progress="0.66" prefWidth="130" style="-fx-accent: #8B5CF6;" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="12" />
+        </HBox>
+        <!-- #ai -->
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #64748B;" text="5" />
+            <Label styleClass="popular-tag-badge" style="-fx-background-color: #FCE7F3; -fx-text-fill: #DB2777;" text="#ai" />
+            <ProgressBar progress="0.55" prefWidth="130" style="-fx-accent: #EC4899;" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="10" />
+        </HBox>
+    </VBox>
+
+    <Label style="-fx-text-fill: #3B82F6; -fx-font-size: 12px; -fx-cursor: hand;" text="View all tags analytics →" />
+</VBox>

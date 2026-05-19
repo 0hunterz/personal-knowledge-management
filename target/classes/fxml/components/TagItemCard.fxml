@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER_LEFT" styleClass="tag-item-card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox styleClass="tag-dot" style="-fx-background-color: #10B981;" />
+    <VBox spacing="2" HBox.hgrow="ALWAYS" style="-fx-padding: 0 0 0 10;">
+        <Label styleClass="tag-name-label" text="#study" />
+        <Label styleClass="tag-notes-label" text="18 notes" />
+    </VBox>
+    <Label styleClass="tag-action-icon" text="⋯" />
+</HBox>

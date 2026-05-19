@@ -39,6 +39,8 @@
         <ToggleButton text="Zen Mode" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
         <!-- Tags -->
         <ToggleButton text="Tags" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
+        <!-- Analytics -->
+        <ToggleButton text="Analytics" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
         <!-- Settings -->
         <ToggleButton text="Settings" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
     </VBox>

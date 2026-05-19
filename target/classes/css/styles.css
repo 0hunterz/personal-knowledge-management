@@ -369,3 +369,245 @@
     -fx-background-radius: 4px;
     -fx-padding: 4px;
 }
+
+/* =====================================================================
+   11. LAN HUB COMPONENTS
+   ===================================================================== */
+/* Trạng thái Connected */
+.lan-status-badge {
+    -fx-background-color: #F8FAFC;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 6px 15px;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1E293B;
+}
+
+/* Nút Create / Join Room */
+.room-action-btn {
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+    -fx-cursor: hand;
+    -fx-alignment: center-left;
+    -fx-spacing: 15px;
+}
+.room-action-btn:hover {
+    -fx-opacity: 0.8;
+}
+.room-create-btn {
+    -fx-background-color: #ECFDF5;
+}
+.room-join-btn {
+    -fx-background-color: #EFF6FF;
+}
+
+/* Member Avatar */
+.member-avatar {
+    -fx-background-radius: 20px;
+    -fx-pref-width: 32px;
+    -fx-pref-height: 32px;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Status Badges */
+.status-focusing {
+    -fx-background-color: #ECFDF5;
+    -fx-text-fill: #10B981;
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+.status-break {
+    -fx-background-color: #EFF6FF;
+    -fx-text-fill: #3B82F6;
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* LAN Airdrop Zone */
+.airdrop-zone {
+    -fx-background-color: #F8FAFC;
+    -fx-border-color: #CBD5E1;
+    -fx-border-style: dashed;
+    -fx-border-width: 2px;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 30px;
+    -fx-alignment: center;
+}
+
+/* Thanh Progress Bar chuyển file */
+.transfer-progress-bar {
+    -fx-accent: #10B981;
+    -fx-min-height: 6px;
+    -fx-pref-height: 6px;
+}
+.transfer-progress-bar .track {
+    -fx-background-color: #E2E8F0;
+    -fx-background-radius: 3px;
+}
+.transfer-progress-bar .bar {
+    -fx-background-color: #10B981;
+    -fx-background-radius: 3px;
+}
+
+/* =====================================================================
+   12. TASKS SCREEN COMPONENTS
+   ===================================================================== */
+/* Task Stat Card */
+.task-stat-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 10, 0, 0, 2);
+    -fx-padding: 15px;
+    -fx-min-width: 150px;
+}
+.stat-icon-wrapper {
+    -fx-background-radius: 25px;
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-alignment: center;
+}
+
+/* Status Badges for Tasks */
+.status-badge-completed {
+    -fx-background-color: #ECFDF5;
+    -fx-text-fill: #10B981;
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+.status-badge-inprogress {
+    -fx-background-color: #EFF6FF;
+    -fx-text-fill: #3B82F6;
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+.status-badge-pending {
+    -fx-background-color: #FFFBEB;
+    -fx-text-fill: #F59E0B;
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* Priority Colors */
+.priority-high { -fx-text-fill: #EF4444; -fx-font-weight: bold; -fx-font-size: 13px; }
+.priority-medium { -fx-text-fill: #F59E0B; -fx-font-weight: bold; -fx-font-size: 13px; }
+.priority-low { -fx-text-fill: #10B981; -fx-font-weight: bold; -fx-font-size: 13px; }
+
+/* Task Row Hover */
+.task-row {
+    -fx-padding: 12px 10px;
+    -fx-border-color: #F1F5F9;
+    -fx-border-width: 0 0 1 0;
+    -fx-cursor: hand;
+}
+.task-row:hover {
+    -fx-background-color: #F8FAFC;
+}
+
+/* Checkbox tuỳ chỉnh */
+.task-checkbox {
+    -fx-border-color: #CBD5E1;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-pref-width: 18px;
+    -fx-pref-height: 18px;
+    -fx-cursor: hand;
+}
+.task-checkbox-checked {
+    -fx-background-color: #10B981;
+    -fx-border-color: #10B981;
+    -fx-alignment: center;
+}
+.task-checkbox-circle {
+    -fx-border-radius: 20px;
+}
+
+/* Pagination Buttons */
+.pagination-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #64748B;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+.pagination-btn:hover {
+    -fx-background-color: #F1F5F9;
+    -fx-background-radius: 6px;
+}
+.pagination-btn-active {
+    -fx-background-color: #E6F8F1;
+    -fx-text-fill: #10B981;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+}
+
+/* =====================================================================
+   13. TAGS SCREEN
+   ===================================================================== */
+.tag-item-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 8, 0, 0, 2);
+    -fx-padding: 15px;
+    -fx-cursor: hand;
+}
+.tag-item-card:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.10), 14, 0, 0, 4);
+}
+.tag-dot {
+    -fx-pref-width: 10px;
+    -fx-pref-height: 10px;
+    -fx-background-radius: 5px;
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+}
+.tag-name-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1E293B;
+}
+.tag-notes-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #94A3B8;
+}
+.popular-tag-badge {
+    -fx-padding: 3px 10px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+.tag-table-row {
+    -fx-padding: 12px 5px;
+    -fx-border-color: #F1F5F9;
+    -fx-border-width: 0 0 1 0;
+}
+.tag-color-dot {
+    -fx-pref-width: 14px;
+    -fx-pref-height: 14px;
+    -fx-background-radius: 7px;
+    -fx-min-width: 14px;
+    -fx-min-height: 14px;
+}
+.tag-action-icon {
+    -fx-font-size: 14px;
+    -fx-text-fill: #94A3B8;
+    -fx-cursor: hand;
+    -fx-padding: 2px 5px;
+}
+.tag-action-icon:hover {
+    -fx-text-fill: #64748B;
+}

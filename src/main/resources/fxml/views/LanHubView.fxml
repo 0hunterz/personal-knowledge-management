@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<ScrollPane fitToWidth="true" style="-fx-background-color: #F8FAFC;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <HBox spacing="30" style="-fx-padding: 30; -fx-background-color: #F8FAFC;">
+        
+        <!-- Phần Trung tâm (Lan Hub Main Area) -->
+        <VBox spacing="20" HBox.hgrow="ALWAYS">
+            
+            <!-- Header -->
+            <HBox alignment="CENTER_LEFT">
+                <VBox spacing="5">
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1E293B;" text="LAN Focus Hub" />
+                        <Label style="-fx-font-size: 24px;" text="🖧" />
+                    </HBox>
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #64748B;" text="Study together locally. Stay focused together." />
+                </VBox>
+                
+                <Region HBox.hgrow="ALWAYS" />
+                
+                <!-- Status Badge -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <HBox alignment="CENTER" spacing="8" styleClass="lan-status-badge">
+                        <Circle radius="4" styleClass="lan-status-dot" />
+                        <Label text="Connected to LAN" />
+                    </HBox>
+                    <Label styleClass="btn-outline" text="🔄" />
+                </HBox>
+            </HBox>
+            
+            <!-- 3 Columns for LAN Features -->
+            <HBox spacing="20">
+                <!-- Column 1: Actions & Discover (Width ~250) -->
+                <VBox spacing="20" minWidth="220" prefWidth="250">
+                    <fx:include source="../components/LanRoomActionsCard.fxml" />
+                    <fx:include source="../components/LanDiscoverRoomsCard.fxml" />
+                </VBox>
+                
+                <!-- Column 2: Active Room (Center, widest, HGrow = ALWAYS) -->
+                <VBox spacing="20" HBox.hgrow="ALWAYS" minWidth="350">
+                    <fx:include source="../components/LanActiveRoomCard.fxml" />
+                </VBox>
+                
+                <!-- Column 3: File Transfers (Width ~280) -->
+                <VBox spacing="20" minWidth="250" prefWidth="280">
+                    <fx:include source="../components/LanAirdropCard.fxml" />
+                    <fx:include source="../components/LanFileTransfersCard.fxml" />
+                </VBox>
+            </HBox>
+        </VBox>
+        
+        <!-- Cột Phải (Widgets thông thường) -->
+        <VBox minWidth="300" prefWidth="300" spacing="20">
+            <fx:include source="../components/QuoteCard.fxml" />
+            <fx:include source="../components/QuickNoteCard.fxml" />
+            <fx:include source="../components/DailyStreakCard.fxml" />
+        </VBox>
+        
+    </HBox>
+</ScrollPane>
