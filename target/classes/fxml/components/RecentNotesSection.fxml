@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <HBox alignment="CENTER_LEFT">
+        <Label text="📄 Recent Notes" styleClass="card-title" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="View all →" style="-fx-background-color: transparent; -fx-text-fill: #3B82F6; -fx-font-weight: bold; -fx-cursor: hand;" />
+    </HBox>
+
+    <!-- HBox chứa các NoteCard nằm ngang, có thể bọc trong ScrollPane nếu nhiều -->
+    <HBox spacing="15" fx:id="notesContainer">
+        <!-- Chỗ này sẽ inject các NoteCard.fxml vào qua code hoặc include tĩnh -->
+        <fx:include source="NoteCard.fxml" />
+        <fx:include source="NoteCard.fxml" />
+        <fx:include source="NoteCard.fxml" />
+        <fx:include source="NoteCard.fxml" />
+    </HBox>
+
+</VBox>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Card dùng màu nền xanh nhạt -->
+<VBox spacing="15" styleClass="card" style="-fx-background-color: #EFF6FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="❝" style="-fx-text-fill: #3B82F6; -fx-font-size: 18px; -fx-font-weight: bold;" />
+        <Label text="Quote of the day" styleClass="card-title" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="⋮" style="-fx-background-color: transparent; -fx-font-size: 16px; -fx-cursor: hand; -fx-text-fill: #64748B;" />
+    </HBox>
+
+    <Label text="&#34;Discipline is the bridge between goals and accomplishment.&#34;" wrapText="true" style="-fx-font-size: 14px; -fx-text-fill: #1E293B; -fx-line-spacing: 5px;" />
+    
+    <Label text="— Jim Rohn" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" />
+</VBox>

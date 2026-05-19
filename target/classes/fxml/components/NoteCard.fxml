@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Một Note Card độc lập -->
+
+<VBox minWidth="200" prefWidth="220" spacing="10" style="-fx-padding: 15; -fx-cursor: hand;" styleClass="card" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Icon mảng -->
+    <StackPane alignment="CENTER_LEFT" stylesheets="@styles.css">
+        <Region style="-fx-background-color: #E0F2FE; -fx-background-radius: 8; -fx-pref-width: 32; -fx-pref-height: 32;" />
+        <Label style="-fx-font-size: 16px; -fx-padding: 0 0 0 8;" text="📄" />
+    </StackPane>
+
+    <!-- Tiêu đề -->
+    <Label fx:id="titleLabel" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1E293B;" stylesheets="@styles.css" text="Project Plan" />
+
+    <!-- Nội dung mô tả ngắn -->
+    <Label fx:id="previewLabel" maxHeight="50" style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-line-spacing: 3px;" stylesheets="@styles.css" text="## Overview&#10;This project aims to build a LAN focus room application..." wrapText="true" />
+
+    <Region stylesheets="@styles.css" VBox.vgrow="ALWAYS" />
+
+    <!-- Tags -->
+    <HBox spacing="8" stylesheets="@styles.css">
+        <Label style="-fx-background-color: #E0F2FE; -fx-text-fill: #0284C7;" styleClass="tag-badge" text="#project" />
+        <Label style="-fx-background-color: #E0F2FE; -fx-text-fill: #0284C7;" styleClass="tag-badge" text="#plan" />
+    </HBox>
+
+    <!-- Thời gian cập nhật -->
+    <Label style="-fx-font-size: 11px; -fx-text-fill: #94A3B8; -fx-padding: 5 0 0 0;" stylesheets="@styles.css" text="Updated 2h ago" />
+</VBox>

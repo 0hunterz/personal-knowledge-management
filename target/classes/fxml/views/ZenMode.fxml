@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<ScrollPane fitToHeight="true"
+            fitToWidth="true"
+            hbarPolicy="AS_NEEDED"
+            style="-fx-background: transparent; -fx-background-color: transparent;"
+            vbarPolicy="AS_NEEDED"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1">
+<StackPane minHeight="560"
+           minWidth="760"
+           style="-fx-background-color: linear-gradient(to bottom right, #E6F8F1, #EFF6FF);">
+
+    <Pane mouseTransparent="true">
+        <Rectangle arcHeight="180" arcWidth="180" fill="#DDF7EE" height="170" opacity="0.75" width="720"
+                   x="-80" y="520" />
+        <Rectangle arcHeight="180" arcWidth="180" fill="#DBEAFE" height="190" opacity="0.75" width="780"
+                   x="470" y="500" />
+        <Circle centerX="170" centerY="170" fill="#FFFFFF" opacity="0.26" radius="120" />
+        <Circle centerX="880" centerY="115" fill="#FFFFFF" opacity="0.34" radius="95" />
+    </Pane>
+
+    <VBox spacing="14" style="-fx-padding: 16 20 16 20;">
+
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <HBox alignment="CENTER_LEFT" spacing="12"
+                  style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 12; -fx-padding: 10 14; -fx-effect: dropshadow(three-pass-box, rgba(15,23,42,0.06), 12, 0, 0, 3);">
+                <Label style="-fx-font-size: 18px; -fx-text-fill: #10B981;" text="Focus-Node" />
+                <VBox spacing="2">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1E293B;" text="Zen Mode" />
+                    <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Stay focused. You've got this." />
+                </VBox>
+            </HBox>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <HBox alignment="CENTER_LEFT" spacing="12"
+                  style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 12; -fx-padding: 10 14; -fx-effect: dropshadow(three-pass-box, rgba(15,23,42,0.06), 12, 0, 0, 3);">
+                <Label style="-fx-font-size: 16px; -fx-text-fill: #64748B;" text="LAN" />
+                <VBox spacing="2">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1E293B;" text="LAN Room: Focus Room A" />
+                    <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="4 members focusing" />
+                </VBox>
+                <Label style="-fx-font-size: 16px; -fx-text-fill: #10B981;" text="||||" />
+            </HBox>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Button style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 12; -fx-padding: 10 14; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-cursor: hand;"
+                    text="Exit Zen Mode" />
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="16" VBox.vgrow="ALWAYS">
+
+            <VBox maxWidth="230" minWidth="205" prefWidth="220" spacing="10"
+                  style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 14; -fx-padding: 14; -fx-effect: dropshadow(three-pass-box, rgba(15,23,42,0.07), 14, 0, 0, 4);">
+                <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1E293B;" text="Session Plan" />
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Circle fill="#10B981" radius="7" />
+                    <VBox spacing="2">
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #10B981;" text="Focus 1" />
+                        <Label wrapText="true" style="-fx-font-size: 12px; -fx-text-fill: #10B981;" text="Build LAN connection module" />
+                    </VBox>
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="25 min" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Circle fill="TRANSPARENT" radius="7" stroke="#CBD5E1" strokeWidth="2" />
+                    <Label style="-fx-text-fill: #334155;" text="Break 1" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="5 min" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Circle fill="TRANSPARENT" radius="7" stroke="#94DCCB" strokeWidth="2" />
+                    <Label style="-fx-text-fill: #334155;" text="Focus 2" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="25 min" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Circle fill="TRANSPARENT" radius="7" stroke="#CBD5E1" strokeWidth="2" />
+                    <Label style="-fx-text-fill: #334155;" text="Break 2" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="5 min" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Circle fill="TRANSPARENT" radius="7" stroke="#94DCCB" strokeWidth="2" />
+                    <Label style="-fx-text-fill: #334155;" text="Focus 3" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="25 min" />
+                </HBox>
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="10" HBox.hgrow="ALWAYS">
+                <Label style="-fx-font-size: 14px; -fx-text-fill: #64748B; -fx-font-weight: bold;" text="Focus on what matters" />
+                <Label wrapText="true" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0F172A; -fx-text-alignment: center;" text="Build LAN connection module" />
+                <Label style="-fx-background-color: rgba(16,185,129,0.10); -fx-background-radius: 18; -fx-padding: 5 14; -fx-text-fill: #334155;"
+                       text="Project" />
+
+                <StackPane minHeight="230" minWidth="230" prefHeight="250" prefWidth="250">
+                    <Circle fill="TRANSPARENT" radius="112" stroke="#E2E8F0" strokeWidth="8" />
+                    <Circle fill="TRANSPARENT" radius="112" stroke="#10B981" strokeDashArray="488, 220" strokeLineCap="ROUND" strokeWidth="8" />
+                    <VBox alignment="CENTER" spacing="8">
+                        <Label style="-fx-font-size: 48px; -fx-font-weight: bold; -fx-text-fill: #0F172A;" text="25:00" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #64748B;" text="Focus Time" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-padding: 8 0 0 0;" text="Session 1 of 4" />
+                    </VBox>
+                </StackPane>
+
+                <Label style="-fx-background-color: rgba(255,255,255,0.78); -fx-background-radius: 18; -fx-padding: 6 14; -fx-text-fill: #64748B;"
+                       text="Ends at 10:45 AM" />
+            </VBox>
+
+            <VBox maxWidth="230" minWidth="205" prefWidth="220" spacing="12">
+                <VBox spacing="10"
+                      style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 14; -fx-padding: 14; -fx-effect: dropshadow(three-pass-box, rgba(15,23,42,0.07), 14, 0, 0, 4);">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1E293B;" text="Team Focus" />
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Circle fill="#6EE7B7" radius="13" />
+                        <Label style="-fx-font-weight: bold;" text="You (Host)" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label style="-fx-background-color: #E6F8F1; -fx-background-radius: 14; -fx-padding: 4 10; -fx-text-fill: #10B981;" text="Focusing" />
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Circle fill="#C4B5FD" radius="13" />
+                        <Label style="-fx-font-weight: bold;" text="Alice" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label style="-fx-background-color: #E6F8F1; -fx-background-radius: 14; -fx-padding: 4 10; -fx-text-fill: #10B981;" text="Focusing" />
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Circle fill="#FDE68A" radius="13" />
+                        <Label style="-fx-font-weight: bold;" text="Bob" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label style="-fx-background-color: #DBEAFE; -fx-background-radius: 14; -fx-padding: 4 10; -fx-text-fill: #2563EB;" text="Break" />
+                    </HBox>
+
+                    <Button style="-fx-background-color: transparent; -fx-text-fill: #3B82F6; -fx-font-weight: bold; -fx-cursor: hand;"
+                            text="View all members ->" />
+                </VBox>
+
+                <VBox spacing="10"
+                      style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 14; -fx-padding: 14; -fx-effect: dropshadow(three-pass-box, rgba(15,23,42,0.07), 14, 0, 0, 4);">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1E293B;" text="Focus Tips" />
+                    <VBox spacing="8" style="-fx-background-color: #EFF6FF; -fx-background-radius: 12; -fx-padding: 14;">
+                        <Label wrapText="true" style="-fx-font-size: 14px; -fx-text-fill: #1E293B;"
+                               text="&quot;Distractions are the enemy of deep work.&quot;" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="- Cal Newport" />
+                    </VBox>
+                </VBox>
+            </VBox>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="18">
+            <Button style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 12; -fx-padding: 10 18; -fx-text-fill: #334155; -fx-font-weight: bold; -fx-cursor: hand;"
+                    text="Lo-fi Beats" />
+            <Button style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 50; -fx-min-width: 44; -fx-min-height: 44; -fx-text-fill: #64748B; -fx-font-size: 16px; -fx-cursor: hand;"
+                    text="|&lt;" />
+            <Button style="-fx-background-color: #10B981; -fx-background-radius: 60; -fx-min-width: 62; -fx-min-height: 62; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-cursor: hand;"
+                    text="||" />
+            <Button style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 50; -fx-min-width: 44; -fx-min-height: 44; -fx-text-fill: #64748B; -fx-font-size: 16px; -fx-cursor: hand;"
+                    text="&gt;|" />
+            <Button style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 12; -fx-padding: 10 18; -fx-text-fill: #334155; -fx-font-weight: bold; -fx-cursor: hand;"
+                    text="End Session" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <HBox alignment="CENTER_LEFT" spacing="12"
+                  style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 12; -fx-padding: 9 12;">
+                <Label style="-fx-text-fill: #64748B; -fx-font-weight: bold;" text="Ambient Sounds" />
+                <Label style="-fx-text-fill: #64748B;" text="Rain" />
+            </HBox>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <HBox alignment="CENTER" maxWidth="360" spacing="12"
+                  style="-fx-background-color: rgba(255,255,255,0.62); -fx-background-radius: 18; -fx-padding: 9 16;">
+                <Label wrapText="true" style="-fx-text-fill: #10B981; -fx-font-size: 12px;" text="Small consistent effort brings lasting results." />
+            </HBox>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <HBox alignment="CENTER" spacing="12"
+                  style="-fx-background-color: rgba(255,255,255,0.82); -fx-background-radius: 12; -fx-padding: 9 12;">
+                <Label style="-fx-text-fill: #64748B; -fx-font-weight: bold;" text="Volume" />
+                <Slider prefWidth="110" value="70" />
+                <ProgressBar progress="0.7" prefWidth="60" />
+            </HBox>
+        </HBox>
+    </VBox>
+</StackPane>
+</ScrollPane>

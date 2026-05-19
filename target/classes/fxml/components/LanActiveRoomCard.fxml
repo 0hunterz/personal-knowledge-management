@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox spacing="25" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <!-- 1. Header (Active Room Info) -->
+    <VBox spacing="20">
+        <HBox alignment="CENTER_LEFT" spacing="15">
+            <Label style="-fx-font-size: 24px;" text="👥" />
+            <VBox spacing="2">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Focus Room A" />
+                    <Label style="-fx-background-color: #ECFDF5; -fx-text-fill: #10B981; -fx-padding: 2 6; -fx-background-radius: 4; -fx-font-size: 10px; -fx-font-weight: bold;" text="Host" />
+                </HBox>
+                <Label style="-fx-text-fill: #64748B; -fx-font-size: 12px;" text="IP: 192.168.1.105  •  Port: 5050" />
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label styleClass="btn-outline" style="-fx-text-fill: #EF4444; -fx-border-color: #FCA5A5;" text="🚪 Leave Room" />
+        </HBox>
+        
+        <HBox spacing="15">
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS" style="-fx-background-color: #F8FAFC; -fx-background-radius: 8; -fx-padding: 10;">
+                <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="4" />
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="Members" />
+            </VBox>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS" style="-fx-background-color: #F8FAFC; -fx-background-radius: 8; -fx-padding: 10;">
+                <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #2563EB;" text="25:00" />
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="Synced Time" />
+            </VBox>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS" style="-fx-background-color: #F8FAFC; -fx-background-radius: 8; -fx-padding: 10;">
+                <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #10B981;" text="Focus" />
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="Mode" />
+            </VBox>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS" style="-fx-background-color: #F8FAFC; -fx-background-radius: 8; -fx-padding: 10;">
+                <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #10B981;" text="Good" />
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="Connection" />
+            </VBox>
+        </HBox>
+    </VBox>
+    
+    <!-- 2. Members List -->
+    <VBox spacing="10">
+        <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Members" />
+        
+        <!-- You -->
+        <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 8 0; -fx-border-color: #F1F5F9; -fx-border-width: 0 0 1 0;">
+            <Label styleClass="member-avatar" style="-fx-background-color: #10B981;" text="U" />
+            <VBox>
+                <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #10B981;" text="You (Host) 👑" />
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #94A3B8;" text="192.168.1.105" />
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label styleClass="status-focusing" text="Focusing" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-pref-width: 40;" text="25:00" />
+            <Label style="-fx-text-fill: #10B981;" text="🔊" />
+        </HBox>
+        
+        <!-- Alice -->
+        <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 8 0; -fx-border-color: #F1F5F9; -fx-border-width: 0 0 1 0;">
+            <Label styleClass="member-avatar" style="-fx-background-color: #A78BFA;" text="A" />
+            <VBox>
+                <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Alice" />
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #94A3B8;" text="192.168.1.102" />
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label styleClass="status-focusing" text="Focusing" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-pref-width: 40;" text="25:00" />
+            <Label style="-fx-text-fill: #64748B;" text="🔊" />
+        </HBox>
+        
+        <!-- Bob -->
+        <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 8 0; -fx-border-color: #F1F5F9; -fx-border-width: 0 0 1 0;">
+            <Label styleClass="member-avatar" style="-fx-background-color: #FBBF24;" text="B" />
+            <VBox>
+                <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Bob" />
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #94A3B8;" text="192.168.1.103" />
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label styleClass="status-break" text="Break" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-pref-width: 40;" text="05:00" />
+            <Label style="-fx-text-fill: #EF4444;" text="🔇" />
+        </HBox>
+        
+        <!-- Charlie -->
+        <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 8 0;">
+            <Label styleClass="member-avatar" style="-fx-background-color: #93C5FD;" text="C" />
+            <VBox>
+                <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Charlie" />
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #94A3B8;" text="192.168.1.104" />
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label styleClass="status-focusing" text="Focusing" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-pref-width: 40;" text="25:00" />
+            <Label style="-fx-text-fill: #64748B;" text="🔊" />
+        </HBox>
+    </VBox>
+    
+    <!-- 3. Room Activity (Tích hợp luôn vào bên dưới) -->
+    <VBox spacing="10" style="-fx-background-color: #F8FAFC; -fx-background-radius: 12; -fx-padding: 15;">
+        <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Room Activity" />
+        <VBox spacing="8">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #94A3B8;" text="10:00" />
+                <Circle radius="3" fill="#10B981" />
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="You created the room" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #94A3B8;" text="10:01" />
+                <Circle radius="3" fill="#3B82F6" />
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="Alice joined the room" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #94A3B8;" text="10:02" />
+                <Circle radius="3" fill="#3B82F6" />
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="Bob joined the room" />
+            </HBox>
+        </VBox>
+    </VBox>
+</VBox>

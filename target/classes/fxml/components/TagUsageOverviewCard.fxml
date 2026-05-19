@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT">
+        <Label styleClass="card-title" text="Tag Usage Overview" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label style="-fx-text-fill: #94A3B8; -fx-cursor: hand;" text="⋯" />
+    </HBox>
+
+    <!-- Stacked bar chart thay thế Pie Chart -->
+    <VBox spacing="4" style="-fx-padding: 5 0;">
+        <HBox prefHeight="16">
+            <VBox style="-fx-background-color: #10B981; -fx-background-radius: 4 0 0 4;" prefWidth="75" prefHeight="16" />
+            <VBox style="-fx-background-color: #3B82F6;" prefWidth="62" prefHeight="16" />
+            <VBox style="-fx-background-color: #F59E0B;" prefWidth="52" prefHeight="16" />
+            <VBox style="-fx-background-color: #8B5CF6;" prefWidth="41" prefHeight="16" />
+            <VBox style="-fx-background-color: #CBD5E1; -fx-background-radius: 0 4 4 0;" prefWidth="30" prefHeight="16" />
+        </HBox>
+        <Label style="-fx-font-size: 10px; -fx-text-fill: #94A3B8;" text="Tag distribution by usage" />
+    </VBox>
+
+    <!-- Legend -->
+    <VBox spacing="8">
+        <HBox spacing="8" alignment="CENTER_LEFT">
+            <VBox styleClass="tag-color-dot" style="-fx-background-color: #10B981;" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="Study" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #64748B;" text="28%" />
+        </HBox>
+        <HBox spacing="8" alignment="CENTER_LEFT">
+            <VBox styleClass="tag-color-dot" style="-fx-background-color: #3B82F6;" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="Project" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #64748B;" text="24%" />
+        </HBox>
+        <HBox spacing="8" alignment="CENTER_LEFT">
+            <VBox styleClass="tag-color-dot" style="-fx-background-color: #F59E0B;" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="Java" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #64748B;" text="20%" />
+        </HBox>
+        <HBox spacing="8" alignment="CENTER_LEFT">
+            <VBox styleClass="tag-color-dot" style="-fx-background-color: #8B5CF6;" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="Network" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #64748B;" text="16%" />
+        </HBox>
+        <HBox spacing="8" alignment="CENTER_LEFT">
+            <VBox styleClass="tag-color-dot" style="-fx-background-color: #CBD5E1;" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="Others" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #64748B;" text="12%" />
+        </HBox>
+    </VBox>
+</VBox>
