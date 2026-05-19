@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" styleClass="zen-glass-card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <Label styleClass="zen-card-title-large" text="Focus Tips" />
+    <VBox spacing="8" styleClass="zen-tip-box">
+        <Label wrapText="true" styleClass="zen-tip-text" text="&quot;Distractions are the enemy of deep work.&quot;" />
+        <Label styleClass="zen-muted" text="- Cal Newport" />
+    </VBox>
+</VBox>

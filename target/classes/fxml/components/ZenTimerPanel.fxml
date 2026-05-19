@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <Label styleClass="zen-eyebrow" text="Focus on what matters" />
+    <Label wrapText="true" styleClass="zen-task-title" text="Build LAN connection module" />
+    <Label styleClass="zen-category-pill" text="Project" />
+
+    <StackPane minHeight="230" minWidth="230" prefHeight="250" prefWidth="250">
+        <Circle fill="TRANSPARENT" radius="112" stroke="#E2E8F0" strokeWidth="8" />
+        <Circle fill="TRANSPARENT" radius="112" stroke="#10B981" strokeDashArray="488, 220" strokeLineCap="ROUND" strokeWidth="8" />
+        <VBox alignment="CENTER" spacing="8">
+            <Label styleClass="zen-timer-text" text="25:00" />
+            <Label styleClass="zen-timer-label" text="Focus Time" />
+            <Label styleClass="zen-session-label" text="Session 1 of 4" />
+        </VBox>
+    </StackPane>
+
+    <Label styleClass="zen-time-pill" text="Ends at 10:45 AM" />
+</VBox>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox maxWidth="230" minWidth="205" prefWidth="220" spacing="10" styleClass="zen-glass-card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <Label styleClass="zen-card-title-large" text="Session Plan" />
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Circle fill="#10B981" radius="7" />
+        <VBox spacing="2">
+            <Label styleClass="zen-active-text-bold" text="Focus 1" />
+            <Label wrapText="true" styleClass="zen-active-text-small" text="Build LAN connection module" />
+        </VBox>
+        <Region HBox.hgrow="ALWAYS" />
+        <Label styleClass="zen-muted" text="25 min" />
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Circle fill="TRANSPARENT" radius="7" stroke="#CBD5E1" strokeWidth="2" />
+        <Label styleClass="zen-body-text" text="Break 1" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label styleClass="zen-muted" text="5 min" />
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Circle fill="TRANSPARENT" radius="7" stroke="#94DCCB" strokeWidth="2" />
+        <Label styleClass="zen-body-text" text="Focus 2" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label styleClass="zen-muted" text="25 min" />
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Circle fill="TRANSPARENT" radius="7" stroke="#CBD5E1" strokeWidth="2" />
+        <Label styleClass="zen-body-text" text="Break 2" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label styleClass="zen-muted" text="5 min" />
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Circle fill="TRANSPARENT" radius="7" stroke="#94DCCB" strokeWidth="2" />
+        <Label styleClass="zen-body-text" text="Focus 3" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label styleClass="zen-muted" text="25 min" />
+    </HBox>
+</VBox>

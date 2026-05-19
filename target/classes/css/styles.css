@@ -611,3 +611,189 @@
 .tag-action-icon:hover {
     -fx-text-fill: #64748B;
 }
+
+/* =====================================================================
+   14. ZEN MODE
+   ===================================================================== */
+.zen-scroll {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+.zen-root {
+    -fx-background-color: linear-gradient(to bottom right, #E6F8F1, #EFF6FF);
+}
+.zen-content {
+    -fx-padding: 16px 20px 16px 20px;
+}
+.zen-glass-pill,
+.zen-glass-card,
+.zen-glass-small,
+.zen-exit-button,
+.zen-control-button,
+.zen-round-button {
+    -fx-background-color: rgba(255,255,255,0.82);
+    -fx-effect: dropshadow(three-pass-box, rgba(15,23,42,0.07), 14, 0, 0, 4);
+}
+.zen-glass-pill {
+    -fx-background-radius: 12px;
+    -fx-padding: 10px 14px;
+}
+.zen-glass-card {
+    -fx-background-radius: 14px;
+    -fx-padding: 14px;
+}
+.zen-glass-small {
+    -fx-background-radius: 12px;
+    -fx-padding: 9px 12px;
+}
+.zen-brand-mark {
+    -fx-font-size: 18px;
+    -fx-text-fill: #10B981;
+}
+.zen-card-title,
+.zen-card-title-small,
+.zen-card-title-large,
+.zen-member-name,
+.zen-bottom-title {
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E293B;
+}
+.zen-card-title {
+    -fx-font-size: 14px;
+}
+.zen-card-title-small {
+    -fx-font-size: 13px;
+}
+.zen-card-title-large {
+    -fx-font-size: 16px;
+}
+.zen-muted,
+.zen-muted-icon {
+    -fx-text-fill: #64748B;
+}
+.zen-muted {
+    -fx-font-size: 12px;
+}
+.zen-muted-icon,
+.zen-signal {
+    -fx-font-size: 16px;
+}
+.zen-signal,
+.zen-active-text-bold,
+.zen-active-text-small,
+.zen-message-text {
+    -fx-text-fill: #10B981;
+}
+.zen-active-text-bold {
+    -fx-font-weight: bold;
+}
+.zen-active-text-small {
+    -fx-font-size: 12px;
+}
+.zen-body-text {
+    -fx-text-fill: #334155;
+}
+.zen-eyebrow {
+    -fx-font-size: 14px;
+    -fx-text-fill: #64748B;
+    -fx-font-weight: bold;
+}
+.zen-task-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0F172A;
+    -fx-text-alignment: center;
+}
+.zen-category-pill {
+    -fx-background-color: rgba(16,185,129,0.10);
+    -fx-background-radius: 18px;
+    -fx-padding: 5px 14px;
+    -fx-text-fill: #334155;
+}
+.zen-timer-text {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0F172A;
+}
+.zen-timer-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #64748B;
+}
+.zen-session-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #64748B;
+    -fx-padding: 8px 0 0 0;
+}
+.zen-time-pill {
+    -fx-background-color: rgba(255,255,255,0.78);
+    -fx-background-radius: 18px;
+    -fx-padding: 6px 14px;
+    -fx-text-fill: #64748B;
+}
+.zen-status-focus,
+.zen-status-break {
+    -fx-background-radius: 14px;
+    -fx-padding: 4px 10px;
+}
+.zen-status-focus {
+    -fx-background-color: #E6F8F1;
+    -fx-text-fill: #10B981;
+}
+.zen-status-break {
+    -fx-background-color: #DBEAFE;
+    -fx-text-fill: #2563EB;
+}
+.zen-tip-box {
+    -fx-background-color: #EFF6FF;
+    -fx-background-radius: 12px;
+    -fx-padding: 14px;
+}
+.zen-tip-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1E293B;
+}
+.zen-link-button,
+.zen-exit-button,
+.zen-control-button,
+.zen-round-button,
+.zen-play-button {
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.zen-link-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3B82F6;
+}
+.zen-exit-button {
+    -fx-background-radius: 12px;
+    -fx-padding: 10px 14px;
+    -fx-text-fill: #1E293B;
+}
+.zen-control-button {
+    -fx-background-radius: 12px;
+    -fx-padding: 10px 18px;
+    -fx-text-fill: #334155;
+}
+.zen-round-button {
+    -fx-background-radius: 50px;
+    -fx-min-width: 44px;
+    -fx-min-height: 44px;
+    -fx-text-fill: #64748B;
+    -fx-font-size: 16px;
+}
+.zen-play-button {
+    -fx-background-color: #10B981;
+    -fx-background-radius: 60px;
+    -fx-min-width: 62px;
+    -fx-min-height: 62px;
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+}
+.zen-message-pill {
+    -fx-background-color: rgba(255,255,255,0.62);
+    -fx-background-radius: 18px;
+    -fx-padding: 9px 16px;
+}
+.zen-message-text {
+    -fx-font-size: 12px;
+}
