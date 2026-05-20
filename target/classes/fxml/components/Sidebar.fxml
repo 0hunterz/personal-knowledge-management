@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.geometry.Insets?>
 
-<VBox prefWidth="250" spacing="10" style="-fx-background-color: #FFFFFF; -fx-border-color: #E2E8F0; -fx-border-width: 0 1 0 0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefWidth="310" spacing="10" style="-fx-background-color: #FFFFFF; -fx-border-color: #E2E8F0; -fx-border-width: 0 1 0 0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.SidebarController">
     <padding>
         <Insets top="30" right="20" bottom="30" left="20"/>
     </padding>
 
     <!-- Logo Area -->
-    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 0 30 0;">
-        <StackPane style="-fx-background-color: #E6F8F1; -fx-background-radius: 10;" prefWidth="32" prefHeight="32">
-            <Label text="⌁" style="-fx-text-fill: #10B981; -fx-font-size: 22px; -fx-font-weight: bold;" />
+    <HBox alignment="CENTER_LEFT" spacing="14" style="-fx-padding: 0 0 30 0;">
+        <StackPane styleClass="sidebar-logo-frame">
+            <ImageView fitWidth="84" fitHeight="84" preserveRatio="true" smooth="true" pickOnBounds="true">
+                <image>
+                    <Image url="@/images/logo.png" />
+                </image>
+            </ImageView>
         </StackPane>
         <VBox>
             <Label text="Focus-Node" style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-text-fill: #1E293B;" />
@@ -26,20 +32,20 @@
             <ToggleGroup fx:id="menuGroup"/>
         </fx:define>
         <!-- Home -->
-        <ToggleButton text="Home" toggleGroup="$menuGroup" selected="true" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
+        <ToggleButton text="Home" toggleGroup="$menuGroup" selected="true" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showHome" />
         <!-- Knowledge -->
-        <ToggleButton text="Knowledge" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
+        <ToggleButton text="Knowledge" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showKnowledge" />
         <!-- LAN Hub -->
-        <ToggleButton text="LAN Hub" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
+        <ToggleButton text="LAN Hub" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showLanHub" />
         <Separator style="-fx-padding: 10 0;" />
         <!-- Tasks -->
-        <ToggleButton text="Tasks" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
+        <ToggleButton text="Tasks" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showTasks" />
         <!-- Zen Mode -->
-        <ToggleButton text="Zen Mode" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
+        <ToggleButton text="Zen Mode" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showZenMode" />
         <!-- Tags -->
-        <ToggleButton text="Tags" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
+        <ToggleButton text="Tags" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showTags" />
         <!-- Analytics -->
-        <ToggleButton text="Analytics" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
+        <ToggleButton text="Analytics" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showAnalytics" />
         <!-- Settings -->
         <ToggleButton text="Settings" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" />
     </VBox>

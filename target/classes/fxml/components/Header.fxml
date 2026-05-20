@@ -5,21 +5,20 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox alignment="CENTER_LEFT" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
-    <VBox spacing="5" stylesheets="@styles.css">
-        <Label fx:id="greetingLabel" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" stylesheets="@styles.css" text="Good morning, User! 👋" />
-        <Label style="-fx-font-size: 14px; -fx-text-fill: #64748B;" stylesheets="@styles.css" text="Small steps every day lead to big changes." />
+<HBox alignment="CENTER_LEFT" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox spacing="5">
+        <Label fx:id="greetingLabel" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="Good morning, User! 👋" />
+        <Label style="-fx-font-size: 14px; -fx-text-fill: #64748B;" text="Small steps every day lead to big changes." />
     </VBox>
 
-    <Region stylesheets="@styles.css" HBox.hgrow="ALWAYS" />
+    <Region HBox.hgrow="ALWAYS" />
 
     <!-- Widget Ngày tháng -->
-    <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #FFFFFF; -fx-padding: 8 16; -fx-background-radius: 20; -fx-border-color: #E2E8F0; -fx-border-radius: 20;" stylesheets="@styles.css">
-        <!-- Icon Lịch giả lập -->
-        <Label style="-fx-font-size: 16px;" stylesheets="@styles.css" text="📅" />
+    <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #FFFFFF; -fx-padding: 8 16; -fx-background-radius: 20; -fx-border-color: #E2E8F0; -fx-border-radius: 20;">
+        <Label style="-fx-font-size: 16px;" text="📅" />
         <VBox>
-            <Label fx:id="dateLabel" style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1E293B;" stylesheets="@styles.css" text="May 24, 2025" />
-            <Label fx:id="dayLabel" style="-fx-font-size: 11px; -fx-text-fill: #64748B;" stylesheets="@styles.css" text="Saturday" />
+            <Label fx:id="dateLabel" style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1E293B;" text="May 24, 2025" />
+            <Label fx:id="dayLabel" style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="Saturday" />
         </VBox>
     </HBox>
 </HBox>

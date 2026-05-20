@@ -2,10 +2,14 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.focusnode.controller.MainLayoutController">
+    <left>
+        <fx:include source="../components/Sidebar.fxml" />
+    </left>
+
     <center>
-        <StackPane fx:id="contentArea" style="-fx-background-color: #F8FAFC;">
-            <fx:include source="ZenMode.fxml"/>
-        </StackPane>
+        <StackPane fx:id="contentArea" style="-fx-background-color: #F8FAFC;" />
     </center>
 </BorderPane>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.shape.Circle?>
 
-<HBox alignment="CENTER_LEFT" spacing="15" styleClass="card" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER_LEFT" spacing="15" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
 
     <Circle fx:id="checkCircle" fill="TRANSPARENT" radius="10" strokeWidth="2" styleClass="check-circle, circle-green" />
 
@@ -16,10 +15,6 @@
 
     <Region HBox.hgrow="ALWAYS" />
 
-    <Label fx:id="durationLabel" styleClass="task-duration" stylesheets="@../../css/styles.css" text="60 min" />
-   <stylesheets>
-      <URL value="@../../css/styles.css" />
-      <URL value="@../../css/styles.css" />
-   </stylesheets>
+    <Label fx:id="durationLabel" styleClass="task-duration" text="60 min" />
 
 </HBox>

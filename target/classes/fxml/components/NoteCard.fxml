@@ -8,27 +8,27 @@
 
 <!-- Một Note Card độc lập -->
 
-<VBox minWidth="200" prefWidth="220" spacing="10" style="-fx-padding: 15; -fx-cursor: hand;" styleClass="card" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<VBox minWidth="200" prefWidth="220" spacing="10" style="-fx-padding: 15; -fx-cursor: hand;" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
     <!-- Icon mảng -->
-    <StackPane alignment="CENTER_LEFT" stylesheets="@styles.css">
+    <StackPane alignment="CENTER_LEFT">
         <Region style="-fx-background-color: #E0F2FE; -fx-background-radius: 8; -fx-pref-width: 32; -fx-pref-height: 32;" />
         <Label style="-fx-font-size: 16px; -fx-padding: 0 0 0 8;" text="📄" />
     </StackPane>
 
     <!-- Tiêu đề -->
-    <Label fx:id="titleLabel" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1E293B;" stylesheets="@styles.css" text="Project Plan" />
+    <Label fx:id="titleLabel" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1E293B;" text="Project Plan" />
 
     <!-- Nội dung mô tả ngắn -->
-    <Label fx:id="previewLabel" maxHeight="50" style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-line-spacing: 3px;" stylesheets="@styles.css" text="## Overview&#10;This project aims to build a LAN focus room application..." wrapText="true" />
+    <Label fx:id="previewLabel" maxHeight="50" style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-line-spacing: 3px;" text="## Overview&#10;This project aims to build a LAN focus room application..." wrapText="true" />
 
-    <Region stylesheets="@styles.css" VBox.vgrow="ALWAYS" />
+    <Region VBox.vgrow="ALWAYS" />
 
     <!-- Tags -->
-    <HBox spacing="8" stylesheets="@styles.css">
+    <HBox spacing="8">
         <Label style="-fx-background-color: #E0F2FE; -fx-text-fill: #0284C7;" styleClass="tag-badge" text="#project" />
         <Label style="-fx-background-color: #E0F2FE; -fx-text-fill: #0284C7;" styleClass="tag-badge" text="#plan" />
     </HBox>
 
     <!-- Thời gian cập nhật -->
-    <Label style="-fx-font-size: 11px; -fx-text-fill: #94A3B8; -fx-padding: 5 0 0 0;" stylesheets="@styles.css" text="Updated 2h ago" />
+    <Label style="-fx-font-size: 11px; -fx-text-fill: #94A3B8; -fx-padding: 5 0 0 0;" text="Updated 2h ago" />
 </VBox>
