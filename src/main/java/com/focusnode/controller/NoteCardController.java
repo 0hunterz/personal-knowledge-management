@@ -41,7 +41,7 @@ public class NoteCardController {
         }
 
         // Dynamic icon and background color based on title or tags
-        String imagePath = "/images/link.png"; // Default
+        String imagePath = "/images/note.png"; // Default
         String bgColor = "#F3E8FF"; // Purple light
 
         String textToMatch = note.getTitle() != null ? note.getTitle().toLowerCase() : "";
@@ -50,16 +50,16 @@ public class NoteCardController {
         }
         
         if (textToMatch.contains("project") || textToMatch.contains("plan")) {
-            imagePath = "/images/work-order.png";
+            imagePath = "/images/Tasks.png";
             bgColor = "#E0F2FE"; // Blue light
         } else if (textToMatch.contains("study") || textToMatch.contains("java") || textToMatch.contains("code")) {
-            imagePath = "/images/study.png";
+            imagePath = "/images/Knowledge.png";
             bgColor = "#DCFCE7"; // Green light
         } else if (textToMatch.contains("idea") || textToMatch.contains("tip") || textToMatch.contains("mind")) {
-            imagePath = "/images/idea.png";
+            imagePath = "/images/Tags.png";
             bgColor = "#FEF3C7"; // Orange light
         } else if (textToMatch.contains("review") || textToMatch.contains("ai")) {
-            imagePath = "/images/growth.png"; // assuming growth.png exists for review
+            imagePath = "/images/Focus.png"; // Focus mode icon for deep work/review
             bgColor = "#F3E8FF"; // Purple light
         }
         

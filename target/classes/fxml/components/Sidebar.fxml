@@ -67,6 +67,18 @@
             </graphic>
         </ToggleButton>
         <Separator style="-fx-padding: 10 0;" />
+        <!-- Achievements -->
+        <ToggleButton text="Achievements" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT">
+            <graphic>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/icon_achievement.png" /></image></ImageView>
+            </graphic>
+        </ToggleButton>
+        <!-- Analytics -->
+        <ToggleButton text="Analytics" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT">
+            <graphic>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/icon_analytics.png" /></image></ImageView>
+            </graphic>
+        </ToggleButton>
         <!-- Settings -->
         <ToggleButton text="Settings" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT">
             <graphic>
