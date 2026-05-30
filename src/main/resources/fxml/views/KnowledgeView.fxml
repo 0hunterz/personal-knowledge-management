@@ -18,8 +18,8 @@
             
             <!-- Tiêu đề -->
             <VBox spacing="5">
-                <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1E293B;" text="Knowledge Base 📖" />
-                <Label style="-fx-font-size: 14px; -fx-text-fill: #64748B;" text="Your ideas, notes, and connections." />
+                <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1F2937;" text="Knowledge Base 📖" />
+                <Label style="-fx-font-size: 14px; -fx-text-fill: #6B7280;" text="Your ideas, notes, and connections." />
             </VBox>
             
             <!-- Thanh Công cụ (Search, Toggles, Filter) -->
@@ -40,7 +40,7 @@
             
             <!-- Quick Filters -->
             <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10 0;">
-                <Label style="-fx-text-fill: #64748B; -fx-font-size: 13px;" text="Quick Filters:" />
+                <Label style="-fx-text-fill: #6B7280; -fx-font-size: 13px;" text="Quick Filters:" />
                 <Label styleClass="quick-filter-btn, quick-filter-btn-active" text="All" />
                 <Label styleClass="quick-filter-btn" text="#study" />
                 <Label styleClass="quick-filter-btn" text="#project" />

@@ -13,18 +13,18 @@
         </ImageView>
         <Label text="Daily Streak" styleClass="card-title" />
         <Region HBox.hgrow="ALWAYS" />
-        <Button text="⋮" style="-fx-background-color: transparent; -fx-font-size: 16px; -fx-cursor: hand; -fx-text-fill: #64748B;" />
+        <Button text="⋮" style="-fx-background-color: transparent; -fx-font-size: 16px; -fx-cursor: hand; -fx-text-fill: #6B7280;" />
     </HBox>
 
     <!-- Biểu đồ Streak và Số ngày -->
     <HBox alignment="CENTER_LEFT" spacing="20">
         <VBox>
             <HBox alignment="BASELINE_LEFT" spacing="5">
-                <Label fx:id="streakDaysLabel" text="7" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" />
-                <Label text="days" style="-fx-font-size: 14px; -fx-text-fill: #64748B;" />
+                <Label fx:id="streakDaysLabel" text="7" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" />
+                <Label text="days" style="-fx-font-size: 14px; -fx-text-fill: #6B7280;" />
             </HBox>
             <HBox alignment="CENTER_LEFT" spacing="5">
-                <Label text="Keep it up!" style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-font-weight: bold;" />
+                <Label text="Keep it up!" style="-fx-font-size: 12px; -fx-text-fill: #6B7280; -fx-font-weight: bold;" />
                 <ImageView fitHeight="12" fitWidth="12" pickOnBounds="true" preserveRatio="true">
                     <image><Image url="@/images/fire.png" /></image>
                 </ImageView>
@@ -36,7 +36,7 @@
         <!-- Biểu đồ chậu cây thu nhỏ -->
         <StackPane>
             <Circle radius="30" fill="TRANSPARENT" stroke="#E2E8F0" strokeWidth="4" />
-            <Arc radiusX="30" radiusY="30" startAngle="90" length="-250" fill="TRANSPARENT" stroke="#10B981" strokeWidth="4" strokeLineCap="ROUND" />
+            <Arc radiusX="30" radiusY="30" startAngle="90" length="-250" fill="TRANSPARENT" stroke="#22C55E" strokeWidth="4" strokeLineCap="ROUND" />
             <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
                 <image><Image url="@/images/plant.png" /></image>
             </ImageView>

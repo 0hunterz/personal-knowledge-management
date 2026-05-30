@@ -11,8 +11,8 @@
         <!-- Header -->
         <HBox alignment="CENTER_LEFT">
             <VBox spacing="5">
-                <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1E293B;" text="Settings ⚙" />
-                <Label style="-fx-font-size: 14px; -fx-text-fill: #64748B;" text="Customize your Focus-Node workspace to maximize your productivity." />
+                <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1F2937;" text="Settings ⚙" />
+                <Label style="-fx-font-size: 14px; -fx-text-fill: #6B7280;" text="Customize your Focus-Node workspace to maximize your productivity." />
             </VBox>
         </HBox>
 
@@ -31,7 +31,7 @@
                             <Label text="U" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 24px;" />
                         </StackPane>
                         <VBox spacing="8">
-                            <Label text="Upload Avatar Image" style="-fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-font-size: 13px;" />
+                            <Label text="Upload Avatar Image" style="-fx-font-weight: bold; -fx-text-fill: #1F2937; -fx-font-size: 13px;" />
                             <Label text="JPG, PNG up to 2MB" style="-fx-font-size: 11px; -fx-text-fill: #94A3B8;" />
                             <HBox spacing="10">
                                 <Button text="Upload New" styleClass="btn-add-task" style="-fx-font-size: 12px; -fx-padding: 5 10;" />
@@ -50,10 +50,10 @@
                             <RowConstraints minHeight="36" />
                         </rowConstraints>
                         
-                        <Label text="Display Name:" style="-fx-text-fill: #64748B; -fx-font-weight: 500;" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Label text="Display Name:" style="-fx-text-fill: #6B7280; -fx-font-weight: 500;" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                         <TextField text="User" styleClass="search-bar" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                         
-                        <Label text="Email Address:" style="-fx-text-fill: #64748B; -fx-font-weight: 500;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <Label text="Email Address:" style="-fx-text-fill: #6B7280; -fx-font-weight: 500;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                         <TextField text="user@focusnode.local" styleClass="search-bar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                     </GridPane>
                 </VBox>
@@ -73,13 +73,13 @@
                             <RowConstraints minHeight="36" />
                         </rowConstraints>
                         
-                        <Label text="Focus Interval Duration (mins):" style="-fx-text-fill: #64748B;" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Label text="Focus Interval Duration (mins):" style="-fx-text-fill: #6B7280;" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                         <Spinner min="1" max="180" initialValue="25" styleClass="search-bar" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                         
-                        <Label text="Short Break Duration (mins):" style="-fx-text-fill: #64748B;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <Label text="Short Break Duration (mins):" style="-fx-text-fill: #6B7280;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                         <Spinner min="1" max="60" initialValue="5" styleClass="search-bar" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         
-                        <Label text="Long Break Duration (mins):" style="-fx-text-fill: #64748B;" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <Label text="Long Break Duration (mins):" style="-fx-text-fill: #6B7280;" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                         <Spinner min="1" max="120" initialValue="15" styleClass="search-bar" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                     </GridPane>
                 </VBox>
@@ -90,13 +90,13 @@
                     
                     <VBox spacing="12">
                         <HBox alignment="CENTER_LEFT" spacing="15">
-                            <Label text="Auto-sync to cloud servers:" style="-fx-text-fill: #64748B;" HBox.hgrow="ALWAYS" />
+                            <Label text="Auto-sync to cloud servers:" style="-fx-text-fill: #6B7280;" HBox.hgrow="ALWAYS" />
                             <Region HBox.hgrow="ALWAYS" />
                             <ToggleButton text="Enabled" selected="true" styleClass="toggle-btn, toggle-btn-active" />
                         </HBox>
                         
                         <HBox alignment="CENTER_LEFT" spacing="15">
-                            <Label text="Sync frequency (mins):" style="-fx-text-fill: #64748B;" />
+                            <Label text="Sync frequency (mins):" style="-fx-text-fill: #6B7280;" />
                             <Region HBox.hgrow="ALWAYS" />
                             <Slider min="5" max="120" value="15" showTickLabels="true" showTickMarks="true" prefWidth="200" />
                         </HBox>
@@ -121,7 +121,7 @@
                     
                     <VBox spacing="15">
                         <VBox spacing="5">
-                            <Label text="Visual Appearance Theme" style="-fx-font-weight: 500; -fx-text-fill: #1E293B;" />
+                            <Label text="Visual Appearance Theme" style="-fx-font-weight: 500; -fx-text-fill: #1F2937;" />
                             <HBox spacing="8" style="-fx-padding: 5 0 0 0;">
                                 <ToggleButton text="Light Mode" selected="true" styleClass="toggle-btn, toggle-btn-active" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
                                 <ToggleButton text="Dark Mode" styleClass="toggle-btn" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
@@ -130,10 +130,10 @@
                         
                         <Separator style="-fx-padding: 5 0;" />
                         
-                        <CheckBox text="Launch on system startup" selected="true" style="-fx-text-fill: #64748B; -fx-font-size: 13px;" />
-                        <CheckBox text="Enable audio sound effects" selected="true" style="-fx-text-fill: #64748B; -fx-font-size: 13px;" />
-                        <CheckBox text="Enable desktop push notifications" selected="true" style="-fx-text-fill: #64748B; -fx-font-size: 13px;" />
-                        <CheckBox text="Allow focus hub discoveries" selected="false" style="-fx-text-fill: #64748B; -fx-font-size: 13px;" />
+                        <CheckBox text="Launch on system startup" selected="true" style="-fx-text-fill: #6B7280; -fx-font-size: 13px;" />
+                        <CheckBox text="Enable audio sound effects" selected="true" style="-fx-text-fill: #6B7280; -fx-font-size: 13px;" />
+                        <CheckBox text="Enable desktop push notifications" selected="true" style="-fx-text-fill: #6B7280; -fx-font-size: 13px;" />
+                        <CheckBox text="Allow focus hub discoveries" selected="false" style="-fx-text-fill: #6B7280; -fx-font-size: 13px;" />
                     </VBox>
                 </VBox>
 
@@ -142,19 +142,19 @@
                     <Label text="Focus Target Settings" styleClass="card-title" />
                     
                     <VBox spacing="12">
-                        <Label text="Your daily focus goal controls the completion circle in Analytics." style="-fx-font-size: 12px; -fx-text-fill: #64748B;" wrapText="true" />
+                        <Label text="Your daily focus goal controls the completion circle in Analytics." style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" wrapText="true" />
                         
                         <VBox spacing="5" style="-fx-padding: 8 0;">
                             <HBox>
-                                <Label text="Daily target (hours):" style="-fx-font-weight: 500; -fx-text-fill: #1E293B;" />
+                                <Label text="Daily target (hours):" style="-fx-font-weight: 500; -fx-text-fill: #1F2937;" />
                                 <Region HBox.hgrow="ALWAYS" />
-                                <Label text="4.0 hrs" style="-fx-font-weight: bold; -fx-text-fill: #10B981;" />
+                                <Label text="4.0 hrs" style="-fx-font-weight: bold; -fx-text-fill: #22C55E;" />
                             </HBox>
                             <Slider min="1" max="16" value="4" showTickMarks="true" majorTickUnit="2" showTickLabels="true" />
                         </VBox>
                         
                         <VBox spacing="5">
-                            <Label text="Weekly focus streak target (days):" style="-fx-font-weight: 500; -fx-text-fill: #1E293B;" />
+                            <Label text="Weekly focus streak target (days):" style="-fx-font-weight: 500; -fx-text-fill: #1F2937;" />
                             <HBox spacing="8" style="-fx-padding: 5 0 0 0;">
                                 <ToggleButton text="3 Days" styleClass="toggle-btn" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
                                 <ToggleButton text="5 Days" selected="true" styleClass="toggle-btn, toggle-btn-active" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
@@ -169,19 +169,19 @@
                     <Label text="System Information" styleClass="card-title" />
                     <VBox spacing="8">
                         <HBox>
-                            <Label text="Version:" style="-fx-text-fill: #64748B;" />
+                            <Label text="Version:" style="-fx-text-fill: #6B7280;" />
                             <Region HBox.hgrow="ALWAYS" />
-                            <Label text="1.2.0-Production" style="-fx-font-weight: bold; -fx-text-fill: #1E293B;" />
+                            <Label text="1.2.0-Production" style="-fx-font-weight: bold; -fx-text-fill: #1F2937;" />
                         </HBox>
                         <HBox>
-                            <Label text="Updates:" style="-fx-text-fill: #64748B;" />
+                            <Label text="Updates:" style="-fx-text-fill: #6B7280;" />
                             <Region HBox.hgrow="ALWAYS" />
-                            <Label text="Up to date ✓" style="-fx-font-weight: bold; -fx-text-fill: #10B981;" />
+                            <Label text="Up to date ✓" style="-fx-font-weight: bold; -fx-text-fill: #22C55E;" />
                         </HBox>
                         <HBox>
-                            <Label text="Build:" style="-fx-text-fill: #64748B;" />
+                            <Label text="Build:" style="-fx-text-fill: #6B7280;" />
                             <Region HBox.hgrow="ALWAYS" />
-                            <Label text="May 2026 Build" style="-fx-text-fill: #64748B;" />
+                            <Label text="May 2026 Build" style="-fx-text-fill: #6B7280;" />
                         </HBox>
                     </VBox>
                     

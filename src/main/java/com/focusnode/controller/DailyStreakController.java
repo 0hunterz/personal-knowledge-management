@@ -79,8 +79,8 @@ public class DailyStreakController {
             dayLabel.setStyle("-fx-font-size: 12px; -fx-font-weight: bold;");
             
             if (isActive) {
-                dayPane.setStyle("-fx-background-color: #E6F8F1; -fx-background-radius: 15;");
-                dayLabel.setStyle(dayLabel.getStyle() + "-fx-text-fill: #10B981;");
+                dayPane.setStyle("-fx-background-color: #DCFCE7; -fx-background-radius: 15;");
+                dayLabel.setStyle(dayLabel.getStyle() + "-fx-text-fill: #22C55E;");
             } else {
                 dayPane.setStyle("-fx-background-color: #F1F5F9; -fx-background-radius: 15;");
                 dayLabel.setStyle(dayLabel.getStyle() + "-fx-text-fill: #94A3B8;");

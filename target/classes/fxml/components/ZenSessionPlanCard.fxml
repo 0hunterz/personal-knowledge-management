@@ -9,7 +9,7 @@
     <Label styleClass="zen-card-title-large" text="Session Plan" />
 
     <HBox alignment="CENTER_LEFT" spacing="12">
-        <Circle fill="#10B981" radius="7" />
+        <Circle fill="#22C55E" radius="7" />
         <VBox spacing="2">
             <Label styleClass="zen-active-text-bold" text="Focus 1" />
             <Label wrapText="true" styleClass="zen-active-text-small" text="Build LAN connection module" />

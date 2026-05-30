@@ -10,9 +10,9 @@
     <Label styleClass="card-title" text="💾 Storage" />
     
     <HBox alignment="CENTER_LEFT">
-        <Label style="-fx-font-size: 13px; -fx-text-fill: #64748B;" text="1.2 GB / 5 GB used" />
+        <Label style="-fx-font-size: 13px; -fx-text-fill: #6B7280;" text="1.2 GB / 5 GB used" />
         <Region HBox.hgrow="ALWAYS" />
-        <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="24%" />
+        <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" text="24%" />
     </HBox>
     
     <ProgressBar progress="0.24" prefWidth="250" styleClass="storage-progress-bar" />

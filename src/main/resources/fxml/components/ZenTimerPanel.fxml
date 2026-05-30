@@ -11,7 +11,7 @@
 
     <StackPane minHeight="230" minWidth="230" prefHeight="250" prefWidth="250">
         <Circle fill="TRANSPARENT" radius="112" stroke="#E2E8F0" strokeWidth="8" />
-        <Circle fill="TRANSPARENT" radius="112" stroke="#10B981" strokeDashArray="488, 220" strokeLineCap="ROUND" strokeWidth="8" />
+        <Circle fill="TRANSPARENT" radius="112" stroke="#22C55E" strokeDashArray="488, 220" strokeLineCap="ROUND" strokeWidth="8" />
         <VBox alignment="CENTER" spacing="8">
             <Label styleClass="zen-timer-text" text="25:00" />
             <Label styleClass="zen-timer-label" text="Focus Time" />

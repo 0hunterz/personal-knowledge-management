@@ -17,9 +17,9 @@
 
     <!-- Vùng Thông tin (Phía dưới) -->
     <VBox spacing="10" styleClass="note-content-area">
-        <Label style="-fx-font-weight: bold; -fx-font-size: 15px; -fx-text-fill: #1E293B;" text="Java NIO Basics" wrapText="true" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 15px; -fx-text-fill: #1F2937;" text="Java NIO Basics" wrapText="true" />
         
-        <Label maxHeight="40" style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-line-spacing: 3px;" text="Understanding Non-blocking I/O in Java with examples." wrapText="true" />
+        <Label maxHeight="40" style="-fx-font-size: 12px; -fx-text-fill: #6B7280; -fx-line-spacing: 3px;" text="Understanding Non-blocking I/O in Java with examples." wrapText="true" />
         
         <HBox spacing="8">
             <Label styleClass="tag-badge, tag-project" text="#java" />

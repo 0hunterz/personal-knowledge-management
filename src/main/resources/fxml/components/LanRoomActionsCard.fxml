@@ -9,10 +9,10 @@
     <VBox spacing="10">
         <!-- Create Room -->
         <HBox styleClass="room-action-btn, room-create-btn">
-            <Label style="-fx-font-size: 20px; -fx-text-fill: #10B981;" text="+" />
+            <Label style="-fx-font-size: 20px; -fx-text-fill: #22C55E;" text="+" />
             <VBox>
-                <Label style="-fx-font-weight: bold; -fx-text-fill: #059669;" text="Create Room" />
-                <Label style="-fx-font-size: 11px; -fx-text-fill: #10B981;" text="Host a new focus room" />
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #16A34A;" text="Create Room" />
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #22C55E;" text="Host a new focus room" />
             </VBox>
         </HBox>
 

@@ -17,10 +17,10 @@
             <HBox alignment="CENTER_LEFT">
                 <VBox spacing="5">
                     <HBox alignment="CENTER_LEFT" spacing="10">
-                        <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1E293B;" text="LAN Focus Hub" />
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1F2937;" text="LAN Focus Hub" />
                         <Label style="-fx-font-size: 24px;" text="🖧" />
                     </HBox>
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: #64748B;" text="Study together locally. Stay focused together." />
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #6B7280;" text="Study together locally. Stay focused together." />
                 </VBox>
                 
                 <Region HBox.hgrow="ALWAYS" />

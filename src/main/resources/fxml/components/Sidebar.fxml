@@ -12,17 +12,15 @@
     </padding>
 
     <!-- Logo Area -->
-    <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 0 0 25 0;">
-        <StackPane styleClass="sidebar-logo-frame" style="-fx-background-color: transparent; -fx-background-radius: 12;">
-            <ImageView fitWidth="64" fitHeight="64" preserveRatio="true" smooth="true" pickOnBounds="true">
-                <image>
-                    <Image url="@/images/logo.png" />
-                </image>
-            </ImageView>
-        </StackPane>
+    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 0 25 0;">
+        <ImageView fitWidth="56" fitHeight="56" preserveRatio="true" smooth="true" pickOnBounds="true">
+            <image>
+                <Image url="@/images/logo.png" />
+            </image>
+        </ImageView>
         <VBox alignment="CENTER_LEFT" spacing="2">
-            <Label text="Focus-Node" style="-fx-font-weight: 800; -fx-font-size: 20px; -fx-text-fill: #0F172A;" />
-            <Label text="Focus. Learn. Grow." style="-fx-font-size: 11px; -fx-text-fill: #64748B;" />
+            <Label text="Focus-Node" style="-fx-font-weight: 800; -fx-font-size: 20px; -fx-text-fill: #1F2937;" />
+            <Label text="Focus. Learn. Grow." style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" />
         </VBox>
     </HBox>
 
@@ -87,8 +85,8 @@
             <Label text="U" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13px;" />
         </StackPane>
         <VBox spacing="1">
-            <Label text="User" style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1E293B;" />
-            <Label text="Focus every day" style="-fx-font-size: 10px; -fx-text-fill: #64748B;" />
+            <Label text="User" style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1F2937;" />
+            <Label text="Focus every day" style="-fx-font-size: 10px; -fx-text-fill: #6B7280;" />
         </VBox>
         <Region HBox.hgrow="ALWAYS" />
         <Label text="›" style="-fx-text-fill: #94A3B8; -fx-font-weight: bold; -fx-font-size: 16px;" />

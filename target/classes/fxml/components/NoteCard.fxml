@@ -20,10 +20,10 @@
     </StackPane>
 
     <!-- Tiêu đề -->
-    <Label fx:id="titleLabel" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1E293B;" text="Project Plan" />
+    <Label fx:id="titleLabel" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" text="Project Plan" />
 
     <!-- Nội dung mô tả ngắn -->
-    <Label fx:id="previewLabel" maxHeight="50" style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-line-spacing: 3px;" text="## Overview&#10;This project aims to build a LAN focus room application..." wrapText="true" />
+    <Label fx:id="previewLabel" maxHeight="45" style="-fx-font-size: 12px; -fx-text-fill: #6B7280; -fx-line-spacing: 3px;" text="## Overview&#10;This project aims to build a LAN focus room application..." wrapText="true" textOverrun="ELLIPSIS" />
 
     <Region VBox.vgrow="ALWAYS" />
 

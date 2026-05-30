@@ -48,7 +48,7 @@
 }
 .nav-btn {
     -fx-background-color: transparent;
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
     -fx-padding: 12px 15px;
@@ -58,11 +58,11 @@
 }
 .nav-btn:hover {
     -fx-background-color: #F1F5F9;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
 }
 .nav-btn:selected {
-    -fx-background-color: #E6F8F1; 
-    -fx-text-fill: #10B981; 
+    -fx-background-color: #DCFCE7; 
+    -fx-text-fill: #22C55E; 
 }
 
 .user-profile-btn {
@@ -82,9 +82,9 @@
    ===================================================================== */
 .card {
     -fx-background-color: #FFFFFF;
-    -fx-background-radius: 12px;
-    -fx-padding: 20px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 15, 0, 0, 4);
+    -fx-background-radius: 16px;
+    -fx-padding: 24px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 4);
 }
 .card:hover {
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 20, 0, 0, 6);
@@ -92,7 +92,7 @@
 .card-title {
     -fx-font-weight: bold;
     -fx-font-size: 16px;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
 }
 
 /* Card màu nền riêng biệt (Ví dụ: Quote) */
@@ -105,8 +105,8 @@
    ===================================================================== */
 /* Nút Add Task xanh nhạt */
 .btn-add-task {
-    -fx-background-color: #E6F8F1; 
-    -fx-text-fill: #10B981; 
+    -fx-background-color: #DCFCE7; 
+    -fx-text-fill: #22C55E; 
     -fx-font-weight: bold;
     -fx-background-radius: 6px;
     -fx-padding: 6px 12px;
@@ -118,15 +118,15 @@
 
 /* Nút Primary (Bắt đầu Pomodoro) */
 .btn-primary {
-    -fx-background-color: #10B981;
+    -fx-background-color: #22C55E;
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-background-radius: 8px;
+    -fx-background-radius: 9999px;
     -fx-padding: 10px 15px;
     -fx-cursor: hand;
 }
 .btn-primary:hover {
-    -fx-background-color: #059669; /* Xanh đậm hơn */
+    -fx-background-color: #16A34A; /* Xanh đậm hơn */
 }
 
 /* Nút Text (Short Break, View All) */
@@ -151,7 +151,7 @@
 }
 .btn-icon-transparent:hover {
     -fx-background-color: #F1F5F9;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
 }
 
 /* =====================================================================
@@ -159,12 +159,12 @@
    ===================================================================== */
 .tag-badge {
     -fx-padding: 4px 10px;
-    -fx-background-radius: 12px;
+    -fx-background-radius: 9999px;
     -fx-font-size: 11px;
     -fx-font-weight: bold;
 }
 .tag-study { -fx-background-color: #EEF2FF; -fx-text-fill: #4F46E5; }
-.tag-project { -fx-background-color: #ECFDF5; -fx-text-fill: #059669; }
+.tag-project { -fx-background-color: #DCFCE7; -fx-text-fill: #16A34A; }
 .tag-review { -fx-background-color: #F3E8FF; -fx-text-fill: #9333EA; }
 .tag-blue { -fx-background-color: #E0F2FE; -fx-text-fill: #0284C7; }
 
@@ -175,17 +175,17 @@
     -fx-padding: 8px 0;
 }
 .task-item:hover .task-name {
-    -fx-text-fill: #10B981;
+    -fx-text-fill: #22C55E;
 }
 .task-name {
     -fx-font-size: 14px;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
 }
 .task-duration {
     -fx-background-color: #F8FAFC;
     -fx-padding: 4px 10px;
     -fx-background-radius: 12px;
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
     -fx-font-size: 12px;
     -fx-font-weight: 500;
 }
@@ -193,8 +193,8 @@
     -fx-stroke: #E2E8F0;
     -fx-cursor: hand;
 }
-.check-circle:hover { -fx-stroke: #10B981; }
-.circle-green { -fx-stroke: #10B981; }
+.check-circle:hover { -fx-stroke: #22C55E; }
+.circle-green { -fx-stroke: #22C55E; }
 
 /* =====================================================================
    7. QUICK NOTE (TextArea)
@@ -207,10 +207,10 @@
     -fx-background-radius: 8px;
     -fx-padding: 5px;
     -fx-font-size: 13px;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
 }
 .quick-note-area:focused {
-    -fx-border-color: #10B981; /* Đổi viền xanh khi gõ chữ */
+    -fx-border-color: #22C55E; /* Đổi viền xanh khi gõ chữ */
     -fx-control-inner-background: #FFFFFF;
 }
 
@@ -220,9 +220,11 @@
 /* Vòng tròn ngày chưa hoàn thành */
 .streak-day-box {
     -fx-background-color: #F1F5F9;
-    -fx-background-radius: 15px;
-    -fx-pref-width: 30px;
-    -fx-pref-height: 30px;
+    -fx-background-radius: 12px;
+    -fx-pref-width: 24px;
+    -fx-pref-height: 24px;
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
     -fx-alignment: center;
 }
 .streak-day-label {
@@ -233,10 +235,10 @@
 
 /* Trạng thái ngày ĐÃ hoàn thành */
 .streak-day-box-active {
-    -fx-background-color: #E6F8F1;
+    -fx-background-color: #DCFCE7;
 }
 .streak-day-label-active {
-    -fx-text-fill: #10B981;
+    -fx-text-fill: #22C55E;
 }
 
 /* =====================================================================
@@ -251,7 +253,7 @@
 }
 /* Vòng tiến trình xanh */
 .chart-progress {
-    -fx-stroke: #10B981;
+    -fx-stroke: #22C55E;
     -fx-stroke-width: 8px;
     -fx-fill: transparent;
     -fx-stroke-linecap: round;
@@ -269,7 +271,7 @@
     -fx-padding: 8px 12px;
 }
 .search-bar:focused {
-    -fx-border-color: #10B981;
+    -fx-border-color: #22C55E;
     -fx-background-color: #FFFFFF;
 }
 
@@ -283,9 +285,9 @@
     -fx-cursor: hand;
 }
 .toggle-btn-active {
-    -fx-background-color: #E6F8F1;
-    -fx-border-color: #10B981;
-    -fx-text-fill: #10B981;
+    -fx-background-color: #DCFCE7;
+    -fx-border-color: #22C55E;
+    -fx-text-fill: #22C55E;
 }
 
 /* Filter / New Note Buttons */
@@ -295,7 +297,7 @@
     -fx-border-radius: 6px;
     -fx-padding: 8px 15px;
     -fx-font-weight: bold;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
     -fx-cursor: hand;
 }
 .btn-outline:hover {
@@ -304,7 +306,7 @@
 
 /* Nút New Note xanh lá */
 .btn-new-note {
-    -fx-background-color: #10B981;
+    -fx-background-color: #22C55E;
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-background-radius: 6px;
@@ -312,7 +314,7 @@
     -fx-cursor: hand;
 }
 .btn-new-note:hover {
-    -fx-background-color: #059669;
+    -fx-background-color: #16A34A;
 }
 
 /* Thẻ Knowledge Note Card */
@@ -334,7 +336,7 @@
 .note-preview-text {
     -fx-font-family: "Consolas", monospace;
     -fx-font-size: 11px;
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
 }
 
 .note-content-area {
@@ -347,14 +349,14 @@
     -fx-border-color: #E2E8F0;
     -fx-border-radius: 15px;
     -fx-padding: 4px 12px;
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
     -fx-font-size: 12px;
     -fx-cursor: hand;
 }
 .quick-filter-btn-active {
-    -fx-background-color: #E6F8F1;
-    -fx-border-color: #10B981;
-    -fx-text-fill: #10B981;
+    -fx-background-color: #DCFCE7;
+    -fx-border-color: #22C55E;
+    -fx-text-fill: #22C55E;
 }
 
 /* Tag Badge trong Tag Cloud */
@@ -370,14 +372,14 @@
 
 /* Storage Progress Bar */
 .storage-progress-bar {
-    -fx-accent: #10B981;
+    -fx-accent: #22C55E;
 }
 .storage-progress-bar .track {
     -fx-background-color: #E2E8F0;
     -fx-background-radius: 4px;
 }
 .storage-progress-bar .bar {
-    -fx-background-color: #10B981;
+    -fx-background-color: #22C55E;
     -fx-background-radius: 4px;
     -fx-padding: 4px;
 }
@@ -394,7 +396,7 @@
     -fx-padding: 6px 15px;
     -fx-font-weight: bold;
     -fx-font-size: 13px;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
 }
 
 /* Nút Create / Join Room */
@@ -409,7 +411,7 @@
     -fx-opacity: 0.8;
 }
 .room-create-btn {
-    -fx-background-color: #ECFDF5;
+    -fx-background-color: #DCFCE7;
 }
 .room-join-btn {
     -fx-background-color: #EFF6FF;
@@ -427,8 +429,8 @@
 
 /* Status Badges */
 .status-focusing {
-    -fx-background-color: #ECFDF5;
-    -fx-text-fill: #10B981;
+    -fx-background-color: #DCFCE7;
+    -fx-text-fill: #22C55E;
     -fx-padding: 4px 10px;
     -fx-background-radius: 12px;
     -fx-font-size: 11px;
@@ -457,7 +459,7 @@
 
 /* Thanh Progress Bar chuyển file */
 .transfer-progress-bar {
-    -fx-accent: #10B981;
+    -fx-accent: #22C55E;
     -fx-min-height: 6px;
     -fx-pref-height: 6px;
 }
@@ -466,7 +468,7 @@
     -fx-background-radius: 3px;
 }
 .transfer-progress-bar .bar {
-    -fx-background-color: #10B981;
+    -fx-background-color: #22C55E;
     -fx-background-radius: 3px;
 }
 
@@ -490,8 +492,8 @@
 
 /* Status Badges for Tasks */
 .status-badge-completed {
-    -fx-background-color: #ECFDF5;
-    -fx-text-fill: #10B981;
+    -fx-background-color: #DCFCE7;
+    -fx-text-fill: #22C55E;
     -fx-padding: 4px 10px;
     -fx-background-radius: 12px;
     -fx-font-size: 11px;
@@ -517,7 +519,7 @@
 /* Priority Colors */
 .priority-high { -fx-text-fill: #EF4444; -fx-font-weight: bold; -fx-font-size: 13px; }
 .priority-medium { -fx-text-fill: #F59E0B; -fx-font-weight: bold; -fx-font-size: 13px; }
-.priority-low { -fx-text-fill: #10B981; -fx-font-weight: bold; -fx-font-size: 13px; }
+.priority-low { -fx-text-fill: #22C55E; -fx-font-weight: bold; -fx-font-size: 13px; }
 
 /* Task Row Hover */
 .task-row {
@@ -540,8 +542,8 @@
     -fx-cursor: hand;
 }
 .task-checkbox-checked {
-    -fx-background-color: #10B981;
-    -fx-border-color: #10B981;
+    -fx-background-color: #22C55E;
+    -fx-border-color: #22C55E;
     -fx-alignment: center;
 }
 .task-checkbox-circle {
@@ -551,7 +553,7 @@
 /* Pagination Buttons */
 .pagination-btn {
     -fx-background-color: transparent;
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
     -fx-padding: 5px 10px;
     -fx-cursor: hand;
     -fx-font-size: 13px;
@@ -561,8 +563,8 @@
     -fx-background-radius: 6px;
 }
 .pagination-btn-active {
-    -fx-background-color: #E6F8F1;
-    -fx-text-fill: #10B981;
+    -fx-background-color: #DCFCE7;
+    -fx-text-fill: #22C55E;
     -fx-font-weight: bold;
     -fx-background-radius: 6px;
 }
@@ -590,7 +592,7 @@
 .tag-name-label {
     -fx-font-weight: bold;
     -fx-font-size: 14px;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
 }
 .tag-notes-label {
     -fx-font-size: 11px;
@@ -621,7 +623,7 @@
     -fx-padding: 2px 5px;
 }
 .tag-action-icon:hover {
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
 }
 
 /* =====================================================================
@@ -632,7 +634,7 @@
     -fx-background-color: transparent;
 }
 .zen-root {
-    -fx-background-color: linear-gradient(to bottom right, #E6F8F1, #EFF6FF);
+    -fx-background-color: linear-gradient(to bottom right, #DCFCE7, #EFF6FF);
 }
 .zen-content {
     -fx-padding: 16px 20px 16px 20px;
@@ -660,7 +662,7 @@
 }
 .zen-brand-mark {
     -fx-font-size: 18px;
-    -fx-text-fill: #10B981;
+    -fx-text-fill: #22C55E;
 }
 .zen-card-title,
 .zen-card-title-small,
@@ -668,7 +670,7 @@
 .zen-member-name,
 .zen-bottom-title {
     -fx-font-weight: bold;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
 }
 .zen-card-title {
     -fx-font-size: 14px;
@@ -681,7 +683,7 @@
 }
 .zen-muted,
 .zen-muted-icon {
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
 }
 .zen-muted {
     -fx-font-size: 12px;
@@ -694,7 +696,7 @@
 .zen-active-text-bold,
 .zen-active-text-small,
 .zen-message-text {
-    -fx-text-fill: #10B981;
+    -fx-text-fill: #22C55E;
 }
 .zen-active-text-bold {
     -fx-font-weight: bold;
@@ -707,13 +709,13 @@
 }
 .zen-eyebrow {
     -fx-font-size: 14px;
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
     -fx-font-weight: bold;
 }
 .zen-task-title {
     -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-text-fill: #0F172A;
+    -fx-text-fill: #1F2937;
     -fx-text-alignment: center;
 }
 .zen-category-pill {
@@ -725,22 +727,22 @@
 .zen-timer-text {
     -fx-font-size: 48px;
     -fx-font-weight: bold;
-    -fx-text-fill: #0F172A;
+    -fx-text-fill: #1F2937;
 }
 .zen-timer-label {
     -fx-font-size: 16px;
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
 }
 .zen-session-label {
     -fx-font-size: 12px;
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
     -fx-padding: 8px 0 0 0;
 }
 .zen-time-pill {
     -fx-background-color: rgba(255,255,255,0.78);
     -fx-background-radius: 18px;
     -fx-padding: 6px 14px;
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
 }
 .zen-status-focus,
 .zen-status-break {
@@ -748,8 +750,8 @@
     -fx-padding: 4px 10px;
 }
 .zen-status-focus {
-    -fx-background-color: #E6F8F1;
-    -fx-text-fill: #10B981;
+    -fx-background-color: #DCFCE7;
+    -fx-text-fill: #22C55E;
 }
 .zen-status-break {
     -fx-background-color: #DBEAFE;
@@ -762,7 +764,7 @@
 }
 .zen-tip-text {
     -fx-font-size: 14px;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
 }
 .zen-link-button,
 .zen-exit-button,
@@ -779,7 +781,7 @@
 .zen-exit-button {
     -fx-background-radius: 12px;
     -fx-padding: 10px 14px;
-    -fx-text-fill: #1E293B;
+    -fx-text-fill: #1F2937;
 }
 .zen-control-button {
     -fx-background-radius: 12px;
@@ -790,11 +792,11 @@
     -fx-background-radius: 50px;
     -fx-min-width: 44px;
     -fx-min-height: 44px;
-    -fx-text-fill: #64748B;
+    -fx-text-fill: #6B7280;
     -fx-font-size: 16px;
 }
 .zen-play-button {
-    -fx-background-color: #10B981;
+    -fx-background-color: #22C55E;
     -fx-background-radius: 60px;
     -fx-min-width: 62px;
     -fx-min-height: 62px;

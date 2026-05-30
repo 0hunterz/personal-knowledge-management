@@ -49,11 +49,11 @@ public class TodaysFocusController {
                     
                     Circle dot = new Circle(6);
                     dot.setFill(javafx.scene.paint.Color.TRANSPARENT);
-                    dot.setStroke(javafx.scene.paint.Color.web("#10B981"));
+                    dot.setStroke(javafx.scene.paint.Color.web("#22C55E"));
                     dot.setStrokeWidth(2);
 
                     Label title = new Label(task.getTitle());
-                    title.setStyle("-fx-text-fill: #1E293B; -fx-font-size: 13px; -fx-font-weight: bold;");
+                    title.setStyle("-fx-text-fill: #1F2937; -fx-font-size: 13px; -fx-font-weight: bold;");
 
                     Label category = new Label(task.getCategory());
                     // Pick color based on category
@@ -62,22 +62,22 @@ public class TodaysFocusController {
                     if (task.getCategory().equalsIgnoreCase("Work")) {
                         catBg = "#F3E8FF"; catText = "#9333EA";
                     } else if (task.getCategory().equalsIgnoreCase("Study")) {
-                        catBg = "#ECFDF5"; catText = "#059669";
+                        catBg = "#DCFCE7"; catText = "#16A34A";
                     } else if (task.getCategory().equalsIgnoreCase("Personal")) {
                         catBg = "#FEF3C7"; catText = "#D97706";
                     }
-                    category.setStyle("-fx-background-color: " + catBg + "; -fx-text-fill: " + catText + "; -fx-padding: 3 8; -fx-background-radius: 12; -fx-font-size: 10px; -fx-font-weight: bold;");
+                    category.setStyle("-fx-background-color: " + catBg + "; -fx-text-fill: " + catText + "; -fx-padding: 3 8; -fx-background-radius: 9999px; -fx-font-size: 11px; -fx-font-weight: 600;");
 
                     Region spacer = new Region();
                     HBox.setHgrow(spacer, Priority.ALWAYS);
 
                     Label time = new Label(task.getFocusMinutes() + " min");
-                    time.setStyle("-fx-background-color: #F8FAFC; -fx-padding: 4 10; -fx-background-radius: 12; -fx-text-fill: #64748B; -fx-font-size: 12px; -fx-font-weight: bold;");
+                    time.setStyle("-fx-background-color: #F8FAFC; -fx-padding: 4 10; -fx-background-radius: 12; -fx-text-fill: #6B7280; -fx-font-size: 12px; -fx-font-weight: 600;");
 
                     row.getChildren().addAll(dot, title, category, spacer, time);
                     
-                    row.setOnMouseEntered(e -> title.setStyle("-fx-text-fill: #10B981; -fx-font-size: 13px; -fx-font-weight: bold;"));
-                    row.setOnMouseExited(e -> title.setStyle("-fx-text-fill: #1E293B; -fx-font-size: 13px; -fx-font-weight: bold;"));
+                    row.setOnMouseEntered(e -> title.setStyle("-fx-text-fill: #22C55E; -fx-font-size: 13px; -fx-font-weight: bold;"));
+                    row.setOnMouseExited(e -> title.setStyle("-fx-text-fill: #1F2937; -fx-font-size: 13px; -fx-font-weight: bold;"));
                     
                     taskListContainer.getChildren().add(row);
                 }

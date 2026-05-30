@@ -11,13 +11,13 @@
         </ImageView>
         <Label text="Quick Note" styleClass="card-title" />
         <Region HBox.hgrow="ALWAYS" />
-        <Button text="⋮" style="-fx-background-color: transparent; -fx-font-size: 16px; -fx-cursor: hand; -fx-text-fill: #64748B;" />
+        <Button text="⋮" style="-fx-background-color: transparent; -fx-font-size: 16px; -fx-cursor: hand; -fx-text-fill: #6B7280;" />
     </HBox>
 
     <TextArea fx:id="noteArea" promptText="Write something...&#10;(press Enter to save)" wrapText="true" prefRowCount="2" style="-fx-background-color: transparent; -fx-border-color: #E2E8F0; -fx-border-radius: 8; -fx-control-inner-background: #F8FAFC;" />
 
     <HBox alignment="CENTER_RIGHT" spacing="15">
         <Label fx:id="charCountLabel" text="0 / 200" style="-fx-font-size: 11px; -fx-text-fill: #94A3B8;" />
-        <Button text="Save Note" style="-fx-background-color: #E6F8F1; -fx-text-fill: #10B981; -fx-font-weight: bold; -fx-background-radius: 6; -fx-padding: 6 12; -fx-cursor: hand;" onAction="#saveQuickNote" />
+        <Button text="Save Note" style="-fx-background-color: #DCFCE7; -fx-text-fill: #22C55E; -fx-font-weight: bold; -fx-background-radius: 6; -fx-padding: 6 12; -fx-cursor: hand;" onAction="#saveQuickNote" />
     </HBox>
 </VBox>

@@ -17,8 +17,8 @@
             <!-- Header -->
             <HBox alignment="CENTER_LEFT">
                 <VBox spacing="5">
-                    <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1E293B;" text="Tasks 📋" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: #64748B;" text="Plan your day. Focus on what matters." />
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1F2937;" text="Tasks 📋" />
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #6B7280;" text="Plan your day. Focus on what matters." />
                 </VBox>
                 
                 <Region HBox.hgrow="ALWAYS" />
@@ -43,8 +43,8 @@
                         <Label style="-fx-font-size: 18px; -fx-text-fill: #3B82F6;" text="🎯" />
                     </VBox>
                     <VBox spacing="2">
-                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="8" />
-                        <Label style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="In Progress" />
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" text="8" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" text="In Progress" />
                         <Label style="-fx-font-size: 10px; -fx-text-fill: #94A3B8;" text="Ongoing" />
                     </VBox>
                 </HBox>
@@ -55,8 +55,8 @@
                         <Label style="-fx-font-size: 18px; -fx-text-fill: #F59E0B;" text="⏱" />
                     </VBox>
                     <VBox spacing="2">
-                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="3" />
-                        <Label style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="Pending" />
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" text="3" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" text="Pending" />
                         <Label style="-fx-font-size: 10px; -fx-text-fill: #94A3B8;" text="Upcoming" />
                     </VBox>
                 </HBox>
@@ -67,8 +67,8 @@
                         <Label style="-fx-font-size: 16px; -fx-text-fill: #9333EA;" text="📅" />
                     </VBox>
                     <VBox spacing="2">
-                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="18" />
-                        <Label style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="Total Tasks" />
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" text="18" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" text="Total Tasks" />
                         <Label style="-fx-font-size: 10px; -fx-text-fill: #94A3B8;" text="This Week" />
                     </VBox>
                 </HBox>
@@ -97,13 +97,13 @@
                     <HBox alignment="CENTER" prefWidth="50">
                         <Label style="-fx-border-color: #CBD5E1; -fx-border-radius: 4; -fx-pref-width: 14; -fx-pref-height: 14;" />
                     </HBox>
-                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1E293B;" prefWidth="250" text="Task" />
-                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1E293B;" prefWidth="120" text="Status" />
-                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1E293B;" prefWidth="100" text="Priority" />
-                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1E293B;" prefWidth="120" text="Due Date" />
-                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1E293B;" prefWidth="100" text="Focus Time" />
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1F2937;" prefWidth="250" text="Task" />
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1F2937;" prefWidth="120" text="Status" />
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1F2937;" prefWidth="100" text="Priority" />
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1F2937;" prefWidth="120" text="Due Date" />
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1F2937;" prefWidth="100" text="Focus Time" />
                     <Region HBox.hgrow="ALWAYS" />
-                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1E293B;" prefWidth="50" alignment="CENTER" text="Actions" />
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: #1F2937;" prefWidth="50" alignment="CENTER" text="Actions" />
                 </HBox>
                 
                 <!-- Task Rows -->
@@ -115,8 +115,8 @@
                         <VBox styleClass="task-checkbox, task-checkbox-circle" style="-fx-border-color: #3B82F6;" />
                     </HBox>
                     <VBox spacing="2" prefWidth="250">
-                        <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1E293B;" text="Review knowledge base UI" />
-                        <Label style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="Review" />
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1F2937;" text="Review knowledge base UI" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" text="Review" />
                     </VBox>
                     <HBox prefWidth="120" alignment="CENTER_LEFT">
                         <Label styleClass="status-badge-inprogress" text="In Progress" />
@@ -125,11 +125,11 @@
                         <Label styleClass="priority-medium" text="— Medium" />
                     </HBox>
                     <HBox prefWidth="120" alignment="CENTER_LEFT">
-                        <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="May 24, 2025" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="May 24, 2025" />
                     </HBox>
                     <HBox prefWidth="100" alignment="CENTER_LEFT" spacing="5">
-                        <Label style="-fx-text-fill: #64748B;" text="⏱" />
-                        <Label style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="45 min" />
+                        <Label style="-fx-text-fill: #6B7280;" text="⏱" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #1F2937;" text="45 min" />
                     </HBox>
                     <Region HBox.hgrow="ALWAYS" />
                     <HBox alignment="CENTER" prefWidth="50">
@@ -143,8 +143,8 @@
                         <VBox styleClass="task-checkbox, task-checkbox-circle" style="-fx-border-color: #CBD5E1;" />
                     </HBox>
                     <VBox spacing="2" prefWidth="250">
-                        <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1E293B;" text="Read AI research papers" />
-                        <Label style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="Study" />
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1F2937;" text="Read AI research papers" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" text="Study" />
                     </VBox>
                     <HBox prefWidth="120" alignment="CENTER_LEFT">
                         <Label styleClass="status-badge-pending" text="Pending" />
@@ -153,11 +153,11 @@
                         <Label styleClass="priority-medium" text="— Medium" />
                     </HBox>
                     <HBox prefWidth="120" alignment="CENTER_LEFT">
-                        <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="May 27, 2025" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="May 27, 2025" />
                     </HBox>
                     <HBox prefWidth="100" alignment="CENTER_LEFT" spacing="5">
-                        <Label style="-fx-text-fill: #64748B;" text="⏱" />
-                        <Label style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="50 min" />
+                        <Label style="-fx-text-fill: #6B7280;" text="⏱" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #1F2937;" text="50 min" />
                     </HBox>
                     <Region HBox.hgrow="ALWAYS" />
                     <HBox alignment="CENTER" prefWidth="50">
@@ -167,7 +167,7 @@
 
                 <!-- Footer / Pagination -->
                 <HBox alignment="CENTER_LEFT" style="-fx-padding: 15 10 5 10;">
-                    <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Showing 1-8 of 18 tasks" />
+                    <Label style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="Showing 1-8 of 18 tasks" />
                     <Region HBox.hgrow="ALWAYS" />
                     
                     <HBox spacing="5" alignment="CENTER">
@@ -181,9 +181,9 @@
                     <Region HBox.hgrow="ALWAYS" />
                     
                     <HBox alignment="CENTER" spacing="5">
-                        <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Show" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="Show" />
                         <Label styleClass="btn-outline" style="-fx-padding: 2 8;" text="10 ⌄" />
-                        <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="per page" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="per page" />
                     </HBox>
                 </HBox>
             </VBox>

@@ -16,8 +16,8 @@
     
     <!-- Task Name & Category -->
     <VBox spacing="2" prefWidth="250">
-        <Label fx:id="nameLabel" style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1E293B;" text="Finish reading Markdown guide" />
-        <Label fx:id="categoryLabel" style="-fx-font-size: 11px; -fx-text-fill: #64748B;" text="Study" />
+        <Label fx:id="nameLabel" style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1F2937;" text="Finish reading Markdown guide" />
+        <Label fx:id="categoryLabel" style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" text="Study" />
     </VBox>
     
     <!-- Status -->
@@ -32,13 +32,13 @@
     
     <!-- Due Date -->
     <HBox prefWidth="120" alignment="CENTER_LEFT">
-        <Label fx:id="dueDateLabel" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="May 24, 2025" />
+        <Label fx:id="dueDateLabel" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="May 24, 2025" />
     </HBox>
     
     <!-- Focus Time -->
     <HBox prefWidth="100" alignment="CENTER_LEFT" spacing="5">
-        <Label style="-fx-text-fill: #64748B;" text="⏱" />
-        <Label fx:id="focusTimeLabel" style="-fx-font-size: 12px; -fx-text-fill: #1E293B;" text="60 min" />
+        <Label style="-fx-text-fill: #6B7280;" text="⏱" />
+        <Label fx:id="focusTimeLabel" style="-fx-font-size: 12px; -fx-text-fill: #1F2937;" text="60 min" />
     </HBox>
     
     <Region HBox.hgrow="ALWAYS" />

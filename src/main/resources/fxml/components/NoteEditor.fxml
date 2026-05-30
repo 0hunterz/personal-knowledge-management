@@ -6,30 +6,30 @@
 
 <VBox spacing="10" style="-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.NoteEditorController">
     <HBox alignment="CENTER_LEFT" spacing="15">
-        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="📝 Edit Note" />
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" text="📝 Edit Note" />
         <Region HBox.hgrow="ALWAYS" />
         <Button fx:id="deleteButton" text="Delete" style="-fx-background-color: #EF4444; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 6 15;" onAction="#handleDelete" />
-        <Button text="Cancel" style="-fx-background-color: #F1F5F9; -fx-text-fill: #64748B; -fx-background-radius: 5; -fx-padding: 6 15;" onAction="#handleCancel" />
-        <Button text="Save" style="-fx-background-color: #10B981; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 6 15;" onAction="#handleSave" />
+        <Button text="Cancel" style="-fx-background-color: #F1F5F9; -fx-text-fill: #6B7280; -fx-background-radius: 5; -fx-padding: 6 15;" onAction="#handleCancel" />
+        <Button text="Save" style="-fx-background-color: #22C55E; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 6 15;" onAction="#handleSave" />
     </HBox>
 
     <TextField fx:id="titleField" promptText="Title..." style="-fx-font-size: 16px; -fx-padding: 8; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 5; -fx-background-radius: 5;" />
 
     <HBox spacing="10" alignment="CENTER_LEFT">
-        <Label text="Category:" style="-fx-text-fill: #64748B; -fx-font-size: 13px;" />
+        <Label text="Category:" style="-fx-text-fill: #6B7280; -fx-font-size: 13px;" />
         <TextField fx:id="categoryField" promptText="Category" prefWidth="120" style="-fx-padding: 5; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
         
-        <Label text="Mastery:" style="-fx-text-fill: #64748B; -fx-font-size: 13px; -fx-padding: 0 0 0 10;" />
+        <Label text="Mastery:" style="-fx-text-fill: #6B7280; -fx-font-size: 13px; -fx-padding: 0 0 0 10;" />
         <ComboBox fx:id="masteryComboBox" prefWidth="120" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
         
-        <Label text="Review:" style="-fx-text-fill: #64748B; -fx-font-size: 13px; -fx-padding: 0 0 0 10;" />
+        <Label text="Review:" style="-fx-text-fill: #6B7280; -fx-font-size: 13px; -fx-padding: 0 0 0 10;" />
         <ComboBox fx:id="reviewComboBox" prefWidth="120" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
     </HBox>
 
     <TextArea fx:id="contentArea" promptText="Write your markdown content here..." VBox.vgrow="ALWAYS" wrapText="true" style="-fx-font-size: 14px; -fx-padding: 8; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 5;" />
 
     <HBox alignment="CENTER_LEFT" spacing="10">
-        <Label text="Tags:" style="-fx-text-fill: #64748B; -fx-font-size: 13px;" />
+        <Label text="Tags:" style="-fx-text-fill: #6B7280; -fx-font-size: 13px;" />
         <TextField fx:id="tagsField" promptText="Comma separated tags (e.g. #java, #ui)" HBox.hgrow="ALWAYS" style="-fx-padding: 5; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
     </HBox>
 </VBox>

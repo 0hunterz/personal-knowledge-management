@@ -17,10 +17,10 @@
             <HBox alignment="CENTER_LEFT">
                 <VBox spacing="5">
                     <HBox spacing="10" alignment="CENTER_LEFT">
-                        <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1E293B;" text="Tags" />
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1F2937;" text="Tags" />
                         <Label style="-fx-font-size: 22px;" text="🏷" />
                     </HBox>
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: #64748B;" text="Organize your notes with tags. Colorful, simple, effective." />
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #6B7280;" text="Organize your notes with tags. Colorful, simple, effective." />
                 </VBox>
                 <Region HBox.hgrow="ALWAYS" />
                 <HBox spacing="10" alignment="CENTER">
@@ -31,13 +31,13 @@
 
             <!-- All Tags Section -->
             <VBox spacing="15">
-                <Label style="-fx-font-weight: bold; -fx-font-size: 15px; -fx-text-fill: #1E293B;" text="All Tags" />
+                <Label style="-fx-font-weight: bold; -fx-font-size: 15px; -fx-text-fill: #1F2937;" text="All Tags" />
 
                 <!-- Row 1: 5 tags -->
                 <HBox spacing="15">
                     <!-- #study -->
                     <HBox alignment="CENTER_LEFT" styleClass="tag-item-card" HBox.hgrow="ALWAYS">
-                        <VBox styleClass="tag-dot" style="-fx-background-color: #10B981;" />
+                        <VBox styleClass="tag-dot" style="-fx-background-color: #22C55E;" />
                         <VBox spacing="2" HBox.hgrow="ALWAYS" style="-fx-padding: 0 0 0 10;">
                             <Label styleClass="tag-name-label" text="#study" />
                             <Label styleClass="tag-notes-label" text="18 notes" />
@@ -95,7 +95,7 @@
                     </HBox>
                     <!-- #linux -->
                     <HBox alignment="CENTER_LEFT" styleClass="tag-item-card" HBox.hgrow="ALWAYS">
-                        <VBox styleClass="tag-dot" style="-fx-background-color: #64748B;" />
+                        <VBox styleClass="tag-dot" style="-fx-background-color: #6B7280;" />
                         <VBox spacing="2" HBox.hgrow="ALWAYS" style="-fx-padding: 0 0 0 10;">
                             <Label styleClass="tag-name-label" text="#linux" />
                             <Label styleClass="tag-notes-label" text="8 notes" />
@@ -133,7 +133,7 @@
 
                 <!-- Show more -->
                 <HBox alignment="CENTER">
-                    <Label style="-fx-text-fill: #64748B; -fx-font-size: 13px; -fx-cursor: hand; -fx-padding: 5;" text="Show more ⌄" />
+                    <Label style="-fx-text-fill: #6B7280; -fx-font-size: 13px; -fx-cursor: hand; -fx-padding: 5;" text="Show more ⌄" />
                 </HBox>
             </VBox>
 

@@ -63,7 +63,7 @@ public class KnowledgeViewController {
         title.setStyle("-fx-font-weight: bold; -fx-font-size: 14px;");
 
         Label preview = new Label(note.getPreview());
-        preview.setStyle("-fx-text-fill: #64748B; -fx-font-size: 12px;");
+        preview.setStyle("-fx-text-fill: #6B7280; -fx-font-size: 12px;");
         preview.setWrapText(true);
 
         Label category = new Label(note.getCategory());

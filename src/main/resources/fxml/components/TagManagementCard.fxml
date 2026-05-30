@@ -9,23 +9,23 @@
 
     <!-- Table Header -->
     <HBox style="-fx-padding: 5; -fx-border-color: #E2E8F0; -fx-border-width: 0 0 1 0;">
-        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #64748B;" prefWidth="160" text="Tag" />
-        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #64748B;" prefWidth="70" text="Color" />
-        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #64748B;" prefWidth="70" text="Notes" />
-        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #64748B;" prefWidth="120" text="Created" />
-        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #64748B;" prefWidth="80" text="Actions" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #6B7280;" prefWidth="160" text="Tag" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #6B7280;" prefWidth="70" text="Color" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #6B7280;" prefWidth="70" text="Notes" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #6B7280;" prefWidth="120" text="Created" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 11px; -fx-text-fill: #6B7280;" prefWidth="80" text="Actions" />
     </HBox>
 
     <!-- Rows -->
     <VBox>
         <!-- study -->
         <HBox alignment="CENTER_LEFT" styleClass="tag-table-row">
-            <Label style="-fx-text-fill: #059669; -fx-font-weight: bold; -fx-font-size: 13px;" prefWidth="160" text="#study" />
+            <Label style="-fx-text-fill: #16A34A; -fx-font-weight: bold; -fx-font-size: 13px;" prefWidth="160" text="#study" />
             <HBox prefWidth="70" alignment="CENTER_LEFT">
-                <VBox styleClass="tag-color-dot" style="-fx-background-color: #10B981;" />
+                <VBox styleClass="tag-color-dot" style="-fx-background-color: #22C55E;" />
             </HBox>
             <Label prefWidth="70" style="-fx-font-size: 13px;" text="18" />
-            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="May 10, 2025" />
+            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="May 10, 2025" />
             <HBox prefWidth="80" spacing="5">
                 <Label styleClass="tag-action-icon" text="✏" />
                 <Label styleClass="tag-action-icon" text="🗑" />
@@ -38,7 +38,7 @@
                 <VBox styleClass="tag-color-dot" style="-fx-background-color: #3B82F6;" />
             </HBox>
             <Label prefWidth="70" style="-fx-font-size: 13px;" text="15" />
-            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="May 8, 2025" />
+            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="May 8, 2025" />
             <HBox prefWidth="80" spacing="5">
                 <Label styleClass="tag-action-icon" text="✏" />
                 <Label styleClass="tag-action-icon" text="🗑" />
@@ -51,7 +51,7 @@
                 <VBox styleClass="tag-color-dot" style="-fx-background-color: #F59E0B;" />
             </HBox>
             <Label prefWidth="70" style="-fx-font-size: 13px;" text="14" />
-            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Apr 30, 2025" />
+            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="Apr 30, 2025" />
             <HBox prefWidth="80" spacing="5">
                 <Label styleClass="tag-action-icon" text="✏" />
                 <Label styleClass="tag-action-icon" text="🗑" />
@@ -64,7 +64,7 @@
                 <VBox styleClass="tag-color-dot" style="-fx-background-color: #8B5CF6;" />
             </HBox>
             <Label prefWidth="70" style="-fx-font-size: 13px;" text="12" />
-            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Apr 28, 2025" />
+            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="Apr 28, 2025" />
             <HBox prefWidth="80" spacing="5">
                 <Label styleClass="tag-action-icon" text="✏" />
                 <Label styleClass="tag-action-icon" text="🗑" />
@@ -77,7 +77,7 @@
                 <VBox styleClass="tag-color-dot" style="-fx-background-color: #EC4899;" />
             </HBox>
             <Label prefWidth="70" style="-fx-font-size: 13px;" text="10" />
-            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Apr 25, 2025" />
+            <Label prefWidth="120" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="Apr 25, 2025" />
             <HBox prefWidth="80" spacing="5">
                 <Label styleClass="tag-action-icon" text="✏" />
                 <Label styleClass="tag-action-icon" text="🗑" />
@@ -87,7 +87,7 @@
 
     <!-- Pagination -->
     <HBox alignment="CENTER_LEFT" style="-fx-padding: 5 0 0 0;">
-        <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Showing 1-5 of 12 tags" />
+        <Label style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="Showing 1-5 of 12 tags" />
         <Region HBox.hgrow="ALWAYS" />
         <HBox spacing="5" alignment="CENTER">
             <Label styleClass="pagination-btn" text="&lt;" />
@@ -98,9 +98,9 @@
         </HBox>
         <Region HBox.hgrow="ALWAYS" />
         <HBox spacing="5" alignment="CENTER">
-            <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Show" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="Show" />
             <Label styleClass="btn-outline" style="-fx-padding: 2 8;" text="5 ⌄" />
-            <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="per page" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" text="per page" />
         </HBox>
     </HBox>
 </VBox>

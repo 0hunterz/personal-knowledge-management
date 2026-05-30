@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <HBox alignment="CENTER_LEFT" styleClass="tag-item-card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-    <VBox styleClass="tag-dot" style="-fx-background-color: #10B981;" />
+    <VBox styleClass="tag-dot" style="-fx-background-color: #22C55E;" />
     <VBox spacing="2" HBox.hgrow="ALWAYS" style="-fx-padding: 0 0 0 10;">
         <Label styleClass="tag-name-label" text="#study" />
         <Label styleClass="tag-notes-label" text="18 notes" />

@@ -37,7 +37,7 @@ public class NoteCardController {
             previewLabel.setStyle("-fx-text-fill: #94A3B8; -fx-font-style: italic;");
         } else {
             previewLabel.setText(note.getContent() != null ? note.getContent() : "");
-            previewLabel.setStyle("-fx-text-fill: #64748B;");
+            previewLabel.setStyle("-fx-text-fill: #6B7280;");
         }
 
         // Dynamic icon and background color based on title or tags
@@ -54,7 +54,7 @@ public class NoteCardController {
             bgColor = "#E0F2FE"; // Blue light
         } else if (textToMatch.contains("study") || textToMatch.contains("java") || textToMatch.contains("code")) {
             imagePath = "/images/study.png";
-            bgColor = "#ECFDF5"; // Green light
+            bgColor = "#DCFCE7"; // Green light
         } else if (textToMatch.contains("idea") || textToMatch.contains("tip") || textToMatch.contains("mind")) {
             imagePath = "/images/idea.png";
             bgColor = "#FEF3C7"; // Orange light
@@ -83,7 +83,7 @@ public class NoteCardController {
                     if (tag.equalsIgnoreCase("project") || tag.equalsIgnoreCase("plan")) {
                         tagLabel.setStyle("-fx-background-color: #E0F2FE; -fx-text-fill: #0284C7;");
                     } else if (tag.equalsIgnoreCase("study") || tag.equalsIgnoreCase("java") || tag.equalsIgnoreCase("code")) {
-                        tagLabel.setStyle("-fx-background-color: #ECFDF5; -fx-text-fill: #059669;");
+                        tagLabel.setStyle("-fx-background-color: #DCFCE7; -fx-text-fill: #16A34A;");
                     } else if (tag.equalsIgnoreCase("review") || tag.equalsIgnoreCase("AI")) {
                         tagLabel.setStyle("-fx-background-color: #F3E8FF; -fx-text-fill: #9333EA;");
                     } else if (tag.equalsIgnoreCase("idea")) {

@@ -49,7 +49,7 @@ public class PopularTagsController {
                     row.setAlignment(Pos.CENTER_LEFT);
 
                     Label rankLabel = new Label(String.valueOf(rank));
-                    rankLabel.setStyle("-fx-font-weight: bold; -fx-text-fill: #64748B;");
+                    rankLabel.setStyle("-fx-font-weight: bold; -fx-text-fill: #6B7280;");
 
                     Label tagLabel = new Label("#" + tag.getName());
                     tagLabel.getStyleClass().add("popular-tag-badge");

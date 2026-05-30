@@ -10,14 +10,14 @@
             <Insets top="40" right="40" bottom="40" left="40"/>
         </padding>
         
-        <Label fx:id="progressLabel" text="Reviewing: 1 / 10" style="-fx-font-size: 14px; -fx-text-fill: #64748B; -fx-font-weight: bold;"/>
+        <Label fx:id="progressLabel" text="Reviewing: 1 / 10" style="-fx-font-size: 14px; -fx-text-fill: #6B7280; -fx-font-weight: bold;"/>
         
         <!-- Flashcard Pane -->
         <VBox fx:id="cardPane" style="-fx-padding: 40; -fx-background-color: white; -fx-background-radius: 16; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);" 
               spacing="30" alignment="CENTER" minHeight="350" minWidth="500">
             
             <Label fx:id="questionLabel" text="What is the question?" wrapText="true" textAlignment="CENTER" 
-                   style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1E293B;"/>
+                   style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1F2937;"/>
             
             <Separator style="-fx-padding: 10 0;" />
             
@@ -35,15 +35,15 @@
                 <Button text="Good (Got it)" onAction="#onGood" 
                         style="-fx-background-color: #E0E7FF; -fx-text-fill: #6366F1; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 20; -fx-cursor: hand;"/>
                 <Button text="Easy (Too easy)" onAction="#onEasy" 
-                        style="-fx-background-color: #D1FAE5; -fx-text-fill: #10B981; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 20; -fx-cursor: hand;"/>
+                        style="-fx-background-color: #D1FAE5; -fx-text-fill: #22C55E; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 20; -fx-cursor: hand;"/>
             </HBox>
         </VBox>
 
         <!-- Completion Pane -->
         <VBox fx:id="completePane" visible="false" alignment="CENTER" spacing="20" managed="${completePane.visible}">
             <Label text="🎉" style="-fx-font-size: 48px;"/>
-            <Label text="You're all caught up for today!" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1E293B;"/>
-            <Label text="Come back tomorrow for more reviews." style="-fx-font-size: 16px; -fx-text-fill: #64748B;"/>
+            <Label text="You're all caught up for today!" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1F2937;"/>
+            <Label text="Come back tomorrow for more reviews." style="-fx-font-size: 16px; -fx-text-fill: #6B7280;"/>
         </VBox>
     </VBox>
 </StackPane>
