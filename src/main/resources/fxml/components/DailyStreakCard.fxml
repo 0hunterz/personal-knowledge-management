@@ -36,7 +36,7 @@
         <!-- Biểu đồ chậu cây thu nhỏ -->
         <StackPane>
             <Circle radius="30" fill="TRANSPARENT" stroke="#E2E8F0" strokeWidth="4" />
-            <Circle radius="30" fill="TRANSPARENT" stroke="#10B981" strokeWidth="4" strokeDashArray="120, 200" />
+            <Arc radiusX="30" radiusY="30" startAngle="90" length="-250" fill="TRANSPARENT" stroke="#10B981" strokeWidth="4" strokeLineCap="ROUND" />
             <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
                 <image><Image url="@/images/plant.png" /></image>
             </ImageView>

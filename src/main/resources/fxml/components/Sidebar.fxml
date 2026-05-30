@@ -68,8 +68,15 @@
                 <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Tags.png" /></image></ImageView>
             </graphic>
         </ToggleButton>
+        <Separator style="-fx-padding: 10 0;" />
+        <!-- Settings -->
+        <ToggleButton text="Settings" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT">
+            <graphic>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Settings.png" /></image></ImageView>
+            </graphic>
+        </ToggleButton>
         
-        <!-- Spacer to push settings and profile to bottom -->
+        <!-- Spacer to push profile to bottom -->
         <Region VBox.vgrow="ALWAYS" />
     </VBox>
 

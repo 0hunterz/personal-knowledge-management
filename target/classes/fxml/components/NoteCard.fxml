@@ -5,14 +5,18 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
 <!-- Một Note Card độc lập -->
 
 <VBox minWidth="200" prefWidth="220" spacing="10" style="-fx-padding: 15; -fx-cursor: hand;" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.NoteCardController">
     <!-- Icon mảng -->
     <StackPane alignment="CENTER_LEFT">
-        <Region style="-fx-background-color: #E0F2FE; -fx-background-radius: 8; -fx-pref-width: 32; -fx-pref-height: 32;" />
-        <Label style="-fx-font-size: 16px; -fx-padding: 0 0 0 8;" text="📄" />
+        <Region fx:id="iconBackground" style="-fx-background-color: #E0F2FE; -fx-background-radius: 8; -fx-pref-width: 32; -fx-pref-height: 32;" />
+        <ImageView fx:id="iconImageView" fitHeight="16" fitWidth="16" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+            <image><Image url="@/images/note.png" /></image>
+        </ImageView>
     </StackPane>
 
     <!-- Tiêu đề -->
