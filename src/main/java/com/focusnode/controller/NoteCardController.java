@@ -64,7 +64,7 @@ public class NoteCardController {
         }
         
         if (iconBackground != null) {
-            iconBackground.setStyle("-fx-background-color: " + bgColor + "; -fx-background-radius: 8; -fx-pref-width: 32; -fx-pref-height: 32;");
+            iconBackground.setStyle("-fx-background-color: " + bgColor + "; -fx-background-radius: 12; -fx-pref-width: 44; -fx-pref-height: 44;");
         }
         
         if (iconImageView != null) {
