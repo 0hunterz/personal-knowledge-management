@@ -2,21 +2,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="15" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox spacing="15" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.RecentNotesController">
     
     <HBox alignment="CENTER_LEFT">
         <Label text="📄 Recent Notes" styleClass="card-title" />
         <Region HBox.hgrow="ALWAYS" />
-        <Button text="View all →" style="-fx-background-color: transparent; -fx-text-fill: #3B82F6; -fx-font-weight: bold; -fx-cursor: hand;" />
+        <Button text="View all →" styleClass="btn-text" onAction="#viewAllNotes" />
     </HBox>
 
     <!-- HBox chứa các NoteCard nằm ngang, có thể bọc trong ScrollPane nếu nhiều -->
     <HBox spacing="15" fx:id="notesContainer">
-        <!-- Chỗ này sẽ inject các NoteCard.fxml vào qua code hoặc include tĩnh -->
-        <fx:include source="NoteCard.fxml" />
-        <fx:include source="NoteCard.fxml" />
-        <fx:include source="NoteCard.fxml" />
-        <fx:include source="NoteCard.fxml" />
+        <!-- Notes will be loaded here dynamically by controller -->
     </HBox>
 
 </VBox>

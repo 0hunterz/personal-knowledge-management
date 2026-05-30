@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.HBox?>
+<HBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.TopBarController" style="-fx-background-color: transparent;" minHeight="0" prefHeight="0" maxHeight="0" />

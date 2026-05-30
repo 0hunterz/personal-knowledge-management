@@ -3,10 +3,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
-<VBox spacing="15" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox spacing="15" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.DailyStreakController">
     <HBox alignment="CENTER_LEFT" spacing="10">
-        <Label text="🔥" style="-fx-font-size: 16px;" />
+        <ImageView fitHeight="18" fitWidth="18" pickOnBounds="true" preserveRatio="true">
+            <image><Image url="@/images/fire.png" /></image>
+        </ImageView>
         <Label text="Daily Streak" styleClass="card-title" />
         <Region HBox.hgrow="ALWAYS" />
         <Button text="⋮" style="-fx-background-color: transparent; -fx-font-size: 16px; -fx-cursor: hand; -fx-text-fill: #64748B;" />
@@ -19,7 +23,12 @@
                 <Label fx:id="streakDaysLabel" text="7" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" />
                 <Label text="days" style="-fx-font-size: 14px; -fx-text-fill: #64748B;" />
             </HBox>
-            <Label text="Keep it up! 🔥" style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-font-weight: bold;" />
+            <HBox alignment="CENTER_LEFT" spacing="5">
+                <Label text="Keep it up!" style="-fx-font-size: 12px; -fx-text-fill: #64748B; -fx-font-weight: bold;" />
+                <ImageView fitHeight="12" fitWidth="12" pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@/images/fire.png" /></image>
+                </ImageView>
+            </HBox>
         </VBox>
         
         <Region HBox.hgrow="ALWAYS" />
@@ -28,19 +37,14 @@
         <StackPane>
             <Circle radius="30" fill="TRANSPARENT" stroke="#E2E8F0" strokeWidth="4" />
             <Circle radius="30" fill="TRANSPARENT" stroke="#10B981" strokeWidth="4" strokeDashArray="120, 200" />
-            <Label text="🌱" style="-fx-font-size: 24px;" />
+            <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
+                <image><Image url="@/images/plant.png" /></image>
+            </ImageView>
         </StackPane>
     </HBox>
 
     <!-- Danh sách các ngày trong tuần -->
     <HBox spacing="10" alignment="CENTER" fx:id="daysContainer">
-        <fx:include source="StreakDay.fxml" />
-        <fx:include source="StreakDay.fxml" />
-        <fx:include source="StreakDay.fxml" />
-        <fx:include source="StreakDay.fxml" />
-        <fx:include source="StreakDay.fxml" />
-        <fx:include source="StreakDay.fxml" />
-        <fx:include source="StreakDay.fxml" />
     </HBox>
 
 </VBox>

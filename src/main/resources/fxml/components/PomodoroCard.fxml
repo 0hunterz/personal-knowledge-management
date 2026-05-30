@@ -4,10 +4,15 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
-<VBox alignment="CENTER" spacing="20" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-    <HBox alignment="CENTER_LEFT">
-        <Label text="⏱ Pomodoro" styleClass="card-title" />
+<VBox alignment="CENTER" spacing="10" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.PomodoroCardController">
+    <HBox alignment="CENTER_LEFT" spacing="8">
+        <ImageView fitHeight="18" fitWidth="18" pickOnBounds="true" preserveRatio="true">
+            <image><Image url="@/images/timer.png" /></image>
+        </ImageView>
+        <Label text="Pomodoro" styleClass="card-title" />
     </HBox>
 
     <!-- Vòng tròn Timer -->
@@ -17,14 +22,14 @@
         <Circle radius="70" fill="TRANSPARENT" stroke="#10B981" strokeWidth="8" strokeDashArray="100, 400" />
         
         <VBox alignment="CENTER">
-            <Label fx:id="timeLabel" text="25:00" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" />
+            <Label fx:id="timeLabel" text="25:00" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" />
             <Label text="Focus Time" style="-fx-font-size: 12px; -fx-text-fill: #64748B;" />
         </VBox>
     </StackPane>
 
     <!-- Nút điều khiển -->
     <VBox spacing="10" alignment="CENTER" maxWidth="Infinity">
-        <Button text="▶ Start Focus" maxWidth="Infinity" style="-fx-background-color: #10B981; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10;" />
-        <Button text="☕ Short Break" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #3B82F6; -fx-font-weight: bold; -fx-cursor: hand;" />
+        <Button text="▶ Start Focus" onAction="#startFocus" maxWidth="Infinity" styleClass="btn-primary" />
+        <Button text="☕ Short Break" onAction="#startBreak" maxWidth="Infinity" styleClass="btn-text" />
     </VBox>
 </VBox>

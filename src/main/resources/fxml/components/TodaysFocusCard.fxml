@@ -6,13 +6,13 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="15" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox spacing="15" styleClass="card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.TodaysFocusController">
 
     <HBox alignment="CENTER_LEFT" spacing="10">
         <Label style="-fx-font-size: 20px;" text="🎯" />
         <Label styleClass="card-title" text="Today's Focus" />
         <Region HBox.hgrow="ALWAYS" />
-        <Button styleClass="btn-add-task" text="+ Add Task" />
+        <Button styleClass="btn-add-task" text="+ Add Task" onAction="#addTask" />
     </HBox>
 
     <VBox fx:id="taskListContainer" spacing="12" />

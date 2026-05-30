@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" style="-fx-padding: 20; -fx-background-color: white; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.SurveyDialogController">
+    <Label text="🎉 Session Complete!" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" />
+    <Label text="How was your focus?" style="-fx-font-size: 14px; -fx-text-fill: #64748B;" />
+    
+    <HBox spacing="10" alignment="CENTER">
+        <RadioButton fx:id="rate1" text="1 - Poor" toggleGroup="$focusGroup" />
+        <RadioButton fx:id="rate2" text="2" toggleGroup="$focusGroup" />
+        <RadioButton fx:id="rate3" text="3 - Okay" toggleGroup="$focusGroup" selected="true" />
+        <RadioButton fx:id="rate4" text="4" toggleGroup="$focusGroup" />
+        <RadioButton fx:id="rate5" text="5 - Deep Focus" toggleGroup="$focusGroup" />
+    </HBox>
+    <fx:define>
+        <ToggleGroup fx:id="focusGroup"/>
+    </fx:define>
+
+    <Label text="Any distractions?" style="-fx-font-size: 14px; -fx-text-fill: #64748B;" />
+    <TextArea fx:id="distractionsArea" promptText="Phone rings, noisy environment..." prefRowCount="3" style="-fx-font-size: 13px;" />
+
+    <HBox alignment="CENTER_RIGHT" spacing="10">
+        <Button text="Skip" onAction="#handleSkip" style="-fx-background-color: #F1F5F9; -fx-text-fill: #64748B; -fx-background-radius: 5; -fx-padding: 6 15;" />
+        <Button text="Save &amp; Close" onAction="#handleSave" style="-fx-background-color: #10B981; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 6 15;" />
+    </HBox>
+</VBox>

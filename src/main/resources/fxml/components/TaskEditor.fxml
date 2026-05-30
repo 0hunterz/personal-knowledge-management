@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" style="-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.TaskEditorController">
+    <HBox alignment="CENTER_LEFT" spacing="15">
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="📝 Task Details" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button fx:id="deleteButton" text="Delete" style="-fx-background-color: #EF4444; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 6 15;" onAction="#handleDelete" />
+        <Button text="Cancel" style="-fx-background-color: #F1F5F9; -fx-text-fill: #64748B; -fx-background-radius: 5; -fx-padding: 6 15;" onAction="#handleCancel" />
+        <Button text="Save Task" style="-fx-background-color: #3B82F6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 6 15;" onAction="#handleSave" />
+    </HBox>
+
+    <TextField fx:id="titleField" promptText="Task Title..." style="-fx-font-size: 16px; -fx-padding: 8; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+    <HBox spacing="15">
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Category:" style="-fx-text-fill: #64748B; -fx-font-size: 12px;" />
+            <TextField fx:id="categoryField" promptText="e.g. Study, Work" style="-fx-padding: 5; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
+        </VBox>
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Task Type:" style="-fx-text-fill: #64748B; -fx-font-size: 12px;" />
+            <ComboBox fx:id="taskTypeComboBox" maxWidth="Infinity" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
+        </VBox>
+    </HBox>
+
+    <HBox spacing="15">
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Priority:" style="-fx-text-fill: #64748B; -fx-font-size: 12px;" />
+            <ComboBox fx:id="priorityComboBox" maxWidth="Infinity" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
+        </VBox>
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Status:" style="-fx-text-fill: #64748B; -fx-font-size: 12px;" />
+            <ComboBox fx:id="statusComboBox" maxWidth="Infinity" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
+        </VBox>
+    </HBox>
+
+    <HBox spacing="15">
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Due Date:" style="-fx-text-fill: #64748B; -fx-font-size: 12px;" />
+            <DatePicker fx:id="dueDatePicker" maxWidth="Infinity" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
+        </VBox>
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Est. Time (mins):" style="-fx-text-fill: #64748B; -fx-font-size: 12px;" />
+            <Spinner fx:id="estTimeSpinner" maxWidth="Infinity" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
+        </VBox>
+    </HBox>
+
+    <VBox spacing="5">
+        <Label text="Link to Note:" style="-fx-text-fill: #64748B; -fx-font-size: 12px;" />
+        <ComboBox fx:id="linkedNoteComboBox" maxWidth="Infinity" promptText="Select a note to link..." style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
+    </VBox>
+
+    <VBox spacing="5" VBox.vgrow="ALWAYS">
+        <Label text="Description:" style="-fx-text-fill: #64748B; -fx-font-size: 12px;" />
+        <TextArea fx:id="descriptionArea" promptText="Add more details..." wrapText="true" VBox.vgrow="ALWAYS" style="-fx-font-size: 14px; -fx-padding: 8; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 5;" />
+    </VBox>
+</VBox>
