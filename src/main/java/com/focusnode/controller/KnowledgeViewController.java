@@ -18,13 +18,14 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.FileChooser;
 import javafx.stage.DirectoryChooser;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.Priority;
 import java.awt.Desktop;
 import java.util.Optional;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
 import javafx.geometry.Pos;
 import javafx.geometry.Insets;
 import com.focusnode.repository.FolderRepository;
@@ -60,8 +61,10 @@ public class KnowledgeViewController {
     @FXML private VBox rightSidebar;
     @FXML private TextField searchInput;
 
-    @FXML private HBox myDriveSidebarBtn;
-    @FXML private HBox trashSidebarBtn;
+    @FXML private VBox dashboardContainer;
+    @FXML private VBox personalRepoContainer;
+    @FXML private Label repoStatsLbl;
+    
     @FXML private MenuButton newBtn;
 
     private NoteEditorController noteEditorController;
@@ -86,7 +89,7 @@ public class KnowledgeViewController {
         setupViewToggles();
         setupDragAndDrop();
         
-        loadCurrentFolderData();
+        showDashboard();
         
         if (searchInput != null) {
             searchInput.textProperty().addListener((obs, oldVal, newVal) -> filterContent(newVal));
@@ -250,8 +253,12 @@ public class KnowledgeViewController {
                         newBtn.setVisible(!isTrashMode);
                         newBtn.setManaged(!isTrashMode);
                     }
-                    updateBreadcrumbs(path);
-                    filterContent(searchInput != null ? searchInput.getText() : "");
+                    if (dashboardContainer.isVisible()) {
+                        updateDashboardStats();
+                    } else {
+                        updateBreadcrumbs(path);
+                        filterContent(searchInput != null ? searchInput.getText() : "");
+                    }
                 });
             } catch (Exception e) {
                 System.out.println("DEBUG: Exception in async executor!");
@@ -264,14 +271,26 @@ public class KnowledgeViewController {
         if (breadcrumbContainer == null) return;
         breadcrumbContainer.getChildren().clear();
         
-        String rootName = isTrashMode ? "Trash" : "My Drive";
+        String rootName = isTrashMode ? "Trash" : "Knowledge";
         Label rootLbl = new Label(rootName);
         rootLbl.setStyle("-fx-font-size: 14px; -fx-text-fill: #3B82F6; -fx-cursor: hand;");
-        rootLbl.setOnMouseClicked(e -> {
-            currentFolder = null;
-            loadCurrentFolderData();
-        });
+        rootLbl.setOnMouseClicked(e -> showDashboard());
         breadcrumbContainer.getChildren().add(rootLbl);
+        
+        if (!isTrashMode) {
+            Label separator1 = new Label(" > ");
+            separator1.setStyle("-fx-font-size: 14px; -fx-text-fill: #6B7280;");
+            
+            Label prLbl = new Label("Personal Repository");
+            prLbl.setStyle("-fx-font-size: 14px; -fx-text-fill: " + (currentFolder == null ? "#1F2937" : "#3B82F6") + "; -fx-font-weight: " + (currentFolder == null ? "bold" : "normal") + "; -fx-cursor: " + (currentFolder == null ? "default" : "hand") + ";");
+            if (currentFolder != null) {
+                prLbl.setOnMouseClicked(e -> {
+                    currentFolder = null;
+                    loadCurrentFolderData();
+                });
+            }
+            breadcrumbContainer.getChildren().addAll(separator1, prLbl);
+        }
         
         for (Folder folder : path) {
             Label separator = new Label(" > ");
@@ -524,48 +543,71 @@ public class KnowledgeViewController {
     }
     
     private Node createFolderCard(Folder folder) {
-        VBox card = new VBox(5);
-        card.setStyle("-fx-background-color: #EFF6FF; -fx-padding: 15; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #BFDBFE; -fx-cursor: hand;");
+        VBox card = new VBox(8);
+        card.setStyle("-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);");
         card.setPrefWidth(200);
+        card.setPrefHeight(120);
         
         Label icon = new Label("📁");
-        icon.setStyle("-fx-font-size: 24px;");
+        icon.setStyle("-fx-font-size: 28px;");
+        
+        Region spacer = new Region();
+        VBox.setVgrow(spacer, Priority.ALWAYS);
         
         Label title = new Label(folder.getName());
-        title.setStyle("-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1E3A8A;");
+        title.setStyle("-fx-font-weight: bold; -fx-font-size: 15px; -fx-text-fill: #1F2937;");
         
-        card.getChildren().addAll(icon, title);
+        // We can show stats if we have them, otherwise just generic or date
+        Label subtitle = new Label("Folder");
+        subtitle.setStyle("-fx-font-size: 12px; -fx-text-fill: #6B7280;");
+        
+        card.getChildren().addAll(icon, spacer, title, subtitle);
         card.setOnMouseClicked(e -> {
             if (e.getButton() == MouseButton.PRIMARY) {
                 currentFolder = folder;
                 loadCurrentFolderData();
             }
         });
+        
+        // Add hover effect via Java code since we don't have a specific CSS class here, 
+        // but applying a class is better. Let's stick to inline for simplicity or add a class.
+        card.setOnMouseEntered(e -> card.setStyle("-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 15, 0, 0, 6);"));
+        card.setOnMouseExited(e -> card.setStyle("-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);"));
+        
         return card;
     }
     
     private Node createFileCard(FileResource file) {
-        VBox card = new VBox(5);
-        card.setStyle("-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 8; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);");
+        VBox card = new VBox(8);
+        card.setStyle("-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);");
         card.setPrefWidth(200);
+        card.setPrefHeight(120);
         
         Label icon = new Label("📄");
-        icon.setStyle("-fx-font-size: 24px; -fx-text-fill: #6B7280;");
+        icon.setStyle("-fx-font-size: 28px; -fx-text-fill: #6B7280;");
+        
+        Region spacer = new Region();
+        VBox.setVgrow(spacer, Priority.ALWAYS);
         
         Label title = new Label(file.getFileName());
-        title.setStyle("-fx-font-weight: bold; -fx-font-size: 14px;");
+        title.setStyle("-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;");
         title.setWrapText(true);
+        title.setMaxHeight(40);
         
         String sizeStr = (file.getSizeBytes() / 1024) + " KB";
-        Label sizeLbl = new Label(sizeStr);
-        sizeLbl.setStyle("-fx-text-fill: #9CA3AF; -fx-font-size: 11px;");
+        Label sizeLbl = new Label("File • " + sizeStr);
+        sizeLbl.setStyle("-fx-text-fill: #9CA3AF; -fx-font-size: 12px;");
         
-        card.getChildren().addAll(icon, title, sizeLbl);
+        card.getChildren().addAll(icon, spacer, title, sizeLbl);
         card.setOnMouseClicked(e -> {
             if (e.getButton() == MouseButton.PRIMARY && e.getClickCount() == 2) {
                 openFile(file);
             }
         });
+        
+        card.setOnMouseEntered(e -> card.setStyle("-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 15, 0, 0, 6);"));
+        card.setOnMouseExited(e -> card.setStyle("-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);"));
+        
         return card;
     }
     
@@ -595,23 +637,31 @@ public class KnowledgeViewController {
     }
 
     private Node createNoteCard(Note note) {
-        VBox card = new VBox(5);
-        card.setStyle("-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 8; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);");
+        VBox card = new VBox(8);
+        card.setStyle("-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);");
         card.setPrefWidth(200);
+        card.setPrefHeight(120);
+
+        Label icon = new Label("📝");
+        icon.setStyle("-fx-font-size: 28px; -fx-text-fill: #4F46E5;");
+        
+        Region spacer = new Region();
+        VBox.setVgrow(spacer, Priority.ALWAYS);
 
         Label title = new Label(note.getTitle());
-        title.setStyle("-fx-font-weight: bold; -fx-font-size: 14px;");
+        title.setStyle("-fx-font-weight: bold; -fx-font-size: 15px; -fx-text-fill: #1F2937;");
+        title.setWrapText(true);
+        title.setMaxHeight(40);
 
-        Label preview = new Label(note.getPreview());
-        preview.setStyle("-fx-text-fill: #6B7280; -fx-font-size: 12px;");
-        preview.setWrapText(true);
+        Label category = new Label("Note • " + note.getSubjectName());
+        category.setStyle("-fx-text-fill: #6B7280; -fx-font-size: 12px;");
 
-        Label category = new Label(note.getSubjectName());
-        category.setStyle("-fx-text-fill: #3B82F6; -fx-font-size: 11px;");
-
-        card.getChildren().addAll(title, category, preview);
+        card.getChildren().addAll(icon, spacer, title, category);
         
         card.setOnMouseClicked(e -> openEditor(note));
+        
+        card.setOnMouseEntered(e -> card.setStyle("-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 15, 0, 0, 6);"));
+        card.setOnMouseExited(e -> card.setStyle("-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);"));
         
         return card;
     }
@@ -693,11 +743,38 @@ public class KnowledgeViewController {
     }
 
     @FXML
-    public void openMyDrive() {
+    public void showDashboard() {
+        if (dashboardContainer != null) {
+            dashboardContainer.setVisible(true);
+            dashboardContainer.setManaged(true);
+        }
+        if (personalRepoContainer != null) {
+            personalRepoContainer.setVisible(false);
+            personalRepoContainer.setManaged(false);
+        }
+        
+        // Load data just to get stats
+        loadCurrentFolderData();
+    }
+    
+    private void updateDashboardStats() {
+        if (repoStatsLbl != null) {
+            repoStatsLbl.setText("Your personal knowledge base");
+        }
+    }
+
+    @FXML
+    public void openPersonalRepository() {
         isTrashMode = false;
         currentFolder = null;
-        if (myDriveSidebarBtn != null) myDriveSidebarBtn.getStyleClass().add("sidebar-item-active");
-        if (trashSidebarBtn != null) trashSidebarBtn.getStyleClass().remove("sidebar-item-active");
+        if (dashboardContainer != null) {
+            dashboardContainer.setVisible(false);
+            dashboardContainer.setManaged(false);
+        }
+        if (personalRepoContainer != null) {
+            personalRepoContainer.setVisible(true);
+            personalRepoContainer.setManaged(true);
+        }
         loadCurrentFolderData();
     }
 
@@ -705,8 +782,14 @@ public class KnowledgeViewController {
     public void openTrash() {
         isTrashMode = true;
         currentFolder = null;
-        if (myDriveSidebarBtn != null) myDriveSidebarBtn.getStyleClass().remove("sidebar-item-active");
-        if (trashSidebarBtn != null) trashSidebarBtn.getStyleClass().add("sidebar-item-active");
+        if (dashboardContainer != null) {
+            dashboardContainer.setVisible(false);
+            dashboardContainer.setManaged(false);
+        }
+        if (personalRepoContainer != null) {
+            personalRepoContainer.setVisible(true);
+            personalRepoContainer.setManaged(true);
+        }
         loadCurrentFolderData();
     }
 }

@@ -885,3 +885,36 @@
 .sidebar-item-active .label {
     -fx-text-fill: #1E40AF;
 }
+
+/* =====================================================================
+   15. KNOWLEDGE HUB NEW DASHBOARD
+   ===================================================================== */
+.hub-portal-card {
+    /* Transitions for scale or translate if supported, mostly relying on hover effect */
+}
+.hub-portal-card:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.12), 20, 0, 0, 6);
+    -fx-background-color: #F8FAFC;
+}
+
+/* Filter pills a-la Notion */
+.notion-filter-pill {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 6px 14px;
+    -fx-text-fill: #6B7280;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-radius: 20px;
+}
+.notion-filter-pill:hover {
+    -fx-background-color: #E5E7EB;
+    -fx-text-fill: #374151;
+}
+.notion-filter-pill-active {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #111827;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 20px;
+}

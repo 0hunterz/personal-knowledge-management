@@ -7,6 +7,7 @@ com\focusnode\model\Note.class
 com\focusnode\controller\LanHubViewController.class
 com\focusnode\model\ReviewItem.class
 com\focusnode\model\TagUsageItem.class
+com\focusnode\util\VaultManager.class
 com\focusnode\controller\NoteEditorController$1.class
 com\focusnode\model\FileResource.class
 com\focusnode\repository\FocusPointRepository.class
@@ -56,6 +57,7 @@ com\focusnode\controller\StorageCardController.class
 com\focusnode\controller\TodaysFocusController.class
 com\focusnode\model\Task.class
 com\focusnode\model\FocusPoint.class
+com\focusnode\model\KnowledgeNode.class
 com\focusnode\controller\NoteEditorController.class
 com\focusnode\controller\ZenModeController.class
 com\focusnode\model\Task$Status.class
