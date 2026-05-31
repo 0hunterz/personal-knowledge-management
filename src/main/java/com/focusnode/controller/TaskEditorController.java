@@ -16,7 +16,6 @@ public class TaskEditorController {
 
     @FXML private TextField titleField;
     @FXML private TextField categoryField;
-    @FXML private ComboBox<String> taskTypeComboBox;
     @FXML private ComboBox<Task.Priority> priorityComboBox;
     @FXML private ComboBox<Task.Status> statusComboBox;
     @FXML private DatePicker dueDatePicker;
@@ -31,7 +30,6 @@ public class TaskEditorController {
 
     @FXML
     public void initialize() {
-        taskTypeComboBox.setItems(FXCollections.observableArrayList("Học tập", "Công việc", "Cá nhân", "Khác"));
         priorityComboBox.setItems(FXCollections.observableArrayList(Task.Priority.values()));
         statusComboBox.setItems(FXCollections.observableArrayList(Task.Status.values()));
 
@@ -69,17 +67,23 @@ public class TaskEditorController {
             deleteButton.setManaged(true);
             titleField.setText(task.getTitle());
             categoryField.setText(task.getCategory());
-            taskTypeComboBox.getSelectionModel().select(task.getTaskType());
             priorityComboBox.getSelectionModel().select(task.getPriority());
             statusComboBox.getSelectionModel().select(task.getStatus());
-            dueDatePicker.setValue(task.getDueDate());
-            estTimeSpinner.getValueFactory().setValue(task.getFocusMinutes());
+            
+            if (task.getDueDate() != null) {
+                dueDatePicker.setValue(task.getDueDate().toLocalDate());
+            } else {
+                dueDatePicker.setValue(null);
+            }
+            
+            estTimeSpinner.getValueFactory().setValue(task.getEstimatedMinutes());
             descriptionArea.setText(task.getDescription());
 
             // Find linked note
-            if (task.getLinkedNoteId() != -1) {
+            if (!task.getLinkedNoteIds().isEmpty()) {
+                int firstNoteId = task.getLinkedNoteIds().get(0);
                 for (Note n : linkedNoteComboBox.getItems()) {
-                    if (n.getId() == task.getLinkedNoteId()) {
+                    if (n.getId() == firstNoteId) {
                         linkedNoteComboBox.getSelectionModel().select(n);
                         break;
                     }
@@ -108,15 +112,18 @@ public class TaskEditorController {
         if (currentTask == null) {
             currentTask = new Task(
                     titleField.getText(),
-                    categoryField.getText(),
                     statusComboBox.getValue() != null ? statusComboBox.getValue() : Task.Status.PENDING,
                     priorityComboBox.getValue() != null ? priorityComboBox.getValue() : Task.Priority.MEDIUM,
-                    dueDatePicker.getValue() != null ? dueDatePicker.getValue() : LocalDate.now(),
+                    dueDatePicker.getValue() != null ? dueDatePicker.getValue().atStartOfDay() : LocalDate.now().atStartOfDay(),
                     estTimeSpinner.getValue()
             );
-            currentTask.setTaskType(taskTypeComboBox.getValue() != null ? taskTypeComboBox.getValue() : "General");
+            currentTask.setCategory(categoryField.getText());
             currentTask.setDescription(descriptionArea.getText());
-            currentTask.setLinkedNoteId(noteId);
+            
+            if (noteId != -1) {
+                currentTask.getLinkedNoteIds().clear();
+                currentTask.getLinkedNoteIds().add(noteId);
+            }
             
             // Should add to database
             ServiceLocator.getAppDataService().saveTask(currentTask);
@@ -124,13 +131,17 @@ public class TaskEditorController {
         } else {
             currentTask.setTitle(titleField.getText());
             currentTask.setCategory(categoryField.getText());
-            currentTask.setTaskType(taskTypeComboBox.getValue() != null ? taskTypeComboBox.getValue() : "General");
             currentTask.setPriority(priorityComboBox.getValue() != null ? priorityComboBox.getValue() : Task.Priority.MEDIUM);
             currentTask.setStatus(statusComboBox.getValue() != null ? statusComboBox.getValue() : Task.Status.PENDING);
-            currentTask.setDueDate(dueDatePicker.getValue() != null ? dueDatePicker.getValue() : LocalDate.now());
-            currentTask.setFocusMinutes(estTimeSpinner.getValue());
+            currentTask.setDueDate(dueDatePicker.getValue() != null ? dueDatePicker.getValue().atStartOfDay() : LocalDate.now().atStartOfDay());
+            currentTask.setEstimatedMinutes(estTimeSpinner.getValue());
             currentTask.setDescription(descriptionArea.getText());
-            currentTask.setLinkedNoteId(noteId);
+            
+            currentTask.getLinkedNoteIds().clear();
+            if (noteId != -1) {
+                currentTask.getLinkedNoteIds().add(noteId);
+            }
+            
             ServiceLocator.getAppDataService().saveTask(currentTask);
         }
 
@@ -159,7 +170,6 @@ public class TaskEditorController {
     private void clearFields() {
         titleField.clear();
         categoryField.clear();
-        taskTypeComboBox.getSelectionModel().selectFirst();
         priorityComboBox.getSelectionModel().select(Task.Priority.MEDIUM);
         statusComboBox.getSelectionModel().select(Task.Status.PENDING);
         dueDatePicker.setValue(LocalDate.now());

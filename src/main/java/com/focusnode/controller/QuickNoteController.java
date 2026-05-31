@@ -32,14 +32,15 @@ public class QuickNoteController {
         ServiceLocator.getAsyncExecutor().execute(() -> {
             Note newNote = new Note(
                 -1,
+                1,
+                null,
                 "Quick Note",
-                content.length() > 50 ? content.substring(0, 50) + "..." : content,
                 content,
-                List.of("#inbox"),
-                "Inbox",
-                "Mới",
-                "Needs Review",
-                LocalDate.now()
+                null,
+                List.of("inbox"),
+                java.time.LocalDateTime.now(),
+                java.time.LocalDateTime.now(),
+                false
             );
             
             // Save to database

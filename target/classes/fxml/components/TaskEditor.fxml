@@ -17,12 +17,8 @@
 
     <HBox spacing="15">
         <VBox spacing="5" HBox.hgrow="ALWAYS">
-            <Label text="Category:" style="-fx-text-fill: #6B7280; -fx-font-size: 12px;" />
+            <Label text="Category (Tag):" style="-fx-text-fill: #6B7280; -fx-font-size: 12px;" />
             <TextField fx:id="categoryField" promptText="e.g. Study, Work" style="-fx-padding: 5; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
-        </VBox>
-        <VBox spacing="5" HBox.hgrow="ALWAYS">
-            <Label text="Task Type:" style="-fx-text-fill: #6B7280; -fx-font-size: 12px;" />
-            <ComboBox fx:id="taskTypeComboBox" maxWidth="Infinity" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
         </VBox>
     </HBox>
 

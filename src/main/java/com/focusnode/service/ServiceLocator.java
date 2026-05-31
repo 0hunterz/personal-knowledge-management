@@ -10,9 +10,9 @@ public class ServiceLocator {
     private static final ExecutorService asyncExecutor = Executors.newVirtualThreadPerTaskExecutor();
 
     static {
-        // Initialize database and switch to SQLite implementation
+        // Initialize database and switch to SQL Server implementation
         DatabaseManager.initialize();
-        appDataService = new SqliteAppDataService();
+        appDataService = new SqlAppDataService();
     }
 
     public static AppDataService getAppDataService() {

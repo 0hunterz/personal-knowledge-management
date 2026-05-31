@@ -66,7 +66,7 @@ public class KnowledgeViewController {
         preview.setStyle("-fx-text-fill: #6B7280; -fx-font-size: 12px;");
         preview.setWrapText(true);
 
-        Label category = new Label(note.getCategory());
+        Label category = new Label(note.getSubjectName());
         category.setStyle("-fx-text-fill: #3B82F6; -fx-font-size: 11px;");
 
         card.getChildren().addAll(title, category, preview);

@@ -101,7 +101,7 @@ public class NoteCardController {
             if (isEmptyNote) {
                 updatedAtLabel.setText("Not started");
             } else if (note.getUpdatedAt() != null) {
-                long days = ChronoUnit.DAYS.between(note.getUpdatedAt(), LocalDate.now());
+                long days = ChronoUnit.DAYS.between(note.getUpdatedAt().toLocalDate(), LocalDate.now());
                 if (days == 0) {
                     updatedAtLabel.setText("Updated today");
                 } else if (days == 1) {

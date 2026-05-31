@@ -1,6 +1,7 @@
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\QuickNoteController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\Note.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\ZenHeaderController.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\MetricsRepository.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\TodaysFocusController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\FocusPointRepository.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\HeaderController.java
@@ -24,6 +25,8 @@ C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\TasksViewController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\CategoryBreakdownRepository.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\LanHubViewController.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\service\SqlAppDataService.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\Subject.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\service\AppDataService.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\TaskEditorController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\FocusSessionRepository.java
@@ -42,7 +45,9 @@ C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\Task.
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\TagUsageRepository.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\TaskRepository.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\TagsCloudController.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\User.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\util\AsyncExecutor.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\Tag.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\SidebarController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\DailyStreakController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\Launcher.java

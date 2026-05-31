@@ -1,24 +1,20 @@
 package com.focusnode.controller;
 
 import com.focusnode.model.Note;
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class NoteEditorController {
 
     @FXML private TextField titleField;
-    @FXML private TextField categoryField;
-    @FXML private ComboBox<String> masteryComboBox;
-    @FXML private ComboBox<String> reviewComboBox;
+    @FXML private TextField subjectField;
     @FXML private TextArea contentArea;
     @FXML private TextField tagsField;
     @FXML private Button deleteButton;
@@ -29,11 +25,7 @@ public class NoteEditorController {
 
     @FXML
     public void initialize() {
-        masteryComboBox.setItems(FXCollections.observableArrayList("Chưa hiểu", "Đang hiểu", "Đã hiểu", "Cần ôn"));
-        reviewComboBox.setItems(FXCollections.observableArrayList("Mới", "Đang ôn", "Tốt", "Quên"));
-        
-        masteryComboBox.getSelectionModel().selectFirst();
-        reviewComboBox.getSelectionModel().selectFirst();
+        // Nothing to initialize since we removed mastery and review combo boxes
     }
 
     public void setNote(Note note, Runnable onSave, Runnable onCancel) {
@@ -44,9 +36,7 @@ public class NoteEditorController {
             deleteButton.setVisible(true);
             deleteButton.setManaged(true);
             titleField.setText(note.getTitle());
-            categoryField.setText(note.getCategory());
-            masteryComboBox.getSelectionModel().select(note.getMasteryLevel());
-            reviewComboBox.getSelectionModel().select(note.getReviewStatus());
+            subjectField.setText(note.getSubjectName());
             contentArea.setText(note.getContent());
             tagsField.setText(String.join(", ", note.getTags()));
         } else {
@@ -65,30 +55,24 @@ public class NoteEditorController {
             return;
         }
 
-        String previewText = contentArea.getText();
-        if (previewText.length() > 100) {
-            previewText = previewText.substring(0, 100) + "...";
-        }
-
         if (currentNote == null) {
-            // Note creation logic should happen in parent or service
+            // Note creation logic should happen in parent or service.
+            // Using dummy userId 1 for now (will be handled by repository later).
             currentNote = new Note(
+                    1, // dummy userId
                     titleField.getText(),
-                    previewText,
-                    Arrays.stream(tagsField.getText().split(",")).map(String::trim).collect(Collectors.toList()),
-                    LocalDate.now()
+                    contentArea.getText(),
+                    null // subjectId will be resolved in repository based on subjectName
             );
+            currentNote.getTags().setAll(Arrays.stream(tagsField.getText().split(",")).map(String::trim).collect(Collectors.toList()));
+            currentNote.setSubjectName(subjectField.getText());
         } else {
             currentNote.setTitle(titleField.getText());
-            currentNote.setPreview(previewText);
+            currentNote.setContent(contentArea.getText());
             currentNote.getTags().setAll(Arrays.stream(tagsField.getText().split(",")).map(String::trim).collect(Collectors.toList()));
-            currentNote.setUpdatedAt(LocalDate.now());
+            currentNote.setUpdatedAt(LocalDateTime.now());
+            currentNote.setSubjectName(subjectField.getText());
         }
-        
-        currentNote.setContent(contentArea.getText());
-        currentNote.setCategory(categoryField.getText());
-        currentNote.setMasteryLevel(masteryComboBox.getValue());
-        currentNote.setReviewStatus(reviewComboBox.getValue());
 
         if (onSaveCallback != null) {
             onSaveCallback.run();
@@ -114,9 +98,7 @@ public class NoteEditorController {
 
     private void clearFields() {
         titleField.clear();
-        categoryField.clear();
-        masteryComboBox.getSelectionModel().selectFirst();
-        reviewComboBox.getSelectionModel().selectFirst();
+        subjectField.clear();
         contentArea.clear();
         tagsField.clear();
     }

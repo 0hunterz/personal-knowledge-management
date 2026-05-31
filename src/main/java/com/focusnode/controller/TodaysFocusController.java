@@ -30,7 +30,7 @@ public class TodaysFocusController {
             // Get incomplete tasks due today or overdue
             List<Task> focusTasks = allTasks.stream()
                 .filter(t -> t.getStatus() != Task.Status.COMPLETED)
-                .filter(t -> t.getDueDate() != null && !t.getDueDate().isAfter(today))
+                .filter(t -> t.getDueDate() != null && !t.getDueDate().toLocalDate().isAfter(today))
                 .limit(4)
                 .collect(Collectors.toList());
 

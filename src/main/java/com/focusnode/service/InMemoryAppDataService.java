@@ -23,23 +23,23 @@ public class InMemoryAppDataService implements AppDataService {
 
     public InMemoryAppDataService() {
         this.tasks = new ArrayList<>(List.of(
-                new Task(1, "Finish reading Markdown guide", "", "Study", Task.Status.COMPLETED, Task.Priority.HIGH, LocalDate.now().plusDays(0), 60, 60, -1, "General"),
-                new Task(2, "Build LAN connection module", "", "Project", Task.Status.COMPLETED, Task.Priority.HIGH, LocalDate.now().minusDays(1), 90, 90, -1, "General"),
-                new Task(3, "Review knowledge base UI", "", "Review", Task.Status.IN_PROGRESS, Task.Priority.MEDIUM, LocalDate.now().plusDays(0), 45, 20, -1, "General"),
-                new Task(4, "Study Java Socket programming", "", "Study", Task.Status.IN_PROGRESS, Task.Priority.HIGH, LocalDate.now().plusDays(1), 120, 0, -1, "General"),
-                new Task(5, "Prepare project presentation", "", "Work", Task.Status.PENDING, Task.Priority.MEDIUM, LocalDate.now().plusDays(2), 60, 0, -1, "General"),
-                new Task(6, "Exercise 30 minutes", "", "Health", Task.Status.PENDING, Task.Priority.LOW, LocalDate.now().plusDays(2), 30, 0, -1, "General"),
-                new Task(7, "Read AI research papers", "", "Study", Task.Status.PENDING, Task.Priority.MEDIUM, LocalDate.now().plusDays(3), 50, 0, -1, "General"),
-                new Task(8, "Write daily journal", "", "Personal", Task.Status.PENDING, Task.Priority.LOW, LocalDate.now().plusDays(3), 20, 0, -1, "General")
+                new Task(1, 1, "Finish reading Markdown guide", "", Task.Status.COMPLETED, Task.Priority.HIGH, LocalDate.now().plusDays(0).atStartOfDay(), 60, 60, List.of("Study"), List.of(), java.time.LocalDateTime.now(), false),
+                new Task(2, 1, "Build LAN connection module", "", Task.Status.COMPLETED, Task.Priority.HIGH, LocalDate.now().minusDays(1).atStartOfDay(), 90, 90, List.of("Project"), List.of(), java.time.LocalDateTime.now(), false),
+                new Task(3, 1, "Review knowledge base UI", "", Task.Status.IN_PROGRESS, Task.Priority.MEDIUM, LocalDate.now().plusDays(0).atStartOfDay(), 45, 20, List.of("Review"), List.of(), java.time.LocalDateTime.now(), false),
+                new Task(4, 1, "Study Java Socket programming", "", Task.Status.IN_PROGRESS, Task.Priority.HIGH, LocalDate.now().plusDays(1).atStartOfDay(), 120, 0, List.of("Study"), List.of(), java.time.LocalDateTime.now(), false),
+                new Task(5, 1, "Prepare project presentation", "", Task.Status.PENDING, Task.Priority.MEDIUM, LocalDate.now().plusDays(2).atStartOfDay(), 60, 0, List.of("Work"), List.of(), java.time.LocalDateTime.now(), false),
+                new Task(6, 1, "Exercise 30 minutes", "", Task.Status.PENDING, Task.Priority.LOW, LocalDate.now().plusDays(2).atStartOfDay(), 30, 0, List.of("Health"), List.of(), java.time.LocalDateTime.now(), false),
+                new Task(7, 1, "Read AI research papers", "", Task.Status.PENDING, Task.Priority.MEDIUM, LocalDate.now().plusDays(3).atStartOfDay(), 50, 0, List.of("Study"), List.of(), java.time.LocalDateTime.now(), false),
+                new Task(8, 1, "Write daily journal", "", Task.Status.PENDING, Task.Priority.LOW, LocalDate.now().plusDays(3).atStartOfDay(), 20, 0, List.of("Personal"), List.of(), java.time.LocalDateTime.now(), false)
         ));
 
         this.notes = new ArrayList<>(List.of(
-                new Note(1, "Java Socket Programming", "Notes about TCP/IP, ServerSocket, Socket, and data communication...", "", List.of("#java", "#network"), "Tech", "Intermediate", "Reviewed", LocalDate.now().minusDays(0)),
-                new Note(2, "TCP vs UDP", "Comparison of TCP and UDP protocols with use cases.", "", List.of("#network", "#study"), "Tech", "Beginner", "Needs Review", LocalDate.now().minusDays(1)),
-                new Note(3, "Focus System Mindmap", "Visual map of my productivity and focus system.", "", List.of("#study", "#productivity"), "Personal", "Advanced", "Reviewed", LocalDate.now().minusDays(2)),
-                new Note(4, "Java NIO Basics", "Understanding Non-blocking I/O in Java with examples.", "", List.of("#java", "#advanced"), "Tech", "Intermediate", "Needs Review", LocalDate.now().minusDays(3)),
-                new Note(5, "LAN Focus Hub Roadmap", "Roadmap and milestones for LAN Focus Hub module.", "", List.of("#project", "#network"), "Project", "Advanced", "Reviewed", LocalDate.now().minusDays(4)),
-                new Note(6, "Pomodoro Technique Guide", "Detailed guide to using Pomodoro for deep work.", "", List.of("#study", "#focus"), "Personal", "Beginner", "Reviewed", LocalDate.now().minusDays(5))
+                new Note(1, 1, 1, "Java Socket Programming", "Notes about TCP/IP, ServerSocket, Socket, and data communication...", "Tech", List.of("#java", "#network"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
+                new Note(2, 1, 1, "TCP vs UDP", "Comparison of TCP and UDP protocols with use cases.", "Tech", List.of("#network", "#study"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
+                new Note(3, 1, 2, "Focus System Mindmap", "Visual map of my productivity and focus system.", "Personal", List.of("#study", "#productivity"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
+                new Note(4, 1, 1, "Java NIO Basics", "Understanding Non-blocking I/O in Java with examples.", "Tech", List.of("#java", "#advanced"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
+                new Note(5, 1, 3, "LAN Focus Hub Roadmap", "Roadmap and milestones for LAN Focus Hub module.", "Project", List.of("#project", "#network"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
+                new Note(6, 1, 2, "Pomodoro Technique Guide", "Detailed guide to using Pomodoro for deep work.", "Personal", List.of("#study", "#focus"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false)
         ));
 
         this.tagUsage = List.of(

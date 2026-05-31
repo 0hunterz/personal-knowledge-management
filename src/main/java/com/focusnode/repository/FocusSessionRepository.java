@@ -9,23 +9,24 @@ import java.util.List;
 public class FocusSessionRepository {
     public List<FocusSession> findAll() {
         List<FocusSession> sessions = new ArrayList<>();
-        String sql = "SELECT * FROM focus_sessions";
+        String sql = "SELECT SessionId, UserId, TaskId, NoteId, PresetId, StartedAt, EndedAt, PlannedMinutes, ActualMinutes, IsCompleted FROM dbo.FocusSessions";
         try (Connection conn = DatabaseManager.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {
+                LocalDateTime endedAt = rs.getTimestamp("EndedAt") != null ? rs.getTimestamp("EndedAt").toLocalDateTime() : null;
+                
                 sessions.add(new FocusSession(
-                    rs.getInt("id"),
-                    rs.getInt("task_id"),
-                    rs.getInt("note_id"),
-                    LocalDateTime.parse(rs.getString("start_time")),
-                    LocalDateTime.parse(rs.getString("end_time")),
-                    rs.getInt("duration"),
-                    rs.getString("mode"),
-                    rs.getInt("completed") == 1,
-                    rs.getInt("interruptions"),
-                    rs.getInt("focus_score"),
-                    rs.getString("distractions")
+                    rs.getInt("SessionId"),
+                    rs.getInt("UserId"),
+                    rs.getInt("TaskId"),
+                    rs.getInt("NoteId"),
+                    rs.getInt("PresetId"),
+                    rs.getTimestamp("StartedAt").toLocalDateTime(),
+                    endedAt,
+                    rs.getInt("PlannedMinutes"),
+                    rs.getInt("ActualMinutes"),
+                    rs.getBoolean("IsCompleted")
                 ));
             }
         } catch (SQLException e) {
@@ -35,20 +36,29 @@ public class FocusSessionRepository {
     }
 
     public void add(FocusSession session) {
-        String sql = "INSERT INTO focus_sessions(task_id, note_id, start_time, end_time, duration, mode, completed, interruptions, focus_score, distractions) " +
-                     "VALUES(?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO dbo.FocusSessions(UserId, TaskId, NoteId, PresetId, StartedAt, EndedAt, PlannedMinutes, ActualMinutes, IsCompleted) " +
+                     "VALUES(?,?,?,?,?,?,?,?,?)";
         try (Connection conn = DatabaseManager.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-            pstmt.setInt(1, session.getTaskId());
-            pstmt.setInt(2, session.getNoteId());
-            pstmt.setString(3, session.getStartTime() != null ? session.getStartTime().toString() : LocalDateTime.now().toString());
-            pstmt.setString(4, session.getEndTime() != null ? session.getEndTime().toString() : LocalDateTime.now().toString());
-            pstmt.setInt(5, session.getDuration());
-            pstmt.setString(6, session.getMode());
-            pstmt.setInt(7, session.isCompleted() ? 1 : 0);
-            pstmt.setInt(8, session.getInterruptions());
-            pstmt.setInt(9, session.getFocusScore());
-            pstmt.setString(10, session.getDistractions());
+             
+            int userId = session.getUserId() > 0 ? session.getUserId() : 1;
+            pstmt.setInt(1, userId);
+            
+            if (session.getTaskId() > 0) pstmt.setInt(2, session.getTaskId()); 
+            else pstmt.setNull(2, java.sql.Types.INTEGER);
+            
+            if (session.getNoteId() > 0) pstmt.setInt(3, session.getNoteId()); 
+            else pstmt.setNull(3, java.sql.Types.INTEGER);
+
+            if (session.getPresetId() > 0) pstmt.setInt(4, session.getPresetId()); 
+            else pstmt.setNull(4, java.sql.Types.INTEGER);
+            
+            pstmt.setTimestamp(5, Timestamp.valueOf(session.getStartedAt() != null ? session.getStartedAt() : LocalDateTime.now()));
+            if (session.getEndedAt() != null) pstmt.setTimestamp(6, Timestamp.valueOf(session.getEndedAt())); else pstmt.setNull(6, java.sql.Types.TIMESTAMP);
+            
+            pstmt.setInt(7, session.getPlannedMinutes());
+            pstmt.setInt(8, session.getActualMinutes());
+            pstmt.setBoolean(9, session.isCompleted());
             pstmt.executeUpdate();
             
             try (ResultSet rs = pstmt.getGeneratedKeys()) {

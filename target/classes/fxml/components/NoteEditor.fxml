@@ -16,14 +16,8 @@
     <TextField fx:id="titleField" promptText="Title..." style="-fx-font-size: 16px; -fx-padding: 8; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 5; -fx-background-radius: 5;" />
 
     <HBox spacing="10" alignment="CENTER_LEFT">
-        <Label text="Category:" style="-fx-text-fill: #6B7280; -fx-font-size: 13px;" />
-        <TextField fx:id="categoryField" promptText="Category" prefWidth="120" style="-fx-padding: 5; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
-        
-        <Label text="Mastery:" style="-fx-text-fill: #6B7280; -fx-font-size: 13px; -fx-padding: 0 0 0 10;" />
-        <ComboBox fx:id="masteryComboBox" prefWidth="120" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
-        
-        <Label text="Review:" style="-fx-text-fill: #6B7280; -fx-font-size: 13px; -fx-padding: 0 0 0 10;" />
-        <ComboBox fx:id="reviewComboBox" prefWidth="120" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
+        <Label text="Subject:" style="-fx-text-fill: #6B7280; -fx-font-size: 13px;" />
+        <TextField fx:id="subjectField" promptText="Subject (e.g. Java, Math)" prefWidth="150" style="-fx-padding: 5; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 3;" />
     </HBox>
 
     <TextArea fx:id="contentArea" promptText="Write your markdown content here..." VBox.vgrow="ALWAYS" wrapText="true" style="-fx-font-size: 14px; -fx-padding: 8; -fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 5;" />

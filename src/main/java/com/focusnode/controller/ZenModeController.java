@@ -177,22 +177,21 @@ public class ZenModeController {
 
         FocusSession session = new FocusSession(
                 -1,
+                1, // Default userId
                 selectedTask != null ? selectedTask.getId() : -1,
                 -1,
+                -1, // PresetId
                 sessionStartTime,
                 LocalDateTime.now(),
+                POMODORO_MINUTES,
                 minutesSpent,
-                "Pomodoro",
-                minutesSpent >= POMODORO_MINUTES,
-                0,
-                result.focusScore,
-                result.distractions
+                minutesSpent >= POMODORO_MINUTES
         );
 
         ServiceLocator.getAsyncExecutor().execute(() -> {
             // Save logic
             ServiceLocator.getAppDataService().getFocusSessions().add(session);
-            System.out.println("Saved Focus Session: " + session.getDuration() + " mins, Focus Score: " + session.getFocusScore());
+            System.out.println("Saved Focus Session: " + session.getActualMinutes() + " mins");
         });
     }
 
