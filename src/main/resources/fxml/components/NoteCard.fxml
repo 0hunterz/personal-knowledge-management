@@ -15,7 +15,7 @@
     <HBox>
         <StackPane alignment="CENTER">
             <Region fx:id="iconBackground" style="-fx-background-color: #E0F2FE; -fx-background-radius: 12; -fx-pref-width: 44; -fx-pref-height: 44;" />
-            <ImageView fx:id="iconImageView" fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="iconImageView" fitHeight="28" fitWidth="28" pickOnBounds="true" preserveRatio="true">
                 <image><Image url="@/images/note.png" /></image>
             </ImageView>
         </StackPane>

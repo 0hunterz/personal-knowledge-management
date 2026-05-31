@@ -12,15 +12,15 @@
     </padding>
 
     <!-- Logo Area -->
-    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 0 25 0;">
-        <ImageView fitWidth="56" fitHeight="56" preserveRatio="true" smooth="true" pickOnBounds="true">
+    <HBox alignment="CENTER_LEFT" spacing="12" style="-fx-padding: 0 0 45 0;">
+        <ImageView fitWidth="70" fitHeight="70" preserveRatio="true" smooth="true" pickOnBounds="true">
             <image>
                 <Image url="@/images/logo.png" />
             </image>
         </ImageView>
         <VBox alignment="CENTER_LEFT" spacing="2">
-            <Label text="Focus-Node" style="-fx-font-weight: 800; -fx-font-size: 20px; -fx-text-fill: #1F2937;" />
-            <Label text="Focus. Learn. Grow." style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" />
+            <Label text="Focus-Node" style="-fx-font-weight: 800; -fx-font-size: 22px; -fx-text-fill: #1F2937;" />
+            <Label text="Focus. Learn. Grow." style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
         </VBox>
     </HBox>
 
