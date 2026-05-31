@@ -13,29 +13,31 @@
     </VBox>
     <Region HBox.hgrow="ALWAYS" />
     <!-- Action Icons -->
-    <HBox alignment="CENTER" spacing="5" style="-fx-padding: 0 15 0 0;">
-        <Button style="-fx-background-color: transparent; -fx-cursor: hand; -fx-padding: 5; -fx-background-radius: 50%;">
+    <HBox alignment="CENTER" spacing="12" style="-fx-padding: 0 15 0 0;">
+        <Button styleClass="header-icon-btn">
             <graphic>
-                <ImageView fitHeight="28" fitWidth="28" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
                     <image><javafx.scene.image.Image url="@/images/icon_darkmode_new.png" /></image>
                 </ImageView>
             </graphic>
         </Button>
-        <Button style="-fx-background-color: transparent; -fx-cursor: hand; -fx-padding: 5; -fx-background-radius: 50%;">
+        <Button styleClass="header-icon-btn">
             <graphic>
-                <ImageView fitHeight="28" fitWidth="28" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
                     <image><javafx.scene.image.Image url="@/images/icon_notification_new.png" /></image>
                 </ImageView>
             </graphic>
         </Button>
     </HBox>
-    <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #FFFFFF; -fx-padding: 10 16; -fx-background-radius: 20; -fx-border-color: #E2E8F0; -fx-border-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 2);">
-        <ImageView fitHeight="18" fitWidth="18" pickOnBounds="true" preserveRatio="true">
-            <image><javafx.scene.image.Image url="@/images/calendar_new.png" /></image>
-        </ImageView>
-        <VBox>
+    <HBox alignment="CENTER" spacing="12" styleClass="date-pill">
+        <HBox alignment="CENTER" style="-fx-background-color: #EFF6FF; -fx-background-radius: 50px; -fx-padding: 6;">
+            <ImageView fitHeight="18" fitWidth="18" pickOnBounds="true" preserveRatio="true">
+                <image><javafx.scene.image.Image url="@/images/calendar_new.png" /></image>
+            </ImageView>
+        </HBox>
+        <VBox spacing="1">
             <Label fx:id="dateLabel" style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1F2937;" text="May 24, 2025" />
-            <Label fx:id="dayLabel" style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" text="Saturday" />
+            <Label fx:id="dayLabel" style="-fx-font-size: 11px; -fx-text-fill: #94A3B8;" text="Saturday" />
         </VBox>
     </HBox>
 </HBox>

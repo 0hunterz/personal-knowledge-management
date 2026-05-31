@@ -33,13 +33,13 @@ public class InMemoryAppDataService implements AppDataService {
                 new Task(8, 1, "Write daily journal", "", Task.Status.PENDING, Task.Priority.LOW, LocalDate.now().plusDays(3).atStartOfDay(), 20, 0, List.of("Personal"), List.of(), java.time.LocalDateTime.now(), false)
         ));
 
-        this.notes = new ArrayList<>(List.of(
-                new Note(1, 1, 1, "Java Socket Programming", "Notes about TCP/IP, ServerSocket, Socket, and data communication...", "Tech", List.of("#java", "#network"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
-                new Note(2, 1, 1, "TCP vs UDP", "Comparison of TCP and UDP protocols with use cases.", "Tech", List.of("#network", "#study"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
-                new Note(3, 1, 2, "Focus System Mindmap", "Visual map of my productivity and focus system.", "Personal", List.of("#study", "#productivity"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
-                new Note(4, 1, 1, "Java NIO Basics", "Understanding Non-blocking I/O in Java with examples.", "Tech", List.of("#java", "#advanced"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
-                new Note(5, 1, 3, "LAN Focus Hub Roadmap", "Roadmap and milestones for LAN Focus Hub module.", "Project", List.of("#project", "#network"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
-                new Note(6, 1, 2, "Pomodoro Technique Guide", "Detailed guide to using Pomodoro for deep work.", "Personal", List.of("#study", "#focus"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false)
+        this.notes = new ArrayList<Note>(List.of(
+                new Note(1, 1, 1, null, "Java Socket Programming", "Notes about TCP/IP, ServerSocket, Socket, and data communication...", "Tech", List.of("#java", "#network"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
+                new Note(2, 1, 1, null, "TCP vs UDP", "Comparison of TCP and UDP protocols with use cases.", "Tech", List.of("#network", "#study"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
+                new Note(3, 1, 2, null, "Focus System Mindmap", "Visual map of my productivity and focus system.", "Personal", List.of("#study", "#productivity"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
+                new Note(4, 1, 1, null, "Java NIO Basics", "Understanding Non-blocking I/O in Java with examples.", "Tech", List.of("#java", "#advanced"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
+                new Note(5, 1, 3, null, "LAN Focus Hub Roadmap", "Roadmap and milestones for LAN Focus Hub module.", "Project", List.of("#project", "#network"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false),
+                new Note(6, 1, 2, null, "Pomodoro Technique Guide", "Detailed guide to using Pomodoro for deep work.", "Personal", List.of("#study", "#focus"), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false)
         ));
 
         this.tagUsage = List.of(

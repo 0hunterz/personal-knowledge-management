@@ -8,10 +8,11 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
-public class Note {
+public class Note implements KnowledgeNode {
     private final IntegerProperty id;
     private final IntegerProperty userId;
     private final ObjectProperty<Integer> subjectId;
+    private final ObjectProperty<Integer> folderId;
     private final StringProperty title;
     private final StringProperty content;
     private final StringProperty subjectName; // Joined from Subjects
@@ -19,11 +20,13 @@ public class Note {
     private final ObjectProperty<LocalDateTime> createdAt;
     private final ObjectProperty<LocalDateTime> updatedAt;
     private final BooleanProperty isDeleted;
+    private final ObservableList<FileResource> attachedFiles = FXCollections.observableArrayList();
 
-    public Note(int id, int userId, Integer subjectId, String title, String content, String subjectName, List<String> tags, LocalDateTime createdAt, LocalDateTime updatedAt, boolean isDeleted) {
+    public Note(int id, int userId, Integer subjectId, Integer folderId, String title, String content, String subjectName, List<String> tags, LocalDateTime createdAt, LocalDateTime updatedAt, boolean isDeleted) {
         this.id = new SimpleIntegerProperty(id);
         this.userId = new SimpleIntegerProperty(userId);
         this.subjectId = new SimpleObjectProperty<>(subjectId);
+        this.folderId = new SimpleObjectProperty<>(folderId);
         this.title = new SimpleStringProperty(title);
         this.content = new SimpleStringProperty(content);
         this.subjectName = new SimpleStringProperty(subjectName);
@@ -33,8 +36,8 @@ public class Note {
         this.isDeleted = new SimpleBooleanProperty(isDeleted);
     }
 
-    public Note(int userId, String title, String content, Integer subjectId) {
-        this(-1, userId, subjectId, title, content, null, List.of(), LocalDateTime.now(), LocalDateTime.now(), false);
+    public Note(int userId, String title, String content, Integer subjectId, Integer folderId) {
+        this(-1, userId, subjectId, folderId, title, content, null, List.of(), LocalDateTime.now(), LocalDateTime.now(), false);
     }
 
     public int getId() { return id.get(); }
@@ -48,6 +51,10 @@ public class Note {
     public Integer getSubjectId() { return subjectId.get(); }
     public void setSubjectId(Integer value) { subjectId.set(value); }
     public ObjectProperty<Integer> subjectIdProperty() { return subjectId; }
+
+    public Integer getFolderId() { return folderId.get(); }
+    public void setFolderId(Integer value) { folderId.set(value); }
+    public ObjectProperty<Integer> folderIdProperty() { return folderId; }
 
     public String getTitle() { return title.get(); }
     public void setTitle(String value) { title.set(value); }
@@ -68,6 +75,8 @@ public class Note {
     }
 
     public ObservableList<String> getTags() { return tags; }
+    
+    public ObservableList<FileResource> getAttachedFiles() { return attachedFiles; }
 
     public LocalDateTime getCreatedAt() { return createdAt.get(); }
     public void setCreatedAt(LocalDateTime value) { createdAt.set(value); }
@@ -93,4 +102,13 @@ public class Note {
     public int hashCode() {
         return Objects.hash(getId());
     }
+
+    @Override
+    public String getName() { return getTitle(); }
+
+    @Override
+    public Integer getParentFolderId() { return getFolderId(); }
+
+    @Override
+    public String getType() { return "Note"; }
 }

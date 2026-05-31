@@ -34,6 +34,7 @@ public class QuickNoteController {
                 -1,
                 1,
                 null,
+                null,
                 "Quick Note",
                 content,
                 null,

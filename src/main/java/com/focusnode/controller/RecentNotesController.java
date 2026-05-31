@@ -42,7 +42,7 @@ public class RecentNotesController {
                 if (foundNote.isPresent()) {
                     displayNotes.add(foundNote.get());
                 } else {
-                    Note dummyNote = new Note(-1, 1, null, "No note for " + targetTag, "", null, java.util.Arrays.asList(targetTag), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false);
+                    Note dummyNote = new Note(-1, 1, null, null, "No note for " + targetTag, "", null, java.util.Arrays.asList(targetTag), java.time.LocalDateTime.now(), java.time.LocalDateTime.now(), false);
                     displayNotes.add(dummyNote);
                 }
             }

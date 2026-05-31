@@ -1,14 +1,19 @@
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\QuickNoteController.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\FileResource.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\Note.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\util\VaultManager.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\ZenHeaderController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\MetricsRepository.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\TodaysFocusController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\FocusPointRepository.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\HeaderController.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\TestFXML.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\CategoryBreakdown.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\Folder.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\ReviewItemRepository.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\NoteEditorController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\NoteRepository.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\KnowledgeNode.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\navigation\AppNavigator.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\NoteCardController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\Main.java
@@ -35,6 +40,7 @@ C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\util\CrashH
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\AnalyticsViewController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\PopularTagsController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\SurveyDialogController.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\FolderRepository.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\navigation\AppView.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\FxmlLoadTest.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\StorageCardController.java
@@ -55,4 +61,5 @@ C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\ConnectSQL.
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\controller\PomodoroCardController.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\service\ServiceLocator.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\TagUsageItem.java
+C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\repository\FileResourceRepository.java
 C:\Users\HunterZ\Desktop\FINAL EXAM JAVA\src\main\java\com\focusnode\model\ReviewItem.java

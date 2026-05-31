@@ -24,6 +24,7 @@ IF OBJECT_ID('dbo.TaskPriorities', 'U') IS NOT NULL DROP TABLE dbo.TaskPrioritie
 IF OBJECT_ID('dbo.NoteTags', 'U') IS NOT NULL DROP TABLE dbo.NoteTags;
 IF OBJECT_ID('dbo.QuickNotes', 'U') IS NOT NULL DROP TABLE dbo.QuickNotes;
 IF OBJECT_ID('dbo.Notes', 'U') IS NOT NULL DROP TABLE dbo.Notes;
+IF OBJECT_ID('dbo.Folders', 'U') IS NOT NULL DROP TABLE dbo.Folders;
 IF OBJECT_ID('dbo.Tags', 'U') IS NOT NULL DROP TABLE dbo.Tags;
 IF OBJECT_ID('dbo.Subjects', 'U') IS NOT NULL DROP TABLE dbo.Subjects;
 IF OBJECT_ID('dbo.UserSettings', 'U') IS NOT NULL DROP TABLE dbo.UserSettings;
@@ -72,6 +73,17 @@ CREATE TABLE dbo.Tags (
     FOREIGN KEY (UserId) REFERENCES dbo.Users(UserId) ON DELETE CASCADE
 );
 
+-- 2.5 FOLDERS
+CREATE TABLE dbo.Folders (
+    FolderId INT IDENTITY(1,1) PRIMARY KEY,
+    UserId INT NOT NULL,
+    Name NVARCHAR(100) NOT NULL,
+    ParentId INT NULL,
+    CreatedAt DATETIME2 DEFAULT GETDATE(),
+    FOREIGN KEY (UserId) REFERENCES dbo.Users(UserId) ON DELETE CASCADE,
+    FOREIGN KEY (ParentId) REFERENCES dbo.Folders(FolderId)
+);
+
 -- 2.5 TASK STATUSES (LOOKUP)
 CREATE TABLE dbo.TaskStatuses (
     StatusId INT PRIMARY KEY,
@@ -100,6 +112,7 @@ CREATE TABLE dbo.Notes (
     NoteId INT IDENTITY(1,1) PRIMARY KEY,
     UserId INT NOT NULL,
     SubjectId INT NULL,
+    FolderId INT NULL,
     Title NVARCHAR(200) NOT NULL,
     Content NVARCHAR(MAX) NULL,
     CreatedAt DATETIME2 DEFAULT GETDATE(),
@@ -107,7 +120,8 @@ CREATE TABLE dbo.Notes (
     IsDeleted BIT DEFAULT 0,
     FOREIGN KEY (UserId) REFERENCES dbo.Users(UserId),
     -- SubjectId set NULL nếu môn học bị xóa (không dùng cascade delete trên subject)
-    FOREIGN KEY (SubjectId) REFERENCES dbo.Subjects(SubjectId) ON DELETE SET NULL 
+    FOREIGN KEY (SubjectId) REFERENCES dbo.Subjects(SubjectId) ON DELETE SET NULL,
+    FOREIGN KEY (FolderId) REFERENCES dbo.Folders(FolderId)
 );
 
 -- 3.2 QUICK NOTES (GHI CHÚ NHANH)
@@ -171,6 +185,7 @@ CREATE TABLE dbo.FocusSessions (
 CREATE TABLE dbo.FileResources (
     FileId INT IDENTITY(1,1) PRIMARY KEY,
     UserId INT NOT NULL,
+    FolderId INT NULL,
     FileName NVARCHAR(255) NOT NULL,
     FilePath NVARCHAR(500) NOT NULL,
     FileTypeId INT NOT NULL,
@@ -178,7 +193,8 @@ CREATE TABLE dbo.FileResources (
     UploadedAt DATETIME2 DEFAULT GETDATE(),
     IsDeleted BIT DEFAULT 0,
     FOREIGN KEY (UserId) REFERENCES dbo.Users(UserId) ON DELETE CASCADE,
-    FOREIGN KEY (FileTypeId) REFERENCES dbo.FileTypes(FileTypeId)
+    FOREIGN KEY (FileTypeId) REFERENCES dbo.FileTypes(FileTypeId),
+    FOREIGN KEY (FolderId) REFERENCES dbo.Folders(FolderId)
 );
 
 -- =========================================

@@ -77,6 +77,31 @@
     -fx-background-color: #F1F5F9;
 }
 
+/* Header Icon Buttons */
+.header-icon-btn {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 2);
+}
+.header-icon-btn:hover {
+    -fx-background-color: #F8FAFC;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 12, 0, 0, 3);
+}
+
+/* Date Pill Card */
+.date-pill {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 12 16;
+    -fx-background-radius: 50px;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 50px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2);
+}
+
 /* =====================================================================
    3. GENERAL CARDS (Khung chứa)
    ===================================================================== */
@@ -277,44 +302,76 @@
 
 /* View Toggles (Grid / List) */
 .toggle-btn {
-    -fx-background-color: #F8FAFC;
-    -fx-border-color: #E2E8F0;
-    -fx-border-radius: 6px;
-    -fx-background-radius: 6px;
-    -fx-padding: 8px 12px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-padding: 8px;
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-alignment: center;
     -fx-cursor: hand;
+    -fx-text-fill: #6B7280;
+}
+.toggle-btn:hover {
+    -fx-background-color: #F1F5F9;
 }
 .toggle-btn-active {
-    -fx-background-color: #DCFCE7;
-    -fx-border-color: #22C55E;
-    -fx-text-fill: #22C55E;
+    -fx-background-color: #E0E7FF;
+    -fx-border-color: transparent;
+    -fx-text-fill: #4F46E5;
 }
 
 /* Filter / New Note Buttons */
 .btn-outline {
     -fx-background-color: transparent;
-    -fx-border-color: #E2E8F0;
-    -fx-border-radius: 6px;
-    -fx-padding: 8px 15px;
+    -fx-border-color: #CBD5E1;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 18px;
     -fx-font-weight: bold;
-    -fx-text-fill: #1F2937;
+    -fx-text-fill: #475569;
     -fx-cursor: hand;
 }
 .btn-outline:hover {
-    -fx-background-color: #F1F5F9;
+    -fx-background-color: #F8FAFC;
+    -fx-border-color: #94A3B8;
 }
 
-/* Nút New Note xanh lá */
+/* Nút New Note xanh dương */
 .btn-new-note {
-    -fx-background-color: #22C55E;
-    -fx-text-fill: white;
+    -fx-background-color: #3B82F6;
     -fx-font-weight: bold;
     -fx-background-radius: 6px;
     -fx-padding: 8px 15px;
     -fx-cursor: hand;
 }
+.btn-new-note .label {
+    -fx-text-fill: white;
+}
+.btn-new-note .arrow {
+    -fx-background-color: white;
+}
 .btn-new-note:hover {
-    -fx-background-color: #16A34A;
+    -fx-background-color: #2563EB;
+}
+.btn-new-note .context-menu {
+    -fx-background-color: white;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+    -fx-padding: 0;
+}
+.btn-new-note .menu-item {
+    -fx-padding: 8px 15px;
+}
+.btn-new-note .menu-item:hover {
+    -fx-background-color: #F1F5F9;
+}
+.btn-new-note .menu-item .label {
+    -fx-text-fill: #1E293B; /* Black text instead of white */
+    -fx-font-weight: normal;
 }
 
 /* Thẻ Knowledge Note Card */
@@ -810,4 +867,21 @@
 }
 .zen-message-text {
     -fx-font-size: 12px;
+}
+
+.sidebar-item {
+    -fx-padding: 10 15;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.sidebar-item:hover {
+    -fx-background-color: #E2E8F0;
+}
+
+.sidebar-item-active {
+    -fx-background-color: #DBEAFE;
+}
+.sidebar-item-active .label {
+    -fx-text-fill: #1E40AF;
 }
