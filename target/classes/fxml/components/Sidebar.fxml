@@ -32,57 +32,57 @@
         <!-- Home -->
         <ToggleButton text="Home" toggleGroup="$menuGroup" selected="true" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showHome">
             <graphic>
-                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Home.png" /></image></ImageView>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Home_new.png" /></image></ImageView>
             </graphic>
         </ToggleButton>
         <!-- Knowledge -->
         <ToggleButton text="Knowledge" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showKnowledge">
             <graphic>
-                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Knowledge.png" /></image></ImageView>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Knowledge_new.png" /></image></ImageView>
             </graphic>
         </ToggleButton>
         <!-- LAN Hub -->
         <ToggleButton text="LAN Hub" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showLanHub">
             <graphic>
-                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/LAN-Hub.png" /></image></ImageView>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/LAN-Hub_new.png" /></image></ImageView>
             </graphic>
         </ToggleButton>
         <Separator style="-fx-padding: 10 0;" />
         <!-- Tasks -->
         <ToggleButton text="Tasks" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showTasks">
             <graphic>
-                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Tasks.png" /></image></ImageView>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Tasks_new.png" /></image></ImageView>
             </graphic>
         </ToggleButton>
         <!-- Zen Mode -->
         <ToggleButton text="Zen Mode" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showZenMode">
             <graphic>
-                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Focus.png" /></image></ImageView>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Focus_new.png" /></image></ImageView>
             </graphic>
         </ToggleButton>
         <!-- Tags -->
         <ToggleButton text="Tags" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT" onAction="#showTags">
             <graphic>
-                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Tags.png" /></image></ImageView>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Tags_new.png" /></image></ImageView>
             </graphic>
         </ToggleButton>
         <Separator style="-fx-padding: 10 0;" />
         <!-- Achievements -->
         <ToggleButton text="Achievements" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT">
             <graphic>
-                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/icon_achievement.png" /></image></ImageView>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/icon_achievement_new.png" /></image></ImageView>
             </graphic>
         </ToggleButton>
         <!-- Analytics -->
         <ToggleButton text="Analytics" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT">
             <graphic>
-                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/icon_analytics.png" /></image></ImageView>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/icon_analytics_new.png" /></image></ImageView>
             </graphic>
         </ToggleButton>
         <!-- Settings -->
         <ToggleButton text="Settings" toggleGroup="$menuGroup" styleClass="nav-btn" maxWidth="Infinity" alignment="BASELINE_LEFT">
             <graphic>
-                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Settings.png" /></image></ImageView>
+                <ImageView fitHeight="22" fitWidth="22" pickOnBounds="true" preserveRatio="true"><image><Image url="@/images/Settings_new.png" /></image></ImageView>
             </graphic>
         </ToggleButton>
         
