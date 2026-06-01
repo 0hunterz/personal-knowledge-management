@@ -26,46 +26,74 @@
             <!-- STATE 1: KNOWLEDGE DASHBOARD               -->
             <!-- ========================================== -->
             <VBox fx:id="dashboardContainer" spacing="30">
-                <!-- Header -->
-                <VBox spacing="5">
-                    <Label style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1F2937;" text="Knowledge Hub" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: #6B7280;" text="Your central brain. Access your repositories and shared files." />
+                <!-- Header & Quick Capture -->
+                <VBox spacing="15">
+                    <Label style="-fx-font-family: 'Georgia', serif; -fx-font-weight: bold; -fx-font-size: 32px; -fx-text-fill: #1F2937;" text="Learning Companion" />
+                    <TextField fx:id="quickCaptureInput" prefWidth="500" promptText="What's on your mind? Type to capture..." style="-fx-background-color: #FFFFFF; -fx-border-color: #E2E8F0; -fx-border-radius: 20; -fx-background-radius: 20; -fx-padding: 12 20; -fx-font-size: 14px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 4);" />
                 </VBox>
                 
-                <!-- Portals Grid -->
-                <FlowPane hgap="20" vgap="20">
-                    <!-- Personal Repository Portal -->
-                    <VBox styleClass="hub-portal-card" onMouseClicked="#openPersonalRepository" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
-                        <Label text="🗂" style="-fx-font-size: 32px;" />
-                        <Region VBox.vgrow="ALWAYS" />
-                        <Label text="Personal Repository" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
-                        <Label fx:id="repoStatsLbl" text="Loading stats..." style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
-                    </VBox>
-                    
-                    <!-- Shared with me Portal -->
-                    <VBox styleClass="hub-portal-card" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
-                        <Label text="🤝" style="-fx-font-size: 32px;" />
-                        <Region VBox.vgrow="ALWAYS" />
-                        <Label text="Shared with me" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
-                        <Label text="LAN Hub transfers" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
-                    </VBox>
-                    
-                    <!-- Recent Portal -->
-                    <VBox styleClass="hub-portal-card" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
-                        <Label text="🕒" style="-fx-font-size: 32px;" />
-                        <Region VBox.vgrow="ALWAYS" />
-                        <Label text="Recent" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
-                        <Label text="Recently accessed files" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
-                    </VBox>
+                <!-- Continue Learning (Mới thêm) -->
+                <VBox spacing="15">
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-text-fill: #374151;" text="Continue Learning" />
+                    </HBox>
+                    <FlowPane hgap="20" vgap="20">
+                        <VBox styleClass="hub-portal-card" onMouseClicked="#openPersonalRepository" prefWidth="250" prefHeight="120" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 15, 0, 0, 6);">
+                            <HBox alignment="CENTER_LEFT" spacing="10">
+                                <Label text="📄" style="-fx-font-size: 16px;" />
+                                <Label text="Product Design" style="-fx-font-size: 11px; -fx-text-fill: #8B5CF6; -fx-font-weight: bold; -fx-background-color: #F3E8FF; -fx-padding: 4 8; -fx-background-radius: 12;" />
+                            </HBox>
+                            <Region VBox.vgrow="ALWAYS" />
+                            <Label text="Mental Models for UX" style="-fx-font-family: 'Georgia', serif; -fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" wrapText="true" />
+                        </VBox>
+                        <VBox styleClass="hub-portal-card" onMouseClicked="#openPersonalRepository" prefWidth="250" prefHeight="120" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 15, 0, 0, 6);">
+                            <HBox alignment="CENTER_LEFT" spacing="10">
+                                <Label text="📝" style="-fx-font-size: 16px;" />
+                                <Label text="Algorithms" style="-fx-font-size: 11px; -fx-text-fill: #10B981; -fx-font-weight: bold; -fx-background-color: #D1FAE5; -fx-padding: 4 8; -fx-background-radius: 12;" />
+                            </HBox>
+                            <Region VBox.vgrow="ALWAYS" />
+                            <Label text="Dynamic Programming Basics" style="-fx-font-family: 'Georgia', serif; -fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" wrapText="true" />
+                        </VBox>
+                    </FlowPane>
+                </VBox>
 
-                    <!-- Trash Portal -->
-                    <VBox styleClass="hub-portal-card" onMouseClicked="#openTrash" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
-                        <Label text="🗑" style="-fx-font-size: 32px;" />
-                        <Region VBox.vgrow="ALWAYS" />
-                        <Label text="Trash" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
-                        <Label text="Deleted items" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
-                    </VBox>
-                </FlowPane>
+                <!-- Portals Grid (Giữ nguyên của người dùng) -->
+                <VBox spacing="15">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-text-fill: #374151;" text="Knowledge Hub Portals" />
+                    <FlowPane hgap="20" vgap="20">
+                        <!-- Personal Repository Portal -->
+                        <VBox styleClass="hub-portal-card" onMouseClicked="#openPersonalRepository" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
+                            <Label text="🗂" style="-fx-font-size: 32px;" />
+                            <Region VBox.vgrow="ALWAYS" />
+                            <Label text="Personal Repository" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
+                            <Label fx:id="repoStatsLbl" text="Loading stats..." style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
+                        </VBox>
+                        
+                        <!-- Shared with me Portal -->
+                        <VBox styleClass="hub-portal-card" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
+                            <Label text="🤝" style="-fx-font-size: 32px;" />
+                            <Region VBox.vgrow="ALWAYS" />
+                            <Label text="Shared with me" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
+                            <Label text="LAN Hub transfers" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
+                        </VBox>
+                        
+                        <!-- Recent Portal -->
+                        <VBox styleClass="hub-portal-card" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
+                            <Label text="🕒" style="-fx-font-size: 32px;" />
+                            <Region VBox.vgrow="ALWAYS" />
+                            <Label text="Recent" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
+                            <Label text="Recently accessed files" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
+                        </VBox>
+
+                        <!-- Trash Portal -->
+                        <VBox styleClass="hub-portal-card" onMouseClicked="#openTrash" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
+                            <Label text="🗑" style="-fx-font-size: 32px;" />
+                            <Region VBox.vgrow="ALWAYS" />
+                            <Label text="Trash" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
+                            <Label text="Deleted items" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
+                        </VBox>
+                    </FlowPane>
+                </VBox>
             </VBox>
 
             <!-- ========================================== -->
