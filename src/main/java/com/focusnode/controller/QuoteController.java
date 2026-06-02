@@ -39,7 +39,7 @@ public class QuoteController {
                     return response.body();
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                System.err.println("[Cảnh báo] Không thể tải Quote mới từ Internet do lỗi mạng. Đang dùng Quote dự phòng. Lỗi: " + e.getMessage());
             }
             return null;
         }).thenAccept(jsonResponse -> {
@@ -57,7 +57,7 @@ public class QuoteController {
                         });
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    System.err.println("[Cảnh báo] Lỗi định dạng dữ liệu Quote trả về. Đang dùng Quote dự phòng.");
                     showFallbackQuote();
                 }
             } else {

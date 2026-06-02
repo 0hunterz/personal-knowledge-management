@@ -13,6 +13,9 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.SVGPath?>
 
 <StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.focusnode.controller.KnowledgeViewController">
     
@@ -27,72 +30,126 @@
             <!-- ========================================== -->
             <VBox fx:id="dashboardContainer" spacing="30">
                 <!-- Header & Quick Capture -->
-                <VBox spacing="15">
-                    <Label style="-fx-font-family: 'Georgia', serif; -fx-font-weight: bold; -fx-font-size: 32px; -fx-text-fill: #1F2937;" text="Learning Companion" />
-                    <TextField fx:id="quickCaptureInput" prefWidth="500" promptText="What's on your mind? Type to capture..." style="-fx-background-color: #FFFFFF; -fx-border-color: #E2E8F0; -fx-border-radius: 20; -fx-background-radius: 20; -fx-padding: 12 20; -fx-font-size: 14px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 4);" />
-                </VBox>
+                <HBox alignment="CENTER_LEFT" spacing="15">
+                    <Label style="-fx-font-family: 'Georgia', serif; -fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1F2937;" text="Learning Companion" />
+                    <Label text="✨ improved" style="-fx-font-size: 11px; -fx-text-fill: #047857; -fx-font-weight: bold; -fx-background-color: #D1FAE5; -fx-padding: 4 8; -fx-background-radius: 12;" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <StackPane maxWidth="-Infinity" maxHeight="-Infinity" style="-fx-background-color: #FFFFFF; -fx-padding: 8; -fx-border-color: #E2E8F0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-cursor: hand;">
+                        <SVGPath content="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" style="-fx-fill: #9CA3AF;" scaleX="0.9" scaleY="0.9" />
+                    </StackPane>
+                    <Label text="+ New note" style="-fx-font-weight: bold; -fx-text-fill: #10B981; -fx-background-color: #D1FAE5; -fx-padding: 10 16; -fx-background-radius: 8; -fx-cursor: hand;" />
+                </HBox>
                 
-                <!-- Continue Learning (Mới thêm) -->
+                <!-- Continue Learning -->
                 <VBox spacing="15">
                     <HBox alignment="CENTER_LEFT" spacing="10">
-                        <Label style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-text-fill: #374151;" text="Continue Learning" />
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #374151;" text="▷ Continue Learning" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label text="View all →" style="-fx-font-size: 12px; -fx-text-fill: #10B981; -fx-cursor: hand;" />
                     </HBox>
-                    <FlowPane hgap="20" vgap="20">
-                        <VBox styleClass="hub-portal-card" onMouseClicked="#openPersonalRepository" prefWidth="250" prefHeight="120" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 15, 0, 0, 6);">
-                            <HBox alignment="CENTER_LEFT" spacing="10">
-                                <Label text="📄" style="-fx-font-size: 16px;" />
-                                <Label text="Product Design" style="-fx-font-size: 11px; -fx-text-fill: #8B5CF6; -fx-font-weight: bold; -fx-background-color: #F3E8FF; -fx-padding: 4 8; -fx-background-radius: 12;" />
-                            </HBox>
+                    <HBox spacing="15">
+                        <VBox styleClass="hub-portal-card" onMouseClicked="#openPersonalRepository" prefWidth="200" prefHeight="160" spacing="10" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 15, 0, 0, 6);">
+                            <Label text="Algorithms" style="-fx-font-size: 11px; -fx-text-fill: #4F46E5; -fx-font-weight: bold; -fx-background-color: #E0E7FF; -fx-padding: 4 8; -fx-background-radius: 12;" />
+                            <Label text="Dynamic Programming Basics" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" wrapText="true" />
                             <Region VBox.vgrow="ALWAYS" />
-                            <Label text="Mental Models for UX" style="-fx-font-family: 'Georgia', serif; -fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" wrapText="true" />
+                            <VBox spacing="5">
+                                <HBox alignment="CENTER_LEFT">
+                                    <Region style="-fx-background-color: #10B981; -fx-pref-height: 4; -fx-pref-width: 62; -fx-background-radius: 2;" />
+                                    <Region style="-fx-background-color: #E5E7EB; -fx-pref-height: 4; -fx-pref-width: 38; -fx-background-radius: 2;" />
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Label text="62%" style="-fx-font-size: 11px; -fx-text-fill: #6B7280; -fx-min-width: 35px; -fx-alignment: center-right;" />
+                                </HBox>
+                                <Label text="🕒 Last viewed: 2 days ago" style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" />
+                            </VBox>
                         </VBox>
-                        <VBox styleClass="hub-portal-card" onMouseClicked="#openPersonalRepository" prefWidth="250" prefHeight="120" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 15, 0, 0, 6);">
-                            <HBox alignment="CENTER_LEFT" spacing="10">
-                                <Label text="📝" style="-fx-font-size: 16px;" />
-                                <Label text="Algorithms" style="-fx-font-size: 11px; -fx-text-fill: #10B981; -fx-font-weight: bold; -fx-background-color: #D1FAE5; -fx-padding: 4 8; -fx-background-radius: 12;" />
-                            </HBox>
+
+                        <VBox styleClass="hub-portal-card" onMouseClicked="#openPersonalRepository" prefWidth="200" prefHeight="160" spacing="10" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 15, 0, 0, 6);">
+                            <Label text="Product Design" style="-fx-font-size: 11px; -fx-text-fill: #8B5CF6; -fx-font-weight: bold; -fx-background-color: #F3E8FF; -fx-padding: 4 8; -fx-background-radius: 12;" />
+                            <Label text="Mental Models for UX" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" wrapText="true" />
                             <Region VBox.vgrow="ALWAYS" />
-                            <Label text="Dynamic Programming Basics" style="-fx-font-family: 'Georgia', serif; -fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" wrapText="true" />
+                            <VBox spacing="5">
+                                <HBox alignment="CENTER_LEFT">
+                                    <Region style="-fx-background-color: #10B981; -fx-pref-height: 4; -fx-pref-width: 35; -fx-background-radius: 2;" />
+                                    <Region style="-fx-background-color: #E5E7EB; -fx-pref-height: 4; -fx-pref-width: 65; -fx-background-radius: 2;" />
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Label text="35%" style="-fx-font-size: 11px; -fx-text-fill: #6B7280; -fx-min-width: 35px; -fx-alignment: center-right;" />
+                                </HBox>
+                                <Label text="🕒 Last viewed: 5 days ago" style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" />
+                            </VBox>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Knowledge Hub Portals -->
+                <VBox spacing="15">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #374151;" text="🗂 Knowledge Portals" />
+                    <FlowPane hgap="15" vgap="15">
+                        <VBox styleClass="hub-portal-card" onMouseClicked="#openPersonalRepository" prefWidth="150" prefHeight="160" alignment="CENTER" spacing="10" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 20, 0, 0, 8);">
+                            <StackPane maxWidth="-Infinity" maxHeight="-Infinity" style="-fx-background-color: #D1FAE5; -fx-padding: 10; -fx-background-radius: 12;">
+                                <SVGPath content="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" style="-fx-fill: #10B981;" scaleX="1.3" scaleY="1.3" />
+                            </StackPane>
+                            <Label text="Personal Repo" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" textAlignment="CENTER" wrapText="true" />
+                            <Label fx:id="repoStatsLbl" text="42 notes&#10;- 3 folders" style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" textAlignment="CENTER" wrapText="true" />
+                        </VBox>
+                        
+                        <VBox styleClass="hub-portal-card" prefWidth="150" prefHeight="160" alignment="CENTER" spacing="10" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 20, 0, 0, 8);">
+                            <StackPane maxWidth="-Infinity" maxHeight="-Infinity" style="-fx-background-color: #E0E7FF; -fx-padding: 10; -fx-background-radius: 12;">
+                                <SVGPath content="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" style="-fx-fill: #4F46E5;" scaleX="1.3" scaleY="1.3" />
+                            </StackPane>
+                            <Label text="Shared with me" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" textAlignment="CENTER" wrapText="true" />
+                            <Label text="8 files from&#10;LAN Hub" style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" textAlignment="CENTER" wrapText="true" />
+                        </VBox>
+                        
+                        <VBox styleClass="hub-portal-card" prefWidth="150" prefHeight="160" alignment="CENTER" spacing="10" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 20, 0, 0, 8);">
+                            <StackPane maxWidth="-Infinity" maxHeight="-Infinity" style="-fx-background-color: #FEF3C7; -fx-padding: 10; -fx-background-radius: 12;">
+                                <SVGPath content="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" style="-fx-fill: #F59E0B;" scaleX="1.3" scaleY="1.3" />
+                            </StackPane>
+                            <Label text="Recent" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" textAlignment="CENTER" wrapText="true" />
+                            <Label text="Recently&#10;accessed" style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" textAlignment="CENTER" wrapText="true" />
+                        </VBox>
+                        
+                        <VBox styleClass="hub-portal-card" onMouseClicked="#openTrash" prefWidth="150" prefHeight="160" alignment="CENTER" spacing="10" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 20, 0, 0, 8);">
+                            <StackPane maxWidth="-Infinity" maxHeight="-Infinity" style="-fx-background-color: #FEE2E2; -fx-padding: 10; -fx-background-radius: 12;">
+                                <SVGPath content="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" style="-fx-fill: #EF4444;" scaleX="1.3" scaleY="1.3" />
+                            </StackPane>
+                            <Label text="Trash" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" textAlignment="CENTER" wrapText="true" />
+                            <Label text="Deleted&#10;notes" style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" textAlignment="CENTER" wrapText="true" />
                         </VBox>
                     </FlowPane>
                 </VBox>
 
-                <!-- Portals Grid (Giữ nguyên của người dùng) -->
+                <!-- Recent Notes -->
                 <VBox spacing="15">
-                    <Label style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-text-fill: #374151;" text="Knowledge Hub Portals" />
-                    <FlowPane hgap="20" vgap="20">
-                        <!-- Personal Repository Portal -->
-                        <VBox styleClass="hub-portal-card" onMouseClicked="#openPersonalRepository" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
-                            <Label text="🗂" style="-fx-font-size: 32px;" />
-                            <Region VBox.vgrow="ALWAYS" />
-                            <Label text="Personal Repository" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
-                            <Label fx:id="repoStatsLbl" text="Loading stats..." style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
-                        </VBox>
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #374151;" text="📄 Recent Notes" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label text="Open vault →" style="-fx-font-size: 12px; -fx-text-fill: #10B981; -fx-cursor: hand;" />
+                    </HBox>
+                    <VBox spacing="10">
+                        <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: #FFFFFF; -fx-padding: 12; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 15, 0, 0, 6);">
+                            <StackPane maxWidth="-Infinity" maxHeight="-Infinity" style="-fx-background-color: #F3E8FF; -fx-padding: 8; -fx-background-radius: 8;">
+                                <SVGPath content="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" style="-fx-fill: #8B5CF6;" scaleX="1.1" scaleY="1.1" />
+                            </StackPane>
+                            <VBox spacing="2">
+                                <Label text="Dynamic Programming..." style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" />
+                                <Label text="Updated 1 hour ago - 1,240 words" style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" />
+                            </VBox>
+                            <Region HBox.hgrow="ALWAYS" />
+                            <Label text="#Algorithms" style="-fx-font-size: 11px; -fx-text-fill: #047857; -fx-font-weight: bold; -fx-background-color: #D1FAE5; -fx-padding: 4 8; -fx-background-radius: 12;" />
+                        </HBox>
                         
-                        <!-- Shared with me Portal -->
-                        <VBox styleClass="hub-portal-card" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
-                            <Label text="🤝" style="-fx-font-size: 32px;" />
-                            <Region VBox.vgrow="ALWAYS" />
-                            <Label text="Shared with me" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
-                            <Label text="LAN Hub transfers" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
-                        </VBox>
-                        
-                        <!-- Recent Portal -->
-                        <VBox styleClass="hub-portal-card" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
-                            <Label text="🕒" style="-fx-font-size: 32px;" />
-                            <Region VBox.vgrow="ALWAYS" />
-                            <Label text="Recent" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
-                            <Label text="Recently accessed files" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
-                        </VBox>
-
-                        <!-- Trash Portal -->
-                        <VBox styleClass="hub-portal-card" onMouseClicked="#openTrash" prefWidth="250" prefHeight="140" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-padding: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 4);">
-                            <Label text="🗑" style="-fx-font-size: 32px;" />
-                            <Region VBox.vgrow="ALWAYS" />
-                            <Label text="Trash" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #1F2937;" />
-                            <Label text="Deleted items" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;" />
-                        </VBox>
-                    </FlowPane>
+                        <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: #FFFFFF; -fx-padding: 12; -fx-background-radius: 12; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 15, 0, 0, 6);">
+                            <StackPane maxWidth="-Infinity" maxHeight="-Infinity" style="-fx-background-color: #D1FAE5; -fx-padding: 8; -fx-background-radius: 8;">
+                                <SVGPath content="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" style="-fx-fill: #10B981;" scaleX="1.1" scaleY="1.1" />
+                            </StackPane>
+                            <VBox spacing="2">
+                                <Label text="Heuristics trong UI/UX..." style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1F2937;" />
+                                <Label text="Updated yesterday - 850 words" style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" />
+                            </VBox>
+                            <Region HBox.hgrow="ALWAYS" />
+                            <Label text="#Design" style="-fx-font-size: 11px; -fx-text-fill: #4F46E5; -fx-font-weight: bold; -fx-background-color: #E0E7FF; -fx-padding: 4 8; -fx-background-radius: 12;" />
+                        </HBox>
+                    </VBox>
                 </VBox>
             </VBox>
 
